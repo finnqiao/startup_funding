@@ -77,15 +77,15 @@ Inbound traffic from 100 existing venture capital firms.
 
 ## Backlog
 
-- S1 : Cleaned data on general information for each startup. (1)
-- S2 : New features based on funding frequencies, amounts, target market. (3)
-- S3 : Cleaned data on venture rounds that were raised by startups during this  period. (2)
-- S4 : New features based on the type of venture round that was raised - seed, growth etc. (3)
-- S5 : Venture type and amount trends across time period. (3)
-- S6 : Cleaned data on venture investors during time period. (2)
+- S1 : Cleaned data on general information for each startup. (1) - Sprint 1 (April 12 - April 26)
+- S2 : New features based on funding frequencies, amounts, target market. (3) - Sprint 1 (April 12 - April 26)
+- S3 : Cleaned data on venture rounds that were raised by startups during this  period. (2) - Sprint 1 (April 12 - April 26)
+- S4 : New features based on the type of venture round that was raised - seed, growth etc. (3) - Sprint 1 (April 12 - April 26)
+- S5 : Venture type and amount trends across time period. (3) - Sprint 1 (April 12 - April 26)
+- S6 : Cleaned data on venture investors during time period. (2) - Sprint 1 (April 12 - April 26)
 - S7 : Scoring of venture investors based on frequency, amount of fundings. (5)
-- S9 : Cleaned data on mergers and acquisitions during this period. (2)
-- S10 : New features based on how accretive acquisition was. (3)
+- S9 : Cleaned data on mergers and acquisitions during this period. (2) - Sprint 1 (April 12 - April 26)
+- S10 : New features based on how accretive acquisition was. (3) - Sprint 1 (April 12 - April 26)
 - S12 : Acquired external data on macro trends during time period. (5)
 - S13 : Cleaned data on external macro trends. (2)
 - S15 : Grouped, aggregated, and in-depth EDA across all collected data. (3)
