@@ -14,6 +14,9 @@ company_df = pd.read_csv('./data/external/companies.csv')
 # Visualize missing values in data.
 msno.matrix(company_df)
 
+# Drop if market is empty
+company_df = company_df.dropna(subset = ['market'])
+
 # Basic dataframe shape and columns.
 company_df.shape
 
@@ -28,8 +31,30 @@ company_df = company_df.apply(lambda column: column.str.lower() if pd.api.types.
 # Check number of unique market types.
 len(company_df['market'].unique())
 
-# See list of top 50 market types by company counts.
-company_df['market'].value_counts().nlargest(50)
+# Save list of all market types.
+market_types = list(company_df['market'].unique())
+
+# Save list of top 50 market types by company counts.
+top_50_markets = list(company_df['market'].value_counts().nlargest(50).index)
+
+outside_50_markets = [x for x in market_types if x not in top_50_markets]
+
+# Create dictionary of top 50 markets.
+top_50_dict = dict.fromkeys(top_50_markets)
+top_50_dict
+
+# Potential overlaps
+for key in tqdm(top_50_dict.keys()):
+    top_50_dict[key] = []
+    for cat in outside_50_markets:
+        # print(key.split(' ')[0] in cat.split(' '))
+        # print(key, cat)
+        if key.split(' ')[0] in cat.split(' '):
+            top_50_dict[key].append(cat)
+
+top_50_dict
+
+company_df['market'].value_counts().nlargest(100)
 
 
 
