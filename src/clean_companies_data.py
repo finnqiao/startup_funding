@@ -114,15 +114,22 @@ company_df['status'].value_counts()
 
 company_df = pd.concat([company_df, pd.get_dummies(company_df['status'], prefix='status')], axis=1)
 company_df = company_df.drop('status', axis=1)
-company_df.head()
-
 
 # Countries with startup numbers above global mean.
-list(company_df['country_code'].value_counts()[company_df['country_code'].value_counts() > company_df['country_code'].value_counts().mean()].index)
+top_countries = list(company_df['country_code'].value_counts()[company_df['country_code'].value_counts() > company_df['country_code'].value_counts().mean()].index)
 
 # Replace other countries with 'other'.
+company_df['country_code'] = company_df['country_code'].fillna('other')
+company_df.loc[~company_df['country_code'].isin(top_countries), 'country_code'] = 'other'
 
 # One-hot encoding of countries.
+company_df = pd.concat([company_df, pd.get_dummies(company_df['country_code'], prefix='country')], axis=1)
+company_df = company_df.drop('country_code', axis=1)
+company_df.columns
+
+# Get median time between first funding and founding to impute missing values.
+company_df['first_funding_at'].head()
+
 
 
 
