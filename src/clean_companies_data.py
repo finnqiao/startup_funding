@@ -43,39 +43,75 @@ outside_50_markets = [x for x in market_types if x not in top_50_markets]
 # Create dictionary of top 50 markets.
 top_50_dict = dict.fromkeys(top_50_markets)
 
-# Potential overlaps
+# First pass at collapsing market categories.
+# Done by checking if first word in a category is present in other category labels.
+# Example 1: word "advertising" apppears in "advertising platforms".
+# Example 2: "enterprise" is the first word in "enterprise software" apppears in "enterprise 2.0"
+
 for key in tqdm(top_50_dict.keys()):
+    # Initialize each key with empty list
     top_50_dict[key] = []
     for cat in outside_50_markets:
+        # Check if first word is present in category, add to key value list, remove from category list.
         if key.split(' ')[0] in cat.split(' '):
             top_50_dict[key].append(cat)
             outside_50_markets.remove(cat)
+        elif (len(key.split(' ')) > 1) and (key.split(' ')[1] == 'and') and (key.split(' ')[2] in cat.split(' ')):
+            top_50_dict[key].append(cat)
+            outside_50_markets.remove(cat)
 
-top_50_dict
+# Check how many categories are left.
+remainder_outside_50 = outside_50_markets
+len(remainder_outside_50)
 
-outside_50_markets
+# Second pass at collapsing market categories.
+# Market category labels are split into character n-grams.
+# N-gram similarity Dice metric is calculated with intersection/union of n-gram sets.
 
-company_df['market'].value_counts().nlargest(100)
-
-
-# Convert text into ngrams.
-def word2ngrams(text, n=3, exact=True):
+def word2ngrams(text, n=4, exact=True):
+    """Convert text into ngrams."""
     return ["".join(g) for g in zip(*[text[i:] for i in range(n)])]
 
-# Calculate ngram similarity metric.
-def sim3gram(text1, text2):
+def sim4gram(text1, text2):
+    """Calculate ngram similarity metric."""
     list1 = word2ngrams(text1)
     list2 = word2ngrams(text2)
     return len(list(set(list1) & set(list2)))/len(list(set(list1) | set(list2)))
 
-test1 = 'hardware + software'
-test2 = 'enterprise software'
+for key in tqdm(top_50_dict.keys()):
+    for cat in remainder_outside_50:
+        if sim4gram(key, cat) > 0.25:
+            top_50_dict[key].append(cat)
+            remainder_outside_50.remove(cat)
 
-list1 = word2ngrams(test1)
-list2 = word2ngrams(test2)
+# Check how many categories are left.
+len(remainder_outside_50)
 
-len(list(set(list1) & set(list2)))/len(list(set(list1) | set(list2)))
-sim3gram(test1, test2)
+# Assign remainder of categories to "Other"
+top_50_dict['other'] = remainder_outside_50
+
+def invert_dict(d):
+    """Function to invert a dictionary of lists so list values become keys."""
+    return dict( (v,k) for k in d for v in d[k] )
+
+category_replace_dict = invert_dict(top_50_dict)
+
+# Relabel key value pairs that do not match well.
+category_replace_dict['big data analytics'] = 'big data'
+category_replace_dict['coworking'] = 'other'
+category_replace_dict['mining technologies'] = 'other'
+category_replace_dict['mobility'] = 'other'
+category_replace_dict['nanotechnology'] = 'other'
+category_replace_dict['real time'] = 'other'
+category_replace_dict['space travel'] = 'other'
+category_replace_dict['social network media'] = 'social media'
+
+# Replace values in market column based on replacement dictionary.
+company_df['market'] = company_df['market'].map(category_replace_dict).fillna(company_df['market'])
+
+
+
+
 
 # Drop missing values for category list as imputation methods are hard to apply for one hot encoding here.
 company_df = company_df.dropna(subset=['category_list'])
