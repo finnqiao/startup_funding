@@ -62,16 +62,20 @@ company_df['market'].value_counts().nlargest(100)
 def word2ngrams(text, n=3, exact=True):
     return ["".join(g) for g in zip(*[text[i:] for i in range(n)])]
 
-test1 = 'blogging platforms'
-test2 = 'artificial intelligence'
+# Calculate ngram similarity metric.
+def sim3gram(text1, text2):
+    list1 = word2ngrams(text1)
+    list2 = word2ngrams(text2)
+    return len(list(set(list1) & set(list2)))/len(list(set(list1) | set(list2)))
 
-
+test1 = 'hardware + software'
+test2 = 'enterprise software'
 
 list1 = word2ngrams(test1)
 list2 = word2ngrams(test2)
 
-list(set(list1) & set(list2))
-list(set(list1) | set(list2))
+len(list(set(list1) & set(list2)))/len(list(set(list1) | set(list2)))
+sim3gram(test1, test2)
 
 # Drop missing values for category list as imputation methods are hard to apply for one hot encoding here.
 company_df = company_df.dropna(subset=['category_list'])
