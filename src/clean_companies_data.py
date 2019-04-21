@@ -7,6 +7,7 @@ import collections
 from sklearn.preprocessing import MultiLabelBinarizer
 import itertools
 from tqdm import tqdm
+import nltk
 
 # Import and inspect initial data on companies.
 company_df = pd.read_csv('./data/external/companies.csv')
@@ -41,25 +42,36 @@ outside_50_markets = [x for x in market_types if x not in top_50_markets]
 
 # Create dictionary of top 50 markets.
 top_50_dict = dict.fromkeys(top_50_markets)
-top_50_dict
 
 # Potential overlaps
 for key in tqdm(top_50_dict.keys()):
     top_50_dict[key] = []
     for cat in outside_50_markets:
-        # print(key.split(' ')[0] in cat.split(' '))
-        # print(key, cat)
         if key.split(' ')[0] in cat.split(' '):
             top_50_dict[key].append(cat)
+            outside_50_markets.remove(cat)
 
 top_50_dict
+
+outside_50_markets
 
 company_df['market'].value_counts().nlargest(100)
 
 
+# Convert text into ngrams.
+def word2ngrams(text, n=3, exact=True):
+    return ["".join(g) for g in zip(*[text[i:] for i in range(n)])]
+
+test1 = 'blogging platforms'
+test2 = 'artificial intelligence'
 
 
 
+list1 = word2ngrams(test1)
+list2 = word2ngrams(test2)
+
+list(set(list1) & set(list2))
+list(set(list1) | set(list2))
 
 # Drop missing values for category list as imputation methods are hard to apply for one hot encoding here.
 company_df = company_df.dropna(subset=['category_list'])
@@ -86,8 +98,6 @@ counter.most_common(50)
 
 
 
-
-company_df.head()
 
 
 
