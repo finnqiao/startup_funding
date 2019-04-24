@@ -30,6 +30,8 @@ Inbound traffic from 100 existing venture capital firms.
 
 ## Planned Work
 
+Detailed project tracker on: https://airtable.com/shraRLvLq3cHHVX9p
+
 ### Theme 1: A dataset that is effective in representing every facet of the venture capital ecosystem 
 
 - E1 - Aggregate general startup data during time period
