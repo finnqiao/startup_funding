@@ -32,3 +32,5 @@ amounts_df = rounds_df.groupby('company_permalink').agg({'raised_amount_usd':['m
 amounts_df.columns = ['_'.join(col).strip() for col in amounts_df.columns.values]
 
 # Join round type and fund amount type data.
+# Cleaned and feature engineered version for venture rounds.
+venture_rounds_df = rounds_df.join(amounts_df, on='company_permalink')
