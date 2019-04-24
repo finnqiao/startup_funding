@@ -4,10 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import missingno as msno
 import collections
-from sklearn.preprocessing import MultiLabelBinarizer
 import itertools
 from tqdm import tqdm
 import nltk
+from datetime import datetime, timedelta
 
 # Import and inspect initial data on companies.
 company_df = pd.read_csv('./data/external/companies.csv')
@@ -24,7 +24,7 @@ company_df.shape
 company_df.columns
 
 # Keep columns that are relevant.
-company_df = company_df[['permalink', 'name', 'market', 'category_list', 'funding_total_usd', 'status', 'country_code', 'city', 'funding_rounds', 'founded_month', 'founded_quarter', 'founded_year', 'first_funding_at', 'last_funding_at']]
+company_df = company_df[['permalink', 'name', 'market', 'category_list', 'funding_total_usd', 'status', 'country_code', 'funding_rounds', 'founded_at', 'founded_month', 'founded_quarter', 'founded_year', 'first_funding_at', 'last_funding_at']]
 
 # Lower case if a column is of string type.
 company_df = company_df.apply(lambda column: column.str.lower() if pd.api.types.is_string_dtype(column) else column)
@@ -127,51 +127,36 @@ company_df = pd.concat([company_df, pd.get_dummies(company_df['country_code'], p
 company_df = company_df.drop('country_code', axis=1)
 company_df.columns
 
-# Get median time between first funding and founding to impute missing values.
-company_df['first_funding_at'].head()
+# Impute missing founding dates.
 
+# Convert datetime columns to datetime objects.
+company_df['first_funding_at'] = pd.to_datetime(company_df['first_funding_at'], errors='coerce')
+company_df['last_funding_at'] = pd.to_datetime(company_df['last_funding_at'], errors='coerce')
+company_df['founded_at'] = pd.to_datetime(company_df['founded_at'], errors='coerce')
 
+# Save two date columns in new dataframe to calculate median value.
+median_days_to_fund = np.median(((company_df['first_funding_at'] - company_df['founded_at'])/(np.timedelta64(1, 'D'))).dropna())
 
+# Impute NAs for founded_at by subtracting median_days_to_fund to first_funding_at.
+company_df['founded_at'] = company_df['founded_at'].fillna(company_df['first_funding_at'] - timedelta(days = median_days_to_fund))
 
+# Filling in founded date features based on imputed values.
+company_df['founded_year'] = company_df['founded_at'].dt.year
+company_df['founded_month'] = company_df['founded_at'].dt.month
+company_df['founded_quarter'] = company_df['founded_month'].map({1:1,2:1,3:1,4:2,5:2,6:2,7:3,8:3,9:3,10:4,11:4,12:4})
 
+# Feature generation for temporal features.
 
+# Number of days and months from first founding date that first round was raised.
+company_df['days_to_fund'] = (company_df['first_funding_at'] - company_df['founded_at'])/(np.timedelta64(1, 'D'))
+company_df['months_to_fund'] = (company_df['first_funding_at'] - company_df['founded_at'])/(np.timedelta64(1, 'M'))
 
-# Drop missing values for category list as imputation methods are hard to apply for one hot encoding here.
-company_df = company_df.dropna(subset=['category_list'])
+# Number of days and months between funding rounds.
+company_df['days_between_rounds'] = (company_df['last_funding_at'] - company_df['first_funding_at'])/(np.timedelta64(1, 'D'))/company_df['funding_rounds']
+company_df['months_between_rounds'] = (company_df['last_funding_at'] - company_df['first_funding_at'])/(np.timedelta64(1, 'M'))/company_df['funding_rounds']
 
-# Number of unique categories.
-company_df['category_list'] = company_df['category_list'].apply(lambda x: [cat for cat in x.split('|') if cat != ''])
+# If only a single round, use value of days or months to first funding.
+company_df.loc[company_df['days_between_rounds'] == 0, 'days_between_rounds'] = company_df['days_to_fund']
+company_df.loc[company_df['months_between_rounds'] == 0, 'months_between_rounds'] = company_df['months_to_fund']
 
-# User MultiLabelBinarizer to convert categories into one hot encoding.
-mlb = MultiLabelBinarizer()
-cat_one_hot = pd.DataFrame(mlb.fit_transform(company_df['category_list']), columns=mlb.classes_, index=company_df.index)
-cat_one_hot.shape
-cat_one_hot.head()
-
-
-
-[(key, len(list(group))) for key, group in itertools.groupby(company_df['category_list'].sum())]
-
-counter = collections.Counter(company_df['category_list'].sum())
-len(counter)
-counter.most_common(50)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
+company_df.shape
