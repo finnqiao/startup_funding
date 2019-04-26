@@ -1,13 +1,6 @@
 import logging
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import missingno as msno
-import collections
-import itertools
-from tqdm import tqdm
-import nltk
-from datetime import datetime, timedelta
 
 # Import and inspect initial data on companies.
 rounds_df = pd.read_csv('./data/external/rounds.csv')
