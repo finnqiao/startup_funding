@@ -1,4 +1,5 @@
 import logging
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -8,6 +9,7 @@ import itertools
 from tqdm import tqdm
 import nltk
 from datetime import datetime, timedelta
+import csv
 
 # Import and inspect initial data on companies.
 company_df = pd.read_csv('./data/external/companies.csv')
@@ -128,7 +130,6 @@ company_df = company_df.drop('country_code', axis=1)
 company_df.columns
 
 # Impute missing founding dates.
-
 # Convert datetime columns to datetime objects.
 company_df['first_funding_at'] = pd.to_datetime(company_df['first_funding_at'], errors='coerce')
 company_df['last_funding_at'] = pd.to_datetime(company_df['last_funding_at'], errors='coerce')
@@ -160,3 +161,9 @@ company_df.loc[company_df['days_between_rounds'] == 0, 'days_between_rounds'] = 
 company_df.loc[company_df['months_between_rounds'] == 0, 'months_between_rounds'] = company_df['months_to_fund']
 
 company_df.shape
+
+# Export list of unique company keys as csv.
+company_df['permalink'].to_csv('./data/auxiliary/filtered_company.csv')
+
+# Export list of unique markets as csv.
+pd.DataFrame(list(company_df['market'].unique())).to_csv('./data/auxiliary/filtered_markets.csv')
