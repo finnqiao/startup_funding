@@ -166,4 +166,4 @@ company_df.shape
 company_df['permalink'].to_csv('./data/auxiliary/filtered_company.csv')
 
 # Export list of unique markets as csv.
-pd.DataFrame(list(company_df['market'].unique())).to_csv('./data/auxiliary/filtered_markets.csv')
+# pd.DataFrame(list(company_df['market'].unique())).to_csv('./data/auxiliary/filtered_markets.csv')
