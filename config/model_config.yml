@@ -1,0 +1,5 @@
+ingest_data:
+  # how: load_csvs
+  load_csvs:
+    directory: s3://startup-funding-avc/
+    n_cores: 1
