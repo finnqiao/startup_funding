@@ -27,3 +27,13 @@ clean_investors_data:
 clean_acquisitions_data:
   get_acquisition_count:
     all_companies_file: 'data/auxiliary/new_companies_data.csv'
+
+preprocess_merge_data:
+  aggregate_dataframes:
+    data_path_list: [
+      'data/auxiliary/new_companies_data.csv','data/auxiliary/new_rounds_data.csv',
+      'data/auxiliary/new_investors_data.csv','data/auxiliary/new_acquisitions_data.csv',
+      'data/auxiliary/new_ipo_data.csv'
+      ]
+  generate_onehot_features:
+    column: 'market'
