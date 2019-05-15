@@ -5,21 +5,15 @@ import argparse
 
 import yaml
 import pandas as pd
+import numpy as np
+import datetime
+import boto3
 
-import src.helpers.gen_helpers as gen_h
-import src.helpers.nlp_helpers as nlp_h
+from helpers import gen_helpers as gen_h
+from helpers import nlp_helpers as nlp_h
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
-
-# def filter_columns(df, column_subset, na_subset):
-#     """Filter out irrelevant columns and drop if values are NaN for a subset of
-#     columns"""
-#     df = df[column_subset]
-#     df = df.dropna(subset = na_subset)
-#     df = df.apply(lambda column: (column.str.lower() if
-#     pd.api.types.is_string_dtype(column) else column))
-#     return df
 
 def reduce_market_categories(df):
     """Reduce market categories to top 50 and other with nlp techniques"""
@@ -41,7 +35,7 @@ def reduce_market_categories(df):
     # Example 2: "enterprise" is the first word in "enterprise software"
     # appears in "enterprise 2.0"
 
-    for key in tqdm(top_50_dict.keys()):
+    for key in top_50_dict.keys():
         # Initialize each key with empty list
         top_50_dict[key] = []
         for cat in outside_50_markets:
@@ -62,9 +56,9 @@ def reduce_market_categories(df):
     # Market category labels are split into character n-grams.
     # N-gram similarity Dice metric is calculated with intersection/union of
     # n-gram sets.
-    for key in tqdm(top_50_dict.keys()):
+    for key in top_50_dict.keys():
         for cat in remainder_outside_50:
-            if sim4gram(key, cat) > 0.25:
+            if nlp_h.sim4gram(key, cat) > 0.25:
                 top_50_dict[key].append(cat)
                 remainder_outside_50.remove(cat)
 
@@ -72,7 +66,7 @@ def reduce_market_categories(df):
     top_50_dict['other'] = remainder_outside_50
 
     # Invert keys and values
-    category_replace_dict = invert_dict(top_50_dict)
+    category_replace_dict = gen_h.invert_dict(top_50_dict)
 
     # Relabel key value pairs that do not match well.
     category_replace_dict['big data analytics'] = 'big data'
@@ -127,7 +121,7 @@ def impute_founding_date(df):
 
     # Impute NAs for founded_at by subtracting median_days_to_fund to first_funding_at.
     df['founded_at'] = df['founded_at'].fillna(df['first_funding_at'] -
-    timedelta(days = median_days_to_fund))
+    datetime.timedelta(days = median_days_to_fund))
 
     # Filling in founded date features based on imputed values.
     df['founded_year'] = df['founded_at'].dt.year
@@ -153,10 +147,8 @@ def temporal_features(df):
     (np.timedelta64(1, 'M'))/df['funding_rounds'])
 
     # If only a single round, use value of days or months to first funding.
-    df.loc[df['days_between_rounds'] == 0, 'days_between_rounds'] =
-    df['days_to_fund']
-    df.loc[df['months_between_rounds'] == 0, 'months_between_rounds'] =
-    df['months_to_fund']
+    df.loc[df['days_between_rounds'] == 0, 'days_between_rounds'] = df['days_to_fund']
+    df.loc[df['months_between_rounds'] == 0, 'months_between_rounds'] = df['months_to_fund']
 
     return df
 
@@ -177,13 +169,18 @@ def run_clean_companies(args):
     df = gen_h.read_data(args.input_file)
     df = gen_h.filter_columns(df, **config['clean_companies_data']['filter_columns'])
     df = reduce_market_categories(df)
-    df = gen_h.generate_onehot_features(df, config['clean_companies_data']
+    df = gen_h.generate_onehot_features(df, **config['clean_companies_data']
     ['generate_onehot_features'])
     df = company_country_features(df)
     df = impute_founding_date(df)
     df = temporal_features(df)
 
+    # Save working copy to local
     df.to_csv(args.save)
+
+    # Save copy to S3 Bucket
+    s3 = boto3.client("s3")
+    s3.upload_file(args.save, args.bucket_name, args.output_file_path)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
@@ -191,6 +188,10 @@ if __name__ == '__main__':
     parser.add_argument('--input_file', help='path to csv file with raw data')
     parser.add_argument('--save', default='data/auxiliary/new_companies_data.csv',
     help='path to where the cleaned dataset should be saved to')
+    parser.add_argument("--bucket_name", default='startup-funding-working-bucket',
+    help="S3 bucket name")
+    parser.add_argument("--output_file_path", default='new_companies_data.csv',
+    help="output file path of uploaded file")
 
     args = parser.parse_args()
 

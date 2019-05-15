@@ -5,8 +5,9 @@ import argparse
 
 import yaml
 import pandas as pd
+import boto3
 
-import src.helpers.gen_helpers as gen_h
+from helpers import gen_helpers as gen_h
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -32,19 +33,20 @@ def group_permalink_funding(df):
      'raised_amount_usd_mean': 'first',
      'raised_amount_usd_median': 'first',
      'raised_amount_usd_min': 'first',
-     'round_type_angel': 'sum',
-     'round_type_convertible_note': 'sum',
-     'round_type_debt_financing': 'sum',
-     'round_type_equity_crowdfunding': 'sum',
-     'round_type_grant': 'sum',
-     'round_type_post_ipo_debt': 'sum',
-     'round_type_post_ipo_equity': 'sum',
-     'round_type_private_equity': 'sum',
-     'round_type_product_crowdfunding': 'sum',
-     'round_type_secondary_market': 'sum',
-     'round_type_seed': 'sum',
-     'round_type_undisclosed': 'sum',
-     'round_type_venture': 'sum'}).reset_index()
+     'funding_round_type_angel': 'sum',
+     'funding_round_type_convertible_note': 'sum',
+     'funding_round_type_debt_financing': 'sum',
+     'funding_round_type_equity_crowdfunding': 'sum',
+     'funding_round_type_grant': 'sum',
+     'funding_round_type_post_ipo_debt': 'sum',
+     'funding_round_type_post_ipo_equity': 'sum',
+     'funding_round_type_private_equity': 'sum',
+     'funding_round_type_product_crowdfunding': 'sum',
+     'funding_round_type_secondary_market': 'sum',
+     'funding_round_type_seed': 'sum',
+     'funding_round_type_undisclosed': 'sum',
+     'funding_round_type_venture': 'sum'})
+    venture_df = venture_df.reset_index()
 
     return venture_df
 
@@ -63,12 +65,16 @@ def run_clean_rounds(args):
         config = yaml.load(f)
 
     df = gen_h.read_data(args.input_file)
-    df = filter_columns(df, **config['clean_rounds_data']['filter_columns'])
-    df = gen_h.generate_onehot_features(df, config['clean_rounds_data']
+    df = gen_h.filter_columns(df, **config['clean_rounds_data']['filter_columns'])
+    df = gen_h.generate_onehot_features(df, **config['clean_rounds_data']
     ['generate_onehot_features'])
     df = group_permalink_funding(df)
 
     df.to_csv(args.save)
+
+    # Save copy to S3 Bucket
+    s3 = boto3.client("s3")
+    s3.upload_file(args.save, args.bucket_name, args.output_file_path)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
@@ -76,6 +82,10 @@ if __name__ == '__main__':
     parser.add_argument('--input_file', help='path to csv file with raw data')
     parser.add_argument('--save', default='data/auxiliary/new_rounds_data.csv',
     help='path to where the cleaned dataset should be saved to')
+    parser.add_argument("--bucket_name", default='startup-funding-working-bucket',
+    help="S3 bucket name")
+    parser.add_argument("--output_file_path", default='new_rounds_data.csv',
+    help="output file path of uploaded file")
 
     args = parser.parse_args()
 

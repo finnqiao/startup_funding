@@ -1,4 +1,5 @@
 import logging
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +19,6 @@ def filter_columns(df, column_subset, na_subset):
 
 def generate_onehot_features(df, column):
     """Generate one-hot encoding of selected column"""
-    df[column].value_counts()
     df = pd.concat([df, pd.get_dummies(df[column], prefix=column)], axis=1)
     df = df.drop(column, axis=1)
     return df

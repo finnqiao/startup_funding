@@ -20,7 +20,7 @@ clean_rounds_data:
   generate_onehot_features:
     column: 'funding_round_type'
 
-clean_investor_data:
+clean_investors_data:
   get_unique_investors:
     all_companies_file: 'data/auxiliary/new_companies_data.csv'
 
