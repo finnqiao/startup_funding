@@ -61,3 +61,10 @@
 2019-05-15 16:14:39,138 INFO     RDS:False
 2019-05-15 16:14:39,175 INFO     database created
 2019-05-15 16:14:39,175 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 16:16:45,948 INFO     RDS:True
+2019-05-15 16:16:45,948 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 16:16:47,518 INFO     database created
+2019-05-15 16:16:47,519 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 16:16:48,488 INFO     New user input added
+2019-05-15 16:16:48,734 INFO       user_session_id      user_timestamp  predicted_amount
+0       aba124jd1 2019-05-15 21:16:48           34500.0
