@@ -26,32 +26,45 @@ class Funding_Prediction(Base):
     user_timestamp = Column(DateTime, default=datetime.datetime.utcnow)
     predicted_amount = Column(Float, unique=False, nullable=False)
 
-# class Company_Features(Base):
-#     """
-#     Create a table to store all the url data and generated features.
-#     """
-#
-#     __tablename__ = 'url_features'
-#
-#     url = Column(String(500), primary_key=True, unique=True, nullable=False)
-#     no_of_dots = Column(Integer, unique= False, nullable=False)
-#     no_of_hyphen = Column(Integer, unique= False, nullable=False)
-#     len_of_url = Column(Float, unique= False, nullable=False)
-#     no_of_at = Column(Integer, unique= False, nullable=False)
-#     no_of_double_slash = Column(Integer, unique= False, nullable=False)
-#     no_of_subdir = Column(Integer, unique= False, nullable=False)
-#     no_of__subdomain = Column(Integer, unique= False, nullable=False)
-#     len_of_domain = Column(Integer, unique= False, nullable=False)
-#     no_of_queries = Column(Integer, unique= False, nullable=False)
-#     contains_IP = Column(Integer, unique= False, nullable=False)
-#     presence_of_suspicious_TLD = Column(Integer, unique= False, nullable=False)
-#     create_age = Column(Integer, unique= False, nullable=False)
-#     expiry_age = Column(Integer, unique= False, nullable=False)
-#     update_age = Column(Integer, unique= False, nullable=False)
-#     country = Column(String(100), unique= False, nullable=False)
-#     file_extension = Column(String(100), unique= False, nullable=False)
-#     risk_indicator = Column(Integer, unique= False, nullable=False)
-#     label = Column(Integer, unique= False, nullable=False)
+class Company_Features(Base):
+    """
+    Create a table to store all the generated features for companies after
+    recursive feature elimination.
+    """
+
+    __tablename__ = 'company_features'
+
+    permalink = Column(String(500), primary_key=True, unique=True, nullable=False)
+    funding_rounds = Column(Integer, unique=False, nullable=False)
+    founded_month = Column(Integer, unique=False, nullable=False)
+    founded_quarter = Column(Integer, unique=False, nullable=False)
+    founded_year = Column(Integer, unique=False, nullable=False)
+    country_esp = Column(Integer, unique=False, nullable=False)
+    country_ind = Column(Integer, unique=False, nullable=False)
+    country_other = Column(Integer, unique=False, nullable=False)
+    country_usa = Column(Integer, unique=False, nullable=False)
+    days_to_fund = Column(Integer, unique=False, nullable=False)
+    months_to_fund = Column(Float, unique=False, nullable=False)
+    days_between_rounds = Column(Float, unique=False, nullable=False)
+    months_between_rounds = Column(Float, unique=False, nullable=False)
+    round_type_debt_financing = Column(Integer, unique=False, nullable=False)
+    round_type_post_ipo_debt = Column(Integer, unique=False, nullable=False)
+    round_type_post_ipo_equity = Column(Integer, unique=False, nullable=False)
+    round_type_private_equity = Column(Integer, unique=False, nullable=False)
+    round_type_venture = Column(Integer, unique=False, nullable=False)
+    unique_investors = Column(Integer, unique=False, nullable=False)
+    median_investor_value = Column(Integer, unique=False, nullable=False)
+    no_acquisitions = Column(Integer, unique=False, nullable=False)
+    no_ipos = Column(Integer, unique=False, nullable=False)
+    market_type__biotechnology = Column(Integer, unique=False, nullable=False)
+    market_type__clean_technology = Column(Integer, unique=False, nullable=False)
+    market_type__enterprise_software = Column(Integer, unique=False, nullable=False)
+    market_type__finance = Column(Integer, unique=False, nullable=False)
+    market_type__health_and_wellness = Column(Integer, unique=False, nullable=False)
+    market_type__hospitality = Column(Integer, unique=False, nullable=False)
+    market_type__internet = Column(Integer, unique=False, nullable=False)
+    market_type__mobile = Column(Integer, unique=False, nullable=False)
+    market_type__other = Column(Integer, unique=False, nullable=False)
 
 def get_engine_string(RDS = False):
     """
