@@ -1,5 +1,29 @@
 ingest_data:
-  # how: load_csvs
   load_csvs:
     directory: s3://startup-funding-avc/
     n_cores: 1
+
+clean_companies_data:
+  filter_columns:
+    column_subset: ['permalink', 'name', 'market', 'category_list',
+    'funding_total_usd', 'status', 'country_code', 'funding_rounds',
+    'founded_at', 'founded_month', 'founded_quarter', 'founded_year',
+    'first_funding_at', 'last_funding_at']
+    na_subset: ['market']
+  generate_onehot_features:
+    column: 'status'
+
+clean_rounds_data:
+  filter_columns:
+    column_subset: ['company_permalink', 'funding_round_type', 'raised_amount_usd']
+    na_subset: []
+  generate_onehot_features:
+    column: 'funding_round_type'
+
+clean_investor_data:
+  get_unique_investors:
+    all_companies_file: 'data/auxiliary/new_companies_data.csv'
+
+clean_acquisitions_data:
+  get_acquisition_count:
+    all_companies_file: 'data/auxiliary/new_companies_data.csv'
