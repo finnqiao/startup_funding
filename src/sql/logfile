@@ -1,0 +1,33 @@
+  w2019-05-15 09:40:36,989 INFO     RDS:False
+2019-05-15 09:40:37,021 INFO     database created
+2019-05-15 09:40:37,021 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startupfund-db
+2019-05-15 09:40:45,269 INFO     RDS:False
+2019-05-15 09:40:45,280 INFO     database created
+2019-05-15 09:40:45,280 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startupfund-db
+2019-05-15 09:45:13,835 INFO     RDS:False
+2019-05-15 09:45:13,865 INFO     database created
+2019-05-15 09:45:13,865 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startupfund-db
+2019-05-15 09:47:48,127 INFO     RDS:False
+2019-05-15 09:47:48,155 INFO     database created
+2019-05-15 09:47:48,155 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startupfund-db
+2019-05-15 09:52:27,164 INFO     RDS:False
+2019-05-15 09:52:27,191 INFO     database created
+2019-05-15 09:52:27,191 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startupfund
+2019-05-15 09:53:39,336 INFO     RDS:True
+2019-05-15 09:53:39,337 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startupfund
+2019-05-15 10:01:05,659 INFO     RDS:True
+2019-05-15 10:01:05,660 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startupfund-db
+2019-05-15 10:09:44,913 INFO     RDS:True
+2019-05-15 10:09:44,915 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 10:09:45,572 INFO     database created
+2019-05-15 10:09:45,573 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 10:09:46,073 INFO     New user input added
+2019-05-15 10:09:57,782 INFO     RDS:True
+2019-05-15 10:09:57,782 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 10:09:58,453 INFO     database created
+2019-05-15 10:09:58,454 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 10:10:22,314 INFO     RDS:True
+2019-05-15 10:10:22,314 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 10:10:22,855 INFO     database created
+2019-05-15 10:10:22,855 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
+2019-05-15 10:10:22,858 INFO     New user input added
