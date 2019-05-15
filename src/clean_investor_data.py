@@ -31,7 +31,7 @@ def bin_investors(df):
     return investments_df
 
 def get_unique_investors(df, all_companies_file):
-    """Get unique investors that appear in list of companies in base company data"""
+    """Get number of unique investors that invested in each company and median value"""
     company_df = gen_h.load_data(all_companies_file)
 
     """Get number of unique investors and mean investor bin quality (decile)"""
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--config', help='path to yaml file with configurations')
     parser.add_argument('--input_file', help='path to csv file with raw data')
-    parser.add_argument('--save', default='data/auxiliary/new_investors_df.csv',
+    parser.add_argument('--save', default='data/auxiliary/new_investors_data.csv',
     help='path to where the cleaned dataset should be saved to')
 
     args = parser.parse_args()

@@ -12,6 +12,7 @@ logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 def group_permalink_funding(df):
+    """Generate features based on funding round descriptive statistics"""
     # Get total number of funding rounds for each funding round type.
     round_type_df = df.groupby('company_permalink').agg('sum')
 
@@ -73,7 +74,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--config', help='path to yaml file with configurations')
     parser.add_argument('--input_file', help='path to csv file with raw data')
-    parser.add_argument('--save', default='data/auxiliary/new_rounds_df.csv',
+    parser.add_argument('--save', default='data/auxiliary/new_rounds_data.csv',
     help='path to where the cleaned dataset should be saved to')
 
     args = parser.parse_args()

@@ -12,19 +12,14 @@ import src.helpers.nlp_helpers as nlp_h
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-def read_data(path):
-    """Read csv file in from path after being downloaded from S3"""
-    df = pd.read_csv(path)
-    return df
-
-def filter_columns(df, column_subset, na_subset):
-    """Filter out irrelevant columns and drop if values are NaN for a subset of
-    columns"""
-    df = df[column_subset]
-    df = df.dropna(subset = na_subset)
-    df = df.apply(lambda column: (column.str.lower() if
-    pd.api.types.is_string_dtype(column) else column))
-    return df
+# def filter_columns(df, column_subset, na_subset):
+#     """Filter out irrelevant columns and drop if values are NaN for a subset of
+#     columns"""
+#     df = df[column_subset]
+#     df = df.dropna(subset = na_subset)
+#     df = df.apply(lambda column: (column.str.lower() if
+#     pd.api.types.is_string_dtype(column) else column))
+#     return df
 
 def reduce_market_categories(df):
     """Reduce market categories to top 50 and other with nlp techniques"""
@@ -94,14 +89,14 @@ def reduce_market_categories(df):
 
     return df
 
-def generate_onehot_features(df, column):
-    """Generate one-hot encoding of selected column"""
-    df[column].value_counts()
-
-    df = pd.concat([df, pd.get_dummies(df[column], prefix=column)], axis=1)
-    df = df.drop(column, axis=1)
-
-    return df
+# def generate_onehot_features(df, column):
+#     """Generate one-hot encoding of selected column"""
+#     df[column].value_counts()
+#
+#     df = pd.concat([df, pd.get_dummies(df[column], prefix=column)], axis=1)
+#     df = df.drop(column, axis=1)
+#
+#     return df
 
 def company_country_features(df):
     """Generate one-hot encoding of top countries and others"""
@@ -179,10 +174,10 @@ def run_clean_companies(args):
     with open(args.config, "r") as f:
         config = yaml.load(f)
 
-    df = read_data(args.input_file)
-    df = filter_columns(df, **config['clean_companies']['filter_columns'])
+    df = gen_h.read_data(args.input_file)
+    df = gen_h.filter_columns(df, **config['clean_companies_data']['filter_columns'])
     df = reduce_market_categories(df)
-    df = generate_onehot_features(df, config['clean_companies']
+    df = gen_h.generate_onehot_features(df, config['clean_companies_data']
     ['generate_onehot_features'])
     df = company_country_features(df)
     df = impute_founding_date(df)
@@ -194,7 +189,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--config', help='path to yaml file with configurations')
     parser.add_argument('--input_file', help='path to csv file with raw data')
-    parser.add_argument('--save', default='data/auxiliary',
+    parser.add_argument('--save', default='data/auxiliary/new_companies_data.csv',
     help='path to where the cleaned dataset should be saved to')
 
     args = parser.parse_args()
@@ -202,4 +197,4 @@ if __name__ == '__main__':
     run_clean_companies(args)
 
 # makefile command
-# python src/clean_companies_data.py --config=config/model_config.yml --input_file=data/external/companies.csv --save=data/auxiliary/
+# python src/clean_companies_data.py --config=config/model_config.yml --input_file=data/external/companies.csv --save=data/auxiliary/new_companies_data.csv
