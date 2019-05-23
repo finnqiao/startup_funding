@@ -13,16 +13,17 @@ logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 def aggregate_dataframes(data_path_list):
-    if 'companies' in data_path:
-        companies_df = pd.read_csv(data_path)
-    elif 'investors' in data_path:
-        investors_df = pd.read_csv(data_path)
-    elif 'rounds' in data_path:
-        rounds_df = pd.read_csv(data_path)
-    elif 'acquisitions' in data_path:
-        acquisitions_df = pd.read_csv(data_path)
-    elif 'ipo' in data_path:
-        ipo_df = pd.read_csv(data_path)
+    for data_path in data_path_list:
+        if 'companies' in data_path:
+            companies_df = pd.read_csv(data_path)
+        elif 'investors' in data_path:
+            investors_df = pd.read_csv(data_path)
+        elif 'rounds' in data_path:
+            rounds_df = pd.read_csv(data_path)
+        elif 'acquisitions' in data_path:
+            acquisitions_df = pd.read_csv(data_path)
+        elif 'ipo' in data_path:
+            ipo_df = pd.read_csv(data_path)
 
     # Combine companies_df, rounds_df, investors_df, acquisitions_df, ipo_df
     agg_df = pd.merge(companies_df, rounds_df, how='left', left_on='permalink',
