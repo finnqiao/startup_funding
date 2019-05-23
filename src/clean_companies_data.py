@@ -35,6 +35,11 @@ def reduce_market_categories(df):
     # Example 2: "enterprise" is the first word in "enterprise software"
     # appears in "enterprise 2.0"
 
+    # Second pass at collapsing market categories.
+    # Market category labels are split into character n-grams.
+    # N-gram similarity Dice metric is calculated with intersection/union of
+    # n-gram sets.
+
     for key in top_50_dict.keys():
         # Initialize each key with empty list
         top_50_dict[key] = []
@@ -45,25 +50,12 @@ def reduce_market_categories(df):
                 top_50_dict[key].append(cat)
                 outside_50_markets.remove(cat)
             elif ((len(key.split(' ')) > 1) and (key.split(' ')[1] == 'and')
-            and (key.split(' ')[2] in cat.split(' '))):
+            and (key.split(' ')[2] in cat.split(' '))) and (nlp_h.sim4gram(key, cat) > 0.25):
                 top_50_dict[key].append(cat)
                 outside_50_markets.remove(cat)
 
-    # Check how many categories are left.
-    remainder_outside_50 = outside_50_markets
-
-    # Second pass at collapsing market categories.
-    # Market category labels are split into character n-grams.
-    # N-gram similarity Dice metric is calculated with intersection/union of
-    # n-gram sets.
-    for key in top_50_dict.keys():
-        for cat in remainder_outside_50:
-            if nlp_h.sim4gram(key, cat) > 0.25:
-                top_50_dict[key].append(cat)
-                remainder_outside_50.remove(cat)
-
     # Assign remainder of categories to "Other"
-    top_50_dict['other'] = remainder_outside_50
+    top_50_dict['other'] = outside_50_markets
 
     # Invert keys and values
     category_replace_dict = gen_h.invert_dict(top_50_dict)
@@ -83,20 +75,13 @@ def reduce_market_categories(df):
 
     return df
 
-# def generate_onehot_features(df, column):
-#     """Generate one-hot encoding of selected column"""
-#     df[column].value_counts()
-#
-#     df = pd.concat([df, pd.get_dummies(df[column], prefix=column)], axis=1)
-#     df = df.drop(column, axis=1)
-#
-#     return df
-
 def company_country_features(df):
     """Generate one-hot encoding of top countries and others"""
+    value_counts_list = df['country_code'].value_counts()
+
     #  Countries with startup numbers above global mean.
-    top_countries = list(df['country_code'].value_counts()[df['country_code']
-    .value_counts() > df['country_code'].value_counts().mean()].index)
+    top_countries = list(value_counts_list[value_counts_list >
+    value_counts_list.mean()].index)
 
     # Replace other countries with 'other'.
     df['country_code'] = df['country_code'].fillna('other')
@@ -126,8 +111,7 @@ def impute_founding_date(df):
     # Filling in founded date features based on imputed values.
     df['founded_year'] = df['founded_at'].dt.year
     df['founded_month'] = df['founded_at'].dt.month
-    df['founded_quarter'] = df['founded_month'].map({1:1,2:1,3:1,4:2,5:2,6:2,
-    7:3,8:3,9:3,10:4,11:4,12:4})
+    df['founded_quarter'] = df['founded_month'].dt.to_period('Q')
 
     return df
 
@@ -166,7 +150,7 @@ def run_clean_companies(args):
     with open(args.config, "r") as f:
         config = yaml.load(f)
 
-    df = gen_h.read_data(args.input_file)
+    df = pd.read_csv(args.input_file)
     df = gen_h.filter_columns(df, **config['clean_companies_data']['filter_columns'])
     df = reduce_market_categories(df)
     df = gen_h.generate_onehot_features(df, **config['clean_companies_data']

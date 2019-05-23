@@ -64,7 +64,7 @@ def run_clean_rounds(args):
     with open(args.config, "r") as f:
         config = yaml.load(f)
 
-    df = gen_h.read_data(args.input_file)
+    df = pd.read_csv(args.input_file)
     df = gen_h.filter_columns(df, **config['clean_rounds_data']['filter_columns'])
     df = gen_h.generate_onehot_features(df, **config['clean_rounds_data']
     ['generate_onehot_features'])

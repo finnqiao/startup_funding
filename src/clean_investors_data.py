@@ -34,11 +34,13 @@ def bin_investors(df):
 
 def get_unique_investors(df, all_companies_file):
     """Get number of unique investors that invested in each company and median value"""
-    company_df = gen_h.read_data(all_companies_file)
+    company_df = pd.read_csv(all_companies_file)
 
-    """Get number of unique investors and mean investor bin quality (decile)"""
+    # Get number of unique investors and mean investor bin quality (decile)
     all_companies_list = list(company_df['permalink'].unique())
 
+    # Filtes unique investors such that only those investing in companies listed in
+    # the initial companies df are included
     unique_investors_df = df.groupby('company_permalink').agg(
     {'investor_permalink':pd.Series.nunique,
     'bins_amount': np.median}).reset_index()
@@ -65,7 +67,7 @@ def run_clean_investors(args):
     with open(args.config, "r") as f:
         config = yaml.load(f)
 
-    df = gen_h.read_data(args.input_file)
+    df = pd.read_csv(args.input_file)
     df = bin_investors(df)
     df = get_unique_investors(df, **config['clean_investors_data']['get_unique_investors'])
 

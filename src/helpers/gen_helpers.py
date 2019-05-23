@@ -3,11 +3,6 @@ import pandas as pd
 
 logger = logging.getLogger(__name__)
 
-def read_data(path):
-    """Read csv file in from path after being downloaded from S3"""
-    df = pd.read_csv(path)
-    return df
-
 def filter_columns(df, column_subset, na_subset):
     """Filter out irrelevant columns and drop if values are NaN for a subset of
     columns"""
@@ -24,5 +19,14 @@ def generate_onehot_features(df, column):
     return df
 
 def invert_dict(d):
-    """Function to invert a dictionary of lists so list values become keys."""
+    """Function to invert a dictionary of lists so list values become keys.
+    Args:
+        d (dict): Dictionary of lists
+    Returns: Dictionary with list values expanded into keys and keys becoming values
+
+    Example:
+        >>> d = {1:[a,b], 2:[c,d]}
+        >>> print(invert_dict(d))
+        {a:1, b:1, c:2, d:2}
+    """
     return dict( (v,k) for k in d for v in d[k] )

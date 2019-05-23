@@ -16,7 +16,7 @@ def get_acquisition_count(df, all_companies_file):
     """Aggregates acquisition by acquirer and creates new dataframe for
     acquisition count"""
     # Create list of acquired companies in original company dataset
-    company_df = gen_h.read_data(all_companies_file)
+    company_df = pd.read_csv(all_companies_file)
     all_companies_list = list(company_df['permalink'].unique())
     acquired_companies_list = list(df['company_permalink'].unique())
     acquirer_companies_list = list(df['acquirer_permalink'].unique())
@@ -50,15 +50,16 @@ def run_clean_acquisitions(args):
     with open(args.config, "r") as f:
         config = yaml.load(f)
 
-    df = gen_h.read_data(args.input_file)
+    df = pd.read_csv(args.input_file)
     df = get_acquisition_count(df, **config['clean_acquisitions_data']
     ['get_acquisition_count'])
 
     df.to_csv(args.save)
 
     # Save copy to S3 Bucket
-    s3 = boto3.client("s3")
-    s3.upload_file(args.save, args.bucket_name, args.output_file_path)
+    if args.bucket_name != None:
+        s3 = boto3.client("s3")
+        s3.upload_file(args.save, args.bucket_name, args.output_file_path)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")

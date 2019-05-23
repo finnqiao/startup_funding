@@ -69,6 +69,7 @@ class Company_Features(Base):
 def get_engine_string(RDS = False):
     """
     Get the engine string for RDS, get the path of sqlite database schema if RDS = False.
+    Environment variables for SQL connection required if saved in RDS.
     Args:
     RDS(bool): Default False. If False: create the database schema locally in sqlite.
                               If True: create the database schema in RDS.
@@ -124,6 +125,6 @@ if __name__ == "__main__":
     logger.info("New user input added")
 
     # check if the new url was inserted successfully
-    query = "SELECT * FROM funding_prediction"
+    query = "SELECT * FROM funding_prediction LIMIT 1"
     df = pd.read_sql(query, con=engine)
-    logger.info(df)
+    logger.debug(df)

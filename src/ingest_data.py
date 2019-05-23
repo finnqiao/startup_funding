@@ -18,13 +18,14 @@ def get_s3_file_names(s3_prefix_path):
     Returns: List of all S3 file locations
     """
 
-    regex = regex = r"s3:\/\/([\w._-]+)\/"
+    # Parse out s3 bucket name using regex from input string
+    regex = r"s3:\/\/([\w._-]+)\/"
     m = re.match(regex, s3_prefix_path)
     s3bucket_name = m.group(1)
 
     # Get s3 bucket handle
     s3 = boto3.resource('s3')
-    s3bucket = s3.Bucket('startup-funding-avc')
+    s3bucket = s3.Bucket(s3bucket_name)
 
     files = []
     for object in s3bucket.objects.all():
@@ -48,23 +49,6 @@ def get_file_names(top_dir):
         list_of_files = glob.glob(top_dir+'/*.csv', recursive=True)
 
     return list_of_files
-
-
-def load_csv(path, **kwargs):
-    """Wrapper function for `pandas.read_csv()` method to enable multiprocessing.
-    """
-    return pd.read_csv(path, **kwargs)
-
-
-def load_column_as_list(path, column=0, **kwargs):
-
-    for k in kwargs:
-        logger.debug(kwargs[k])
-
-    df = pd.read_csv(path, **kwargs)
-
-    return df[column].tolist()
-
 
 def load_csvs(file_names=None, directory=None):
     """Loads multiple CSVs into a single Pandas dataframe.
