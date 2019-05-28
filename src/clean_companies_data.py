@@ -111,7 +111,7 @@ def impute_founding_date(df):
     # Filling in founded date features based on imputed values.
     df['founded_year'] = df['founded_at'].dt.year
     df['founded_month'] = df['founded_at'].dt.month
-    df['founded_quarter'] = df['founded_month'].dt.to_period('Q')
+    df['founded_quarter'] = df['founded_at'].dt.to_period('Q')
 
     return df
 

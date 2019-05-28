@@ -26,7 +26,7 @@ def run_ipo(args):
     with open(args.config, "r") as f:
         config = yaml.load(f)
 
-    df = pd.read_csv(args.input_file)
+    df = pd.read_csv(args.input_file, index_col=0)
     df.columns = ['year','no_ipos']
 
     df.to_csv(args.save)

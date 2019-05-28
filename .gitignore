@@ -13,7 +13,7 @@ tryb_expenses.ipynb
 .ipynb_checkpoints/
 data/*
 !data/sample/
-!data/auxiliary
+data/auxiliary
 models/*
 test/model/test/*
 !.gitkeep
