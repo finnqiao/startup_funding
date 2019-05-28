@@ -1,7 +1,6 @@
 ingest_data:
   load_csvs:
     directory: s3://startup-funding-avc/
-    n_cores: 1
 
 clean_companies_data:
   filter_columns:

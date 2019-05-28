@@ -50,6 +50,11 @@ def get_file_names(top_dir):
 
     return list_of_files
 
+def load_csv(path, **kwargs):
+    """Wrapper function for `pandas.read_csv()` method to enable multiprocessing.
+    """
+    return pd.read_csv(path, **kwargs)
+
 def load_csvs(file_names=None, directory=None):
     """Loads multiple CSVs into a single Pandas dataframe.
     Given either a directory name (which can be local or an s3 bucket prefix)
@@ -93,7 +98,6 @@ def run_loading(args):
     for df in df_list:
         df[1].to_csv(args.save + df[0])
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--config', help='path to yaml file with configurations')
@@ -106,4 +110,4 @@ if __name__ == '__main__':
     run_loading(args)
 
 # makefile command
-# python src/ingest_data.py --config=config/model_config.yml --save=data/sample/
+# python src/ingest_data.py --config=config/model_config.yml --save=data/external/
