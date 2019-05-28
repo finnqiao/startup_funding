@@ -59,4 +59,9 @@ data/auxiliary/aggregated_data.csv: data/auxiliary/new_companies_data.csv data/a
 
 merge_data: data/auxiliary/aggregated_data.csv
 
-all: |data clean_data merge_data
+data/models/sample_model.pkl: config/model_config.yml data/auxiliary/aggregated_data.csv
+	python src/train_model.py --config=config/model_config.yml --input_file_path=data/auxiliary/aggregated_data.csv --save=models/sample_model.pkl
+
+model: data/models/sample_model.pkl
+
+all: |data clean_data merge_data model
