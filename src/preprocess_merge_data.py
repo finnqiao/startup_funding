@@ -38,6 +38,7 @@ def aggregate_dataframes(data_path_list):
         'last_funding_at','company_permalink_x', 'company_permalink_y', 'year'],axis=1)
 
     agg_df = agg_df.fillna(0)
+    logging.info('Final shape of merged dataframe is ', agg_df.shape)
     return agg_df
 
 def run_merging(args):
@@ -58,10 +59,12 @@ def run_merging(args):
     df = gen_h.generate_onehot_features(df, **config['preprocess_merge_data']['generate_onehot_features'])
 
     df.to_csv(args.save)
+    logging.debug('Working copy was saved to %s', args.save)
 
     # Save copy to S3 Bucket
     s3 = boto3.client("s3")
     s3.upload_file(args.save, args.bucket_name, args.output_file_path)
+    logging.debug('Working copy was saved to bucket %s', bucket_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")

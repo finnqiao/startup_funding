@@ -25,9 +25,13 @@ def data_filter(file_path, selected_features):
     Returns:
         df (dataframe): Dataframe with filtered features
     """
+    logging.debug('Number of selected features is %s', len(selected_features))
     df = pd.read_csv(file_path)
+    df = df[selected_features]
 
-    return df[selected_features]
+    logging.debug('Number of features in filtered data is %s', len(list(df.columns)))
+
+    return df
 
 def fit_model(df, target, test_size, hyperparams):
     """Splits data into train and test and runs a random forest which has been
@@ -69,11 +73,12 @@ def run_training(args):
     # Save pickle locally to models folder
     with open(args.save, "wb") as f:
         pickle.dump(model, f)
-    logger.info("Trained model object saved to %s", args.save)
+    logger.debug("Trained model object saved to %s", args.save)
 
     # Save pickle to S3 bucket
     s3 = boto3.client("s3")
     s3.upload_file(args.save, args.bucket_name, args.output_file_path)
+    logging.debug('Working model was saved to bucket %s', bucket_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
