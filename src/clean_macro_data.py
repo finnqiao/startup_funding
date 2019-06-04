@@ -9,7 +9,8 @@ import boto3
 
 from helpers import gen_helpers as gen_h
 
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def run_ipo(args):
@@ -28,12 +29,15 @@ def run_ipo(args):
 
     df = pd.read_csv(args.input_file, index_col=0)
     df.columns = ['year','no_ipos']
+    logging.info('There are %s years of ipo data', df.shape[0])
 
     df.to_csv(args.save)
+    logging.debug('Working copy was saved to %s', args.save)
 
     # Save copy to S3 Bucket
     s3 = boto3.client("s3")
     s3.upload_file(args.save, args.bucket_name, args.output_file_path)
+    logging.debug('Working copy was saved to bucket %s', bucket_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
