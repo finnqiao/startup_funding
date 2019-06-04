@@ -9,7 +9,8 @@ import boto3
 
 from helpers import gen_helpers as gen_h
 
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def get_acquisition_count(df, all_companies_file):
@@ -20,6 +21,8 @@ def get_acquisition_count(df, all_companies_file):
     all_companies_list = list(company_df['permalink'].unique())
     acquired_companies_list = list(df['company_permalink'].unique())
     acquirer_companies_list = list(df['acquirer_permalink'].unique())
+    logging.info('There are %s number of acquired companies', len(acquired_companies_list))
+    logging.info('There are %s number of acquirer companies', len(acquirer_companies_list))
 
     acquired_companies_list = [permalink for permalink in acquired_companies_list
     if permalink in all_companies_list]
@@ -55,11 +58,13 @@ def run_clean_acquisitions(args):
     ['get_acquisition_count'])
 
     df.to_csv(args.save)
+    logging.debug('Working copy was saved to %s', args.save)
 
     # Save copy to S3 Bucket
     if args.bucket_name != None:
         s3 = boto3.client("s3")
         s3.upload_file(args.save, args.bucket_name, args.output_file_path)
+        logging.debug('Working copy was saved to bucket %s', bucket_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
