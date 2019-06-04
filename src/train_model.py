@@ -82,7 +82,7 @@ if __name__ == '__main__':
         help="input file path to aggregated data")
     parser.add_argument('--save', default='models/sample_model.pkl',
         help='path to where the model should be saved to')
-    parser.add_argument("--bucket_name", default='startup-funding-working-bucket',
+    parser.add_argument("--bucket_name", default='startu    p-funding-working-bucket',
         help="S3 bucket name")
     parser.add_argument("--output_file_path", default='sample_model.pkl',
         help="output file path of uploaded file in s3 bucket")
@@ -92,4 +92,4 @@ if __name__ == '__main__':
     run_training(args)
 
 # makefile command
-# python src/train_model.py --config=config/model_config.yml --save=models/sample_model.pkl
+# python src/train_model.py --config=config/model_config.yml --input_file_path=data/auxiliary/aggregated_data.csv --save=models/sample_model.pkl

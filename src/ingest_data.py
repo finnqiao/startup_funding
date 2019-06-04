@@ -22,6 +22,7 @@ def get_s3_file_names(s3_prefix_path):
     regex = r"s3:\/\/([\w._-]+)\/"
     m = re.match(regex, s3_prefix_path)
     s3bucket_name = m.group(1)
+    logging.info('Bucket name parsed out is %s', s3bucket_name)
 
     # Get s3 bucket handle
     s3 = boto3.resource('s3')
@@ -30,6 +31,7 @@ def get_s3_file_names(s3_prefix_path):
     files = []
     for object in s3bucket.objects.all():
         path_to_file = os.path.join("s3://%s" % s3bucket_name, object.key)
+        logging.debug('File with path %s is being added', path_to_file)
         files.append(path_to_file)
 
     return files
@@ -97,11 +99,11 @@ def run_loading(args):
 
     for df in df_list:
         df[1].to_csv(args.save + df[0])
+        logging.debug('Dataframe saved to %s', args.save)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--config', help='path to yaml file with configurations')
-
     parser.add_argument('--save', default='data/external/',
     help='Path to where the dataset should be saved to')
 

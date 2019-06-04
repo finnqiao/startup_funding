@@ -12,13 +12,16 @@ import boto3
 from helpers import gen_helpers as gen_h
 from helpers import nlp_helpers as nlp_h
 
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def reduce_market_categories(df):
     """Reduce market categories to top 50 and other with nlp techniques"""
     # Save list of all market types.
     market_types = list(df['market'].unique())
+    logging.info('%s of total market types in raw dataset, to be reduced to 50',
+    len(market_types))
 
     # Save list of top 50 market types by company counts.
     top_50_markets = list(df['market'].value_counts().nlargest(50).index)
@@ -42,6 +45,7 @@ def reduce_market_categories(df):
 
     for key in top_50_dict.keys():
         # Initialize each key with empty list
+        logging.info('Top 50 markets include %s', key)
         top_50_dict[key] = []
         for cat in outside_50_markets:
             # Check if first word is present in category, add to key value list,
@@ -82,6 +86,7 @@ def company_country_features(df):
     #  Countries with startup numbers above global mean.
     top_countries = list(value_counts_list[value_counts_list >
     value_counts_list.mean()].index)
+    logging.info('Top countries for venture are ' + ' '.join(top_countries))
 
     # Replace other countries with 'other'.
     df['country_code'] = df['country_code'].fillna('other')
@@ -161,10 +166,12 @@ def run_clean_companies(args):
 
     # Save working copy to local
     df.to_csv(args.save)
+    logging.debug('Working copy was saved to %s', args.save)
 
     # Save copy to S3 Bucket
     s3 = boto3.client("s3")
     s3.upload_file(args.save, args.bucket_name, args.output_file_path)
+    logging.debug('Working copy was saved to bucket %s', bucket_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
