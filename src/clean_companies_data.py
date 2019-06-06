@@ -27,6 +27,7 @@ def reduce_market_categories(df):
     top_50_markets = list(df['market'].value_counts().nlargest(50).index)
 
     outside_50_markets = [x for x in market_types if x not in top_50_markets]
+    outside_50_markets = [x for x in outside_50_markets if str(x) != 'nan']
 
     # Create dictionary of top 50 markets.
     top_50_dict = dict.fromkeys(top_50_markets)
@@ -42,8 +43,7 @@ def reduce_market_categories(df):
     # Market category labels are split into character n-grams.
     # N-gram similarity Dice metric is calculated with intersection/union of
     # n-gram sets.
-
-    for key in top_50_dict.keys():
+    for key in list(top_50_dict.keys()):
         # Initialize each key with empty list
         logging.info('Top 50 markets include %s', key)
         top_50_dict[key] = []

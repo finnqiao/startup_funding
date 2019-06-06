@@ -97,3 +97,535 @@
 2019-06-03 22:02:58,284 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
 2019-06-03 22:02:58,452 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "POST /new_companies_data.csv?uploadId=5Iqd2yw.z1WqZzY87IUfgSYbU58of5Ka3r6WYjvwT5p6OWXHF_1bhlQI23kcuhu_zLH6T5zjmH4QO49Yuj2zGgRESMV3UhJgZEc3Z8tl6OE- HTTP/1.1" 200 None
 2019-06-03 22:02:58,491 DEBUG    Releasing acquire 0/None
+2019-06-06 09:23:16,143 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:23:16,158 INFO     Top 50 markets include Software
+2019-06-06 09:24:59,857 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:24:59,865 INFO     Top 50 markets include Software
+2019-06-06 09:26:37,209 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:26:37,221 INFO     Top 50 markets include Software
+2019-06-06 09:29:03,169 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:29:03,182 INFO     Top 50 markets include Software
+2019-06-06 09:29:43,179 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:29:43,192 INFO     Top 50 markets include Software
+2019-06-06 09:39:13,269 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:39:13,280 INFO     Top 50 markets include Software
+2019-06-06 09:41:28,797 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:41:28,807 INFO     Top 50 markets include Software
+2019-06-06 09:41:28,808 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:41:28,808 INFO     Top 50 markets include Mobile
+2019-06-06 09:41:28,810 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:41:28,810 INFO     Top 50 markets include Curated Web
+2019-06-06 09:41:28,812 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:41:28,813 INFO     Top 50 markets include Health Care
+2019-06-06 09:41:28,814 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:41:28,816 INFO     Top 50 markets include Games
+2019-06-06 09:41:28,817 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:41:28,818 INFO     Top 50 markets include Advertising
+2019-06-06 09:41:28,819 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:41:28,821 INFO     Top 50 markets include Social Media
+2019-06-06 09:41:28,823 INFO     Top 50 markets include Finance
+2019-06-06 09:41:28,824 INFO     Top 50 markets include Education
+2019-06-06 09:41:28,825 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:41:28,826 INFO     Top 50 markets include Analytics
+2019-06-06 09:41:28,827 INFO     Top 50 markets include Security
+2019-06-06 09:41:28,828 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:41:28,829 INFO     Top 50 markets include Consulting
+2019-06-06 09:41:28,832 INFO     Top 50 markets include Hospitality
+2019-06-06 09:41:28,833 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:41:28,834 INFO     Top 50 markets include Fashion
+2019-06-06 09:41:28,835 INFO     Top 50 markets include Real Estate
+2019-06-06 09:41:28,835 INFO     Top 50 markets include News
+2019-06-06 09:41:28,836 INFO     Top 50 markets include Travel
+2019-06-06 09:41:28,836 INFO     Top 50 markets include Messaging
+2019-06-06 09:41:28,838 INFO     Top 50 markets include Music
+2019-06-06 09:41:28,838 INFO     Top 50 markets include Search
+2019-06-06 09:41:28,839 INFO     Top 50 markets include SaaS
+2019-06-06 09:41:28,840 INFO     Top 50 markets include Medical
+2019-06-06 09:41:28,840 INFO     Top 50 markets include Sports
+2019-06-06 09:41:28,841 INFO     Top 50 markets include Technology
+2019-06-06 09:41:28,841 INFO     Top 50 markets include Apps
+2019-06-06 09:41:28,842 INFO     Top 50 markets include Internet
+2019-06-06 09:41:28,843 INFO     Top 50 markets include Photography
+2019-06-06 09:41:28,843 INFO     Top 50 markets include Entertainment
+2019-06-06 09:41:28,844 INFO     Top 50 markets include Video
+2019-06-06 09:41:28,844 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:41:28,845 INFO     Top 50 markets include Networking
+2019-06-06 09:41:28,846 INFO     Top 50 markets include Automotive
+2019-06-06 09:41:28,847 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:41:28,848 INFO     Top 50 markets include Public Relations
+2019-06-06 09:41:28,849 INFO     Top 50 markets include Transportation
+2019-06-06 09:41:28,850 INFO     Top 50 markets include Design
+2019-06-06 09:41:28,850 INFO     Top 50 markets include Big Data
+2019-06-06 09:41:28,851 INFO     Top 50 markets include Startups
+2019-06-06 09:41:28,851 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:41:28,852 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:41:28,852 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:42:03,153 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:42:03,166 INFO     Top 50 markets include Software
+2019-06-06 09:42:03,167 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:42:03,168 INFO     Top 50 markets include Mobile
+2019-06-06 09:42:03,169 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:42:03,169 INFO     Top 50 markets include Curated Web
+2019-06-06 09:42:03,170 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:42:03,171 INFO     Top 50 markets include Health Care
+2019-06-06 09:42:03,172 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:42:03,173 INFO     Top 50 markets include Games
+2019-06-06 09:42:03,174 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:42:03,175 INFO     Top 50 markets include Advertising
+2019-06-06 09:42:03,175 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:42:03,176 INFO     Top 50 markets include Social Media
+2019-06-06 09:42:03,177 INFO     Top 50 markets include Finance
+2019-06-06 09:42:03,178 INFO     Top 50 markets include Education
+2019-06-06 09:42:03,178 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:42:03,179 INFO     Top 50 markets include Analytics
+2019-06-06 09:42:03,180 INFO     Top 50 markets include Security
+2019-06-06 09:42:03,181 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:42:03,181 INFO     Top 50 markets include Consulting
+2019-06-06 09:42:03,182 INFO     Top 50 markets include Hospitality
+2019-06-06 09:42:03,183 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:42:03,184 INFO     Top 50 markets include Fashion
+2019-06-06 09:42:03,184 INFO     Top 50 markets include Real Estate
+2019-06-06 09:42:03,185 INFO     Top 50 markets include News
+2019-06-06 09:42:03,186 INFO     Top 50 markets include Travel
+2019-06-06 09:42:03,187 INFO     Top 50 markets include Messaging
+2019-06-06 09:42:03,187 INFO     Top 50 markets include Music
+2019-06-06 09:42:03,188 INFO     Top 50 markets include Search
+2019-06-06 09:42:03,188 INFO     Top 50 markets include SaaS
+2019-06-06 09:42:03,188 INFO     Top 50 markets include Medical
+2019-06-06 09:42:03,189 INFO     Top 50 markets include Technology
+2019-06-06 09:42:03,189 INFO     Top 50 markets include Sports
+2019-06-06 09:42:03,190 INFO     Top 50 markets include Apps
+2019-06-06 09:42:03,191 INFO     Top 50 markets include Internet
+2019-06-06 09:42:03,191 INFO     Top 50 markets include Photography
+2019-06-06 09:42:03,192 INFO     Top 50 markets include Entertainment
+2019-06-06 09:42:03,192 INFO     Top 50 markets include Video
+2019-06-06 09:42:03,193 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:42:03,193 INFO     Top 50 markets include Networking
+2019-06-06 09:42:03,194 INFO     Top 50 markets include Automotive
+2019-06-06 09:42:03,195 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:42:03,196 INFO     Top 50 markets include Public Relations
+2019-06-06 09:42:03,196 INFO     Top 50 markets include Transportation
+2019-06-06 09:42:03,197 INFO     Top 50 markets include Design
+2019-06-06 09:42:03,198 INFO     Top 50 markets include Big Data
+2019-06-06 09:42:03,198 INFO     Top 50 markets include Startups
+2019-06-06 09:42:03,199 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:42:03,199 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:42:03,200 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:42:46,711 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:42:46,721 INFO     Top 50 markets include Software
+2019-06-06 09:42:46,722 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:42:46,723 INFO     Top 50 markets include Mobile
+2019-06-06 09:42:46,723 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:42:46,724 INFO     Top 50 markets include Curated Web
+2019-06-06 09:42:46,725 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:42:46,725 INFO     Top 50 markets include Health Care
+2019-06-06 09:42:46,726 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:42:46,727 INFO     Top 50 markets include Games
+2019-06-06 09:42:46,728 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:42:46,729 INFO     Top 50 markets include Advertising
+2019-06-06 09:42:46,730 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:42:46,731 INFO     Top 50 markets include Social Media
+2019-06-06 09:42:46,733 INFO     Top 50 markets include Finance
+2019-06-06 09:42:46,733 INFO     Top 50 markets include Education
+2019-06-06 09:42:46,734 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:42:46,734 INFO     Top 50 markets include Analytics
+2019-06-06 09:42:46,735 INFO     Top 50 markets include Security
+2019-06-06 09:42:46,735 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:42:46,736 INFO     Top 50 markets include Consulting
+2019-06-06 09:42:46,736 INFO     Top 50 markets include Hospitality
+2019-06-06 09:42:46,737 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:42:46,738 INFO     Top 50 markets include Fashion
+2019-06-06 09:42:46,738 INFO     Top 50 markets include Real Estate
+2019-06-06 09:42:46,739 INFO     Top 50 markets include News
+2019-06-06 09:42:46,739 INFO     Top 50 markets include Travel
+2019-06-06 09:42:46,740 INFO     Top 50 markets include Messaging
+2019-06-06 09:42:46,740 INFO     Top 50 markets include Music
+2019-06-06 09:42:46,741 INFO     Top 50 markets include Search
+2019-06-06 09:42:46,741 INFO     Top 50 markets include SaaS
+2019-06-06 09:42:46,742 INFO     Top 50 markets include Medical
+2019-06-06 09:42:46,742 INFO     Top 50 markets include Technology
+2019-06-06 09:42:46,743 INFO     Top 50 markets include Sports
+2019-06-06 09:42:46,743 INFO     Top 50 markets include Apps
+2019-06-06 09:42:46,744 INFO     Top 50 markets include Internet
+2019-06-06 09:42:46,745 INFO     Top 50 markets include Photography
+2019-06-06 09:42:46,745 INFO     Top 50 markets include Entertainment
+2019-06-06 09:42:46,746 INFO     Top 50 markets include Video
+2019-06-06 09:42:46,747 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:42:46,747 INFO     Top 50 markets include Networking
+2019-06-06 09:42:46,747 INFO     Top 50 markets include Automotive
+2019-06-06 09:42:46,748 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:42:46,749 INFO     Top 50 markets include Public Relations
+2019-06-06 09:42:46,749 INFO     Top 50 markets include Transportation
+2019-06-06 09:42:46,750 INFO     Top 50 markets include Design
+2019-06-06 09:42:46,750 INFO     Top 50 markets include Big Data
+2019-06-06 09:42:46,751 INFO     Top 50 markets include Startups
+2019-06-06 09:42:46,751 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:42:46,752 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:42:46,752 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:47:08,467 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:47:08,478 INFO     Top 50 markets include Software
+2019-06-06 09:47:08,479 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:47:08,480 INFO     Top 50 markets include Mobile
+2019-06-06 09:47:08,480 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:47:08,481 INFO     Top 50 markets include Curated Web
+2019-06-06 09:47:08,482 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:47:08,483 INFO     Top 50 markets include Health Care
+2019-06-06 09:47:08,484 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:47:08,485 INFO     Top 50 markets include Games
+2019-06-06 09:47:08,486 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:47:08,486 INFO     Top 50 markets include Advertising
+2019-06-06 09:47:08,487 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:47:08,488 INFO     Top 50 markets include Social Media
+2019-06-06 09:47:08,489 INFO     Top 50 markets include Finance
+2019-06-06 09:47:08,490 INFO     Top 50 markets include Education
+2019-06-06 09:47:08,490 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:47:08,491 INFO     Top 50 markets include Analytics
+2019-06-06 09:47:08,491 INFO     Top 50 markets include Security
+2019-06-06 09:47:08,492 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:47:08,493 INFO     Top 50 markets include Consulting
+2019-06-06 09:47:08,494 INFO     Top 50 markets include Hospitality
+2019-06-06 09:47:08,494 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:47:08,495 INFO     Top 50 markets include Fashion
+2019-06-06 09:47:08,496 INFO     Top 50 markets include Real Estate
+2019-06-06 09:47:08,497 INFO     Top 50 markets include News
+2019-06-06 09:47:08,498 INFO     Top 50 markets include Travel
+2019-06-06 09:47:08,499 INFO     Top 50 markets include Messaging
+2019-06-06 09:47:08,500 INFO     Top 50 markets include Music
+2019-06-06 09:47:08,501 INFO     Top 50 markets include Search
+2019-06-06 09:47:08,501 INFO     Top 50 markets include SaaS
+2019-06-06 09:47:08,502 INFO     Top 50 markets include Medical
+2019-06-06 09:47:08,502 INFO     Top 50 markets include Sports
+2019-06-06 09:47:08,503 INFO     Top 50 markets include Technology
+2019-06-06 09:47:08,503 INFO     Top 50 markets include Apps
+2019-06-06 09:47:08,504 INFO     Top 50 markets include Internet
+2019-06-06 09:47:08,504 INFO     Top 50 markets include Photography
+2019-06-06 09:47:08,505 INFO     Top 50 markets include Entertainment
+2019-06-06 09:47:08,505 INFO     Top 50 markets include Video
+2019-06-06 09:47:08,506 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:47:08,506 INFO     Top 50 markets include Networking
+2019-06-06 09:47:08,506 INFO     Top 50 markets include Automotive
+2019-06-06 09:47:08,507 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:47:08,508 INFO     Top 50 markets include Public Relations
+2019-06-06 09:47:08,508 INFO     Top 50 markets include Transportation
+2019-06-06 09:47:08,509 INFO     Top 50 markets include Design
+2019-06-06 09:47:08,509 INFO     Top 50 markets include Big Data
+2019-06-06 09:47:08,510 INFO     Top 50 markets include Startups
+2019-06-06 09:47:08,510 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:47:08,511 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:47:08,511 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:47:08,620 INFO     Top countries for venture are USA GBR CAN CHN DEU FRA IND ISR ESP
+2019-06-06 09:47:31,424 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:47:31,433 INFO     Top 50 markets include Software
+2019-06-06 09:47:31,434 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:47:31,435 INFO     Top 50 markets include Mobile
+2019-06-06 09:47:31,436 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:47:31,436 INFO     Top 50 markets include Curated Web
+2019-06-06 09:47:31,437 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:47:31,439 INFO     Top 50 markets include Health Care
+2019-06-06 09:47:31,440 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:47:31,441 INFO     Top 50 markets include Games
+2019-06-06 09:47:31,442 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:47:31,443 INFO     Top 50 markets include Advertising
+2019-06-06 09:47:31,444 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:47:31,446 INFO     Top 50 markets include Social Media
+2019-06-06 09:47:31,448 INFO     Top 50 markets include Finance
+2019-06-06 09:47:31,449 INFO     Top 50 markets include Education
+2019-06-06 09:47:31,449 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:47:31,450 INFO     Top 50 markets include Analytics
+2019-06-06 09:47:31,451 INFO     Top 50 markets include Security
+2019-06-06 09:47:31,451 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:47:31,452 INFO     Top 50 markets include Consulting
+2019-06-06 09:47:31,453 INFO     Top 50 markets include Hospitality
+2019-06-06 09:47:31,453 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:47:31,454 INFO     Top 50 markets include Fashion
+2019-06-06 09:47:31,454 INFO     Top 50 markets include Real Estate
+2019-06-06 09:47:31,455 INFO     Top 50 markets include News
+2019-06-06 09:47:31,456 INFO     Top 50 markets include Travel
+2019-06-06 09:47:31,456 INFO     Top 50 markets include Messaging
+2019-06-06 09:47:31,457 INFO     Top 50 markets include Music
+2019-06-06 09:47:31,457 INFO     Top 50 markets include Search
+2019-06-06 09:47:31,458 INFO     Top 50 markets include SaaS
+2019-06-06 09:47:31,458 INFO     Top 50 markets include Medical
+2019-06-06 09:47:31,459 INFO     Top 50 markets include Technology
+2019-06-06 09:47:31,459 INFO     Top 50 markets include Sports
+2019-06-06 09:47:31,460 INFO     Top 50 markets include Apps
+2019-06-06 09:47:31,460 INFO     Top 50 markets include Internet
+2019-06-06 09:47:31,461 INFO     Top 50 markets include Photography
+2019-06-06 09:47:31,461 INFO     Top 50 markets include Entertainment
+2019-06-06 09:47:31,462 INFO     Top 50 markets include Video
+2019-06-06 09:47:31,462 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:47:31,462 INFO     Top 50 markets include Networking
+2019-06-06 09:47:31,463 INFO     Top 50 markets include Automotive
+2019-06-06 09:47:31,463 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:47:31,464 INFO     Top 50 markets include Public Relations
+2019-06-06 09:47:31,465 INFO     Top 50 markets include Transportation
+2019-06-06 09:47:31,465 INFO     Top 50 markets include Design
+2019-06-06 09:47:31,466 INFO     Top 50 markets include Big Data
+2019-06-06 09:47:31,466 INFO     Top 50 markets include Startups
+2019-06-06 09:47:31,467 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:47:31,467 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:47:31,468 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:47:31,570 INFO     Top countries for venture are USA GBR CAN CHN DEU FRA IND ISR ESP
+2019-06-06 09:48:11,418 DEBUG    CACHEDIR=/Users/finn/.matplotlib
+2019-06-06 09:48:11,437 DEBUG    Using fontManager instance from /Users/finn/.matplotlib/fontlist-v300.json
+2019-06-06 09:48:11,647 DEBUG    Loaded backend module://ipykernel.pylab.backend_inline version unknown.
+2019-06-06 09:48:51,577 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:48:51,587 INFO     Top 50 markets include Software
+2019-06-06 09:48:51,588 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:48:51,589 INFO     Top 50 markets include Mobile
+2019-06-06 09:48:51,590 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:48:51,590 INFO     Top 50 markets include Curated Web
+2019-06-06 09:48:51,591 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:48:51,592 INFO     Top 50 markets include Health Care
+2019-06-06 09:48:51,594 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:48:51,595 INFO     Top 50 markets include Games
+2019-06-06 09:48:51,596 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:48:51,597 INFO     Top 50 markets include Advertising
+2019-06-06 09:48:51,598 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:48:51,599 INFO     Top 50 markets include Social Media
+2019-06-06 09:48:51,600 INFO     Top 50 markets include Finance
+2019-06-06 09:48:51,600 INFO     Top 50 markets include Education
+2019-06-06 09:48:51,601 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:48:51,602 INFO     Top 50 markets include Analytics
+2019-06-06 09:48:51,603 INFO     Top 50 markets include Security
+2019-06-06 09:48:51,604 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:48:51,605 INFO     Top 50 markets include Consulting
+2019-06-06 09:48:51,606 INFO     Top 50 markets include Hospitality
+2019-06-06 09:48:51,607 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:48:51,609 INFO     Top 50 markets include Fashion
+2019-06-06 09:48:51,610 INFO     Top 50 markets include Real Estate
+2019-06-06 09:48:51,611 INFO     Top 50 markets include News
+2019-06-06 09:48:51,612 INFO     Top 50 markets include Travel
+2019-06-06 09:48:51,613 INFO     Top 50 markets include Messaging
+2019-06-06 09:48:51,614 INFO     Top 50 markets include Music
+2019-06-06 09:48:51,615 INFO     Top 50 markets include Search
+2019-06-06 09:48:51,616 INFO     Top 50 markets include SaaS
+2019-06-06 09:48:51,616 INFO     Top 50 markets include Medical
+2019-06-06 09:48:51,617 INFO     Top 50 markets include Sports
+2019-06-06 09:48:51,618 INFO     Top 50 markets include Technology
+2019-06-06 09:48:51,619 INFO     Top 50 markets include Apps
+2019-06-06 09:48:51,620 INFO     Top 50 markets include Internet
+2019-06-06 09:48:51,621 INFO     Top 50 markets include Photography
+2019-06-06 09:48:51,622 INFO     Top 50 markets include Entertainment
+2019-06-06 09:48:51,623 INFO     Top 50 markets include Video
+2019-06-06 09:48:51,623 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:48:51,624 INFO     Top 50 markets include Networking
+2019-06-06 09:48:51,625 INFO     Top 50 markets include Automotive
+2019-06-06 09:48:51,626 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:48:51,627 INFO     Top 50 markets include Public Relations
+2019-06-06 09:48:51,628 INFO     Top 50 markets include Transportation
+2019-06-06 09:48:51,629 INFO     Top 50 markets include Design
+2019-06-06 09:48:51,630 INFO     Top 50 markets include Big Data
+2019-06-06 09:48:51,631 INFO     Top 50 markets include Startups
+2019-06-06 09:48:51,632 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:48:51,633 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:48:51,634 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:48:51,745 INFO     Top countries for venture are USA GBR CAN CHN DEU FRA IND ISR ESP
+2019-06-06 09:49:54,947 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:49:54,958 INFO     Top 50 markets include Software
+2019-06-06 09:49:54,960 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:49:54,961 INFO     Top 50 markets include Mobile
+2019-06-06 09:49:54,961 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:49:54,962 INFO     Top 50 markets include Curated Web
+2019-06-06 09:49:54,963 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:49:54,964 INFO     Top 50 markets include Health Care
+2019-06-06 09:49:54,965 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:49:54,965 INFO     Top 50 markets include Games
+2019-06-06 09:49:54,966 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:49:54,967 INFO     Top 50 markets include Advertising
+2019-06-06 09:49:54,967 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:49:54,969 INFO     Top 50 markets include Social Media
+2019-06-06 09:49:54,970 INFO     Top 50 markets include Finance
+2019-06-06 09:49:54,971 INFO     Top 50 markets include Education
+2019-06-06 09:49:54,971 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:49:54,972 INFO     Top 50 markets include Analytics
+2019-06-06 09:49:54,973 INFO     Top 50 markets include Security
+2019-06-06 09:49:54,974 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:49:54,975 INFO     Top 50 markets include Consulting
+2019-06-06 09:49:54,975 INFO     Top 50 markets include Hospitality
+2019-06-06 09:49:54,976 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:49:54,977 INFO     Top 50 markets include Fashion
+2019-06-06 09:49:54,978 INFO     Top 50 markets include Real Estate
+2019-06-06 09:49:54,979 INFO     Top 50 markets include News
+2019-06-06 09:49:54,980 INFO     Top 50 markets include Travel
+2019-06-06 09:49:54,981 INFO     Top 50 markets include Messaging
+2019-06-06 09:49:54,981 INFO     Top 50 markets include Music
+2019-06-06 09:49:54,982 INFO     Top 50 markets include Search
+2019-06-06 09:49:54,982 INFO     Top 50 markets include SaaS
+2019-06-06 09:49:54,983 INFO     Top 50 markets include Medical
+2019-06-06 09:49:54,983 INFO     Top 50 markets include Technology
+2019-06-06 09:49:54,984 INFO     Top 50 markets include Sports
+2019-06-06 09:49:54,984 INFO     Top 50 markets include Apps
+2019-06-06 09:49:54,985 INFO     Top 50 markets include Internet
+2019-06-06 09:49:54,985 INFO     Top 50 markets include Photography
+2019-06-06 09:49:54,986 INFO     Top 50 markets include Entertainment
+2019-06-06 09:49:54,986 INFO     Top 50 markets include Video
+2019-06-06 09:49:54,987 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:49:54,987 INFO     Top 50 markets include Networking
+2019-06-06 09:49:54,987 INFO     Top 50 markets include Automotive
+2019-06-06 09:49:54,988 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:49:54,989 INFO     Top 50 markets include Public Relations
+2019-06-06 09:49:54,989 INFO     Top 50 markets include Transportation
+2019-06-06 09:49:54,990 INFO     Top 50 markets include Design
+2019-06-06 09:49:54,990 INFO     Top 50 markets include Big Data
+2019-06-06 09:49:54,991 INFO     Top 50 markets include Startups
+2019-06-06 09:49:54,992 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:49:54,993 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:49:54,993 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:49:55,100 INFO     Top countries for venture are USA GBR CAN CHN DEU FRA IND ISR ESP
+2019-06-06 09:50:12,359 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:50:12,369 INFO     Top 50 markets include Software
+2019-06-06 09:50:12,370 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:50:12,371 INFO     Top 50 markets include Mobile
+2019-06-06 09:50:12,371 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:50:12,372 INFO     Top 50 markets include Curated Web
+2019-06-06 09:50:12,373 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:50:12,375 INFO     Top 50 markets include Health Care
+2019-06-06 09:50:12,376 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:50:12,377 INFO     Top 50 markets include Games
+2019-06-06 09:50:12,378 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:50:12,380 INFO     Top 50 markets include Advertising
+2019-06-06 09:50:12,380 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:50:12,382 INFO     Top 50 markets include Social Media
+2019-06-06 09:50:12,383 INFO     Top 50 markets include Finance
+2019-06-06 09:50:12,384 INFO     Top 50 markets include Education
+2019-06-06 09:50:12,384 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:50:12,385 INFO     Top 50 markets include Analytics
+2019-06-06 09:50:12,385 INFO     Top 50 markets include Security
+2019-06-06 09:50:12,386 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:50:12,386 INFO     Top 50 markets include Consulting
+2019-06-06 09:50:12,387 INFO     Top 50 markets include Hospitality
+2019-06-06 09:50:12,388 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:50:12,388 INFO     Top 50 markets include Fashion
+2019-06-06 09:50:12,389 INFO     Top 50 markets include Real Estate
+2019-06-06 09:50:12,390 INFO     Top 50 markets include News
+2019-06-06 09:50:12,391 INFO     Top 50 markets include Travel
+2019-06-06 09:50:12,392 INFO     Top 50 markets include Messaging
+2019-06-06 09:50:12,392 INFO     Top 50 markets include Music
+2019-06-06 09:50:12,393 INFO     Top 50 markets include Search
+2019-06-06 09:50:12,393 INFO     Top 50 markets include SaaS
+2019-06-06 09:50:12,394 INFO     Top 50 markets include Medical
+2019-06-06 09:50:12,394 INFO     Top 50 markets include Technology
+2019-06-06 09:50:12,395 INFO     Top 50 markets include Sports
+2019-06-06 09:50:12,395 INFO     Top 50 markets include Apps
+2019-06-06 09:50:12,395 INFO     Top 50 markets include Internet
+2019-06-06 09:50:12,396 INFO     Top 50 markets include Photography
+2019-06-06 09:50:12,396 INFO     Top 50 markets include Entertainment
+2019-06-06 09:50:12,397 INFO     Top 50 markets include Video
+2019-06-06 09:50:12,397 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:50:12,398 INFO     Top 50 markets include Networking
+2019-06-06 09:50:12,398 INFO     Top 50 markets include Automotive
+2019-06-06 09:50:12,398 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:50:12,399 INFO     Top 50 markets include Public Relations
+2019-06-06 09:50:12,400 INFO     Top 50 markets include Transportation
+2019-06-06 09:50:12,400 INFO     Top 50 markets include Design
+2019-06-06 09:50:12,400 INFO     Top 50 markets include Big Data
+2019-06-06 09:50:12,401 INFO     Top 50 markets include Startups
+2019-06-06 09:50:12,401 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:50:12,402 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:50:12,402 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:50:12,506 INFO     Top countries for venture are USA GBR CAN CHN DEU FRA IND ISR ESP
+2019-06-06 09:50:39,397 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:50:39,408 INFO     Top 50 markets include Software
+2019-06-06 09:50:39,410 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:50:39,410 INFO     Top 50 markets include Mobile
+2019-06-06 09:50:39,411 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:50:39,412 INFO     Top 50 markets include Curated Web
+2019-06-06 09:50:39,413 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:50:39,414 INFO     Top 50 markets include Health Care
+2019-06-06 09:50:39,415 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:50:39,416 INFO     Top 50 markets include Games
+2019-06-06 09:50:39,416 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:50:39,417 INFO     Top 50 markets include Advertising
+2019-06-06 09:50:39,418 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:50:39,420 INFO     Top 50 markets include Social Media
+2019-06-06 09:50:39,421 INFO     Top 50 markets include Finance
+2019-06-06 09:50:39,421 INFO     Top 50 markets include Education
+2019-06-06 09:50:39,422 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:50:39,422 INFO     Top 50 markets include Analytics
+2019-06-06 09:50:39,423 INFO     Top 50 markets include Security
+2019-06-06 09:50:39,424 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:50:39,424 INFO     Top 50 markets include Consulting
+2019-06-06 09:50:39,425 INFO     Top 50 markets include Hospitality
+2019-06-06 09:50:39,426 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:50:39,427 INFO     Top 50 markets include Fashion
+2019-06-06 09:50:39,427 INFO     Top 50 markets include Real Estate
+2019-06-06 09:50:39,428 INFO     Top 50 markets include News
+2019-06-06 09:50:39,429 INFO     Top 50 markets include Travel
+2019-06-06 09:50:39,429 INFO     Top 50 markets include Messaging
+2019-06-06 09:50:39,430 INFO     Top 50 markets include Music
+2019-06-06 09:50:39,430 INFO     Top 50 markets include Search
+2019-06-06 09:50:39,431 INFO     Top 50 markets include SaaS
+2019-06-06 09:50:39,431 INFO     Top 50 markets include Medical
+2019-06-06 09:50:39,432 INFO     Top 50 markets include Sports
+2019-06-06 09:50:39,432 INFO     Top 50 markets include Technology
+2019-06-06 09:50:39,433 INFO     Top 50 markets include Apps
+2019-06-06 09:50:39,433 INFO     Top 50 markets include Internet
+2019-06-06 09:50:39,433 INFO     Top 50 markets include Photography
+2019-06-06 09:50:39,434 INFO     Top 50 markets include Entertainment
+2019-06-06 09:50:39,434 INFO     Top 50 markets include Video
+2019-06-06 09:50:39,435 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:50:39,436 INFO     Top 50 markets include Networking
+2019-06-06 09:50:39,436 INFO     Top 50 markets include Automotive
+2019-06-06 09:50:39,437 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:50:39,437 INFO     Top 50 markets include Public Relations
+2019-06-06 09:50:39,438 INFO     Top 50 markets include Transportation
+2019-06-06 09:50:39,438 INFO     Top 50 markets include Design
+2019-06-06 09:50:39,439 INFO     Top 50 markets include Big Data
+2019-06-06 09:50:39,439 INFO     Top 50 markets include Startups
+2019-06-06 09:50:39,440 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:50:39,441 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:50:39,441 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:50:39,548 INFO     Top countries for venture are USA GBR CAN CHN DEU FRA IND ISR ESP
+2019-06-06 09:50:59,910 INFO     754 of total market types in raw dataset, to be reduced to 50
+2019-06-06 09:50:59,919 INFO     Top 50 markets include Software
+2019-06-06 09:50:59,920 INFO     Top 50 markets include Biotechnology
+2019-06-06 09:50:59,921 INFO     Top 50 markets include Mobile
+2019-06-06 09:50:59,921 INFO     Top 50 markets include E-Commerce
+2019-06-06 09:50:59,922 INFO     Top 50 markets include Curated Web
+2019-06-06 09:50:59,923 INFO     Top 50 markets include Enterprise Software
+2019-06-06 09:50:59,924 INFO     Top 50 markets include Health Care
+2019-06-06 09:50:59,925 INFO     Top 50 markets include Clean Technology
+2019-06-06 09:50:59,925 INFO     Top 50 markets include Games
+2019-06-06 09:50:59,926 INFO     Top 50 markets include Hardware + Software
+2019-06-06 09:50:59,927 INFO     Top 50 markets include Advertising
+2019-06-06 09:50:59,927 INFO     Top 50 markets include Health and Wellness
+2019-06-06 09:50:59,928 INFO     Top 50 markets include Social Media
+2019-06-06 09:50:59,929 INFO     Top 50 markets include Finance
+2019-06-06 09:50:59,930 INFO     Top 50 markets include Education
+2019-06-06 09:50:59,930 INFO     Top 50 markets include Manufacturing
+2019-06-06 09:50:59,931 INFO     Top 50 markets include Analytics
+2019-06-06 09:50:59,931 INFO     Top 50 markets include Security
+2019-06-06 09:50:59,932 INFO     Top 50 markets include Semiconductors
+2019-06-06 09:50:59,932 INFO     Top 50 markets include Consulting
+2019-06-06 09:50:59,933 INFO     Top 50 markets include Hospitality
+2019-06-06 09:50:59,934 INFO     Top 50 markets include Web Hosting
+2019-06-06 09:50:59,934 INFO     Top 50 markets include Fashion
+2019-06-06 09:50:59,935 INFO     Top 50 markets include Real Estate
+2019-06-06 09:50:59,936 INFO     Top 50 markets include News
+2019-06-06 09:50:59,936 INFO     Top 50 markets include Travel
+2019-06-06 09:50:59,937 INFO     Top 50 markets include Messaging
+2019-06-06 09:50:59,938 INFO     Top 50 markets include Music
+2019-06-06 09:50:59,938 INFO     Top 50 markets include Search
+2019-06-06 09:50:59,939 INFO     Top 50 markets include SaaS
+2019-06-06 09:50:59,940 INFO     Top 50 markets include Medical
+2019-06-06 09:50:59,940 INFO     Top 50 markets include Technology
+2019-06-06 09:50:59,941 INFO     Top 50 markets include Sports
+2019-06-06 09:50:59,941 INFO     Top 50 markets include Apps
+2019-06-06 09:50:59,942 INFO     Top 50 markets include Internet
+2019-06-06 09:50:59,943 INFO     Top 50 markets include Photography
+2019-06-06 09:50:59,943 INFO     Top 50 markets include Entertainment
+2019-06-06 09:50:59,943 INFO     Top 50 markets include Video
+2019-06-06 09:50:59,944 INFO     Top 50 markets include Marketplaces
+2019-06-06 09:50:59,944 INFO     Top 50 markets include Networking
+2019-06-06 09:50:59,945 INFO     Top 50 markets include Automotive
+2019-06-06 09:50:59,945 INFO     Top 50 markets include Social Network Media
+2019-06-06 09:50:59,946 INFO     Top 50 markets include Public Relations
+2019-06-06 09:50:59,946 INFO     Top 50 markets include Transportation
+2019-06-06 09:50:59,947 INFO     Top 50 markets include Design
+2019-06-06 09:50:59,947 INFO     Top 50 markets include Big Data
+2019-06-06 09:50:59,948 INFO     Top 50 markets include Startups
+2019-06-06 09:50:59,948 INFO     Top 50 markets include Cloud Computing
+2019-06-06 09:50:59,949 INFO     Top 50 markets include Nonprofits
+2019-06-06 09:50:59,949 INFO     Top 50 markets include Sales and Marketing
+2019-06-06 09:50:59,969 INFO     Top countries for venture are USA GBR CAN CHN DEU FRA IND ISR ESP
