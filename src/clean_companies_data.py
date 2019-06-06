@@ -100,6 +100,7 @@ def company_country_features(df):
 
 def impute_founding_date(df):
     """Impute missing founding dates."""
+    df = df.dropna(subset=['first_funding_at','founded_at'])
     # Convert datetime columns to datetime objects.
     df['first_funding_at'] = pd.to_datetime(df['first_funding_at'], errors='coerce')
     df['last_funding_at'] = pd.to_datetime(df['last_funding_at'], errors='coerce')
