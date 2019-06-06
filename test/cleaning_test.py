@@ -9,6 +9,7 @@ from clean_companies_data import reduce_market_categories, company_country_featu
 from clean_acquisitions_data import get_acquisition_count
 from clean_investors_data import bin_investors, get_unique_investors
 from clean_rounds_data import group_permalink_funding
+from helpers import gen_helpers as gen_h
 
 logging.basicConfig(level=logging.DEBUG, filename="test_logfile", filemode="a+",
                     format="%(asctime)-15s %(levelname)-8s %(message)s")
@@ -23,6 +24,7 @@ rounds_df = pd.read_csv('data/external/rounds.csv')
 final_num_markets = 52
 final_num_countries = 10
 final_num_temporal = 4
+final_venture_features = 19
 
 # Test to see if reducing markets worked and final number matches dataframe.
 def test_reduce_market():
@@ -65,7 +67,13 @@ def test_investor_bins():
 def test_unique_investors():
     df = bin_investors(investments_df)
     df = get_unique_investors(df, 'data/external/companies.csv')
-
     all_companies_list = list(companies_df['permalink'].unique())
     invested_companies_list = list(df['company_permalink'].unique())
     assert(set(invested_companies_list).issubset(all_companies_list) == True)
+
+# Test to check number of funding round types for one hot features.
+def test_venture_features():
+    df = gen_h.filter_columns(rounds_df,['company_permalink', 'funding_round_type', 'raised_amount_usd'], na_subset=[])
+    df = gen_h.generate_onehot_features(df,'funding_round_type')
+    df = group_permalink_funding(df)
+    assert(df.shape[1] == final_venture_features)
