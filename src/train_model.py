@@ -14,7 +14,8 @@ from sklearn.ensemble import RandomForestRegressor
 
 from helpers import gen_helpers as gen_h
 
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def data_filter(file_path, selected_features):

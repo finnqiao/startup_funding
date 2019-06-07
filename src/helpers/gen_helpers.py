@@ -1,6 +1,8 @@
 import logging
 import pandas as pd
 
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def filter_columns(df, column_subset, na_subset):
