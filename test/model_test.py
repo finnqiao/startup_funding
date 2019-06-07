@@ -20,8 +20,7 @@ selected_features = ['funding_rounds', 'founded_month', 'founded_quarter', 'foun
 'market_clean technology', 'market_enterprise software', 'market_finance', 'market_health and wellness',
 'market_hospitality', 'market_internet', 'market_mobile', 'market_other', 'raised_amount_usd_mean']
 
-agg_df = pd.read_csv('data/auxiliary/aggregated_data.csv')
-
+# Test to check if correct features were selected.
 def test_filter():
-    df = data_filter(agg_df, selected_features)
+    df = data_filter('data/auxiliary/aggregated_data.csv', selected_features)
     assert(list(df.columns) == selected_features)
