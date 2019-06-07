@@ -2713,3 +2713,591 @@
 2019-06-06 11:37:00,585 INFO     Investor features after dataframe merging Unnamed: 0 company_permalink company_name company_category_list company_market company_country_code company_state_code company_region company_city investor_permalink investor_name investor_category_list investor_market investor_country_code investor_state_code investor_region investor_city funding_round_permalink funding_round_type funding_round_code funded_at funded_month funded_quarter funded_year raised_amount_usd bins_amount
 2019-06-06 11:37:00,874 INFO     There are a total of 49436 companies in initial dataframe
 2019-06-06 11:37:04,420 INFO     There are 19 funding round types
+2019-06-06 16:46:52,734 INFO     Bucket name parsed out is startup-funding-avc
+2019-06-06 16:46:52,736 DEBUG    Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2019-06-06 16:46:52,739 DEBUG    Changing event name from before-call.apigateway to before-call.api-gateway
+2019-06-06 16:46:52,740 DEBUG    Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2019-06-06 16:46:52,742 DEBUG    Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2019-06-06 16:46:52,742 DEBUG    Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2019-06-06 16:46:52,742 DEBUG    Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2019-06-06 16:46:52,743 DEBUG    Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2019-06-06 16:46:52,745 DEBUG    Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2019-06-06 16:46:52,745 DEBUG    Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2019-06-06 16:46:52,745 DEBUG    Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2019-06-06 16:46:52,745 DEBUG    Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2019-06-06 16:46:52,853 DEBUG    Loading JSON file: /Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/boto3/data/s3/2006-03-01/resources-1.json
+2019-06-06 16:46:52,881 DEBUG    Looking for credentials via: env
+2019-06-06 16:46:52,881 INFO     Found credentials in environment variables.
+2019-06-06 16:46:52,882 DEBUG    Loading JSON file: /Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/botocore/data/endpoints.json
+2019-06-06 16:46:52,886 DEBUG    Event choose-service-name: calling handler <function handle_service_name_alias at 0x105c3c488>
+2019-06-06 16:46:52,925 DEBUG    Loading JSON file: /Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/botocore/data/s3/2006-03-01/service-2.json
+2019-06-06 16:46:52,932 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x105bfe1e0>
+2019-06-06 16:46:52,932 DEBUG    Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10e6c1268>
+2019-06-06 16:46:52,991 DEBUG    Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x105bfaf28>
+2019-06-06 16:46:52,991 DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+2019-06-06 16:46:52,999 DEBUG    Setting s3 timeout as (60, 60)
+2019-06-06 16:46:53,001 DEBUG    Loading JSON file: /Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/botocore/data/_retry.json
+2019-06-06 16:46:53,001 DEBUG    Registering retry handlers for service: s3
+2019-06-06 16:46:53,002 DEBUG    Defaulting to S3 virtual host style addressing with path style addressing fallback.
+2019-06-06 16:46:53,002 DEBUG    Loading s3:s3
+2019-06-06 16:46:53,004 DEBUG    Loading s3:Bucket
+2019-06-06 16:46:53,004 DEBUG    Renaming Bucket attribute name
+2019-06-06 16:46:53,005 DEBUG    Event creating-resource-class.s3.Bucket: calling handler <function lazy_call.<locals>._handler at 0x10e6c12f0>
+2019-06-06 16:46:53,019 DEBUG    Loading JSON file: /Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/botocore/data/s3/2006-03-01/paginators-1.json
+2019-06-06 16:46:53,020 DEBUG    Calling paginated s3:list_objects with {'Bucket': 'startup-funding-avc'}
+2019-06-06 16:46:53,021 DEBUG    Event before-parameter-build.s3.ListObjects: calling handler <function set_list_objects_encoding_type_url at 0x105c622f0>
+2019-06-06 16:46:53,021 DEBUG    Event before-parameter-build.s3.ListObjects: calling handler <function validate_bucket_name at 0x105c5dea0>
+2019-06-06 16:46:53,022 DEBUG    Event before-parameter-build.s3.ListObjects: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x10f406240>>
+2019-06-06 16:46:53,022 DEBUG    Event before-parameter-build.s3.ListObjects: calling handler <function generate_idempotent_uuid at 0x105c5dae8>
+2019-06-06 16:46:53,023 DEBUG    Event before-call.s3.ListObjects: calling handler <function add_expect_header at 0x105c60400>
+2019-06-06 16:46:53,023 DEBUG    Event before-call.s3.ListObjects: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x10f406240>>
+2019-06-06 16:46:53,023 DEBUG    Event before-call.s3.ListObjects: calling handler <function inject_api_version_header_if_needed at 0x105c62620>
+2019-06-06 16:46:53,023 DEBUG    Making request for OperationModel(name=ListObjects) with params: {'url_path': '/startup-funding-avc', 'query_string': {'encoding-type': 'url'}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.9.146 Python/3.7.3 Darwin/18.5.0 Botocore/1.12.146 Resource'}, 'body': b'', 'url': 'https://s3.amazonaws.com/startup-funding-avc?encoding-type=url', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x10f305d68>, 'has_streaming_input': False, 'auth_type': None, 'encoding_type_auto_set': True, 'signing': {'bucket': 'startup-funding-avc'}}}
+2019-06-06 16:46:53,024 DEBUG    Event request-created.s3.ListObjects: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x10f305978>>
+2019-06-06 16:46:53,024 DEBUG    Event choose-signer.s3.ListObjects: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x10e77b588>>
+2019-06-06 16:46:53,024 DEBUG    Event choose-signer.s3.ListObjects: calling handler <function set_operation_specific_signer at 0x105c5d9d8>
+2019-06-06 16:46:53,025 DEBUG    Event before-sign.s3.ListObjects: calling handler <function fix_s3_host at 0x105af08c8>
+2019-06-06 16:46:53,025 DEBUG    Checking for DNS compatible bucket for: https://s3.amazonaws.com/startup-funding-avc?encoding-type=url
+2019-06-06 16:46:53,025 DEBUG    URI updated to: https://startup-funding-avc.s3.amazonaws.com/?encoding-type=url
+2019-06-06 16:46:53,025 DEBUG    Calculating signature using v4 auth.
+2019-06-06 16:46:53,025 DEBUG    CanonicalRequest:
+GET
+/
+encoding-type=url
+host:startup-funding-avc.s3.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20190606T214653Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2019-06-06 16:46:53,025 DEBUG    StringToSign:
+AWS4-HMAC-SHA256
+20190606T214653Z
+20190606/us-east-1/s3/aws4_request
+00009c295be6c26491dd750e025147749288bda6aa78fd6c5c59f8918e4b946e
+2019-06-06 16:46:53,026 DEBUG    Signature:
+08e59856c5d1653de3e28a96a1b246004abe4d43dc40a14f6ee6c052b78eaae5
+2019-06-06 16:46:53,026 DEBUG    Sending http request: <AWSPreparedRequest stream_output=False, method=GET, url=https://startup-funding-avc.s3.amazonaws.com/?encoding-type=url, headers={'User-Agent': b'Boto3/1.9.146 Python/3.7.3 Darwin/18.5.0 Botocore/1.12.146 Resource', 'X-Amz-Date': b'20190606T214653Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAICJAEJNGVCVPB7XA/20190606/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=08e59856c5d1653de3e28a96a1b246004abe4d43dc40a14f6ee6c052b78eaae5'}>
+2019-06-06 16:46:53,026 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:53,027 DEBUG    Starting new HTTPS connection (1): startup-funding-avc.s3.amazonaws.com:443
+2019-06-06 16:46:53,217 DEBUG    https://startup-funding-avc.s3.amazonaws.com:443 "GET /?encoding-type=url HTTP/1.1" 400 None
+2019-06-06 16:46:53,218 DEBUG    Response headers: {'x-amz-bucket-region': 'us-east-2', 'x-amz-request-id': '7DBA594DB1DEF911', 'x-amz-id-2': 'KQu0SfEuPiHmtf0c8kk5GuoPVmOCm20BIqcYI7FW+ae9cUfOqSjHVaJwSxXwtuwa/7vS5zXJYoo=', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Thu, 06 Jun 2019 21:46:52 GMT', 'Connection': 'close', 'Server': 'AmazonS3'}
+2019-06-06 16:46:53,218 DEBUG    Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Error><Code>AuthorizationHeaderMalformed</Code><Message>The authorization header is malformed; the region \'us-east-1\' is wrong; expecting \'us-east-2\'</Message><Region>us-east-2</Region><RequestId>7DBA594DB1DEF911</RequestId><HostId>KQu0SfEuPiHmtf0c8kk5GuoPVmOCm20BIqcYI7FW+ae9cUfOqSjHVaJwSxXwtuwa/7vS5zXJYoo=</HostId></Error>'
+2019-06-06 16:46:53,224 DEBUG    Event needs-retry.s3.ListObjects: calling handler <botocore.retryhandler.RetryHandler object at 0x10f406278>
+2019-06-06 16:46:53,224 DEBUG    No retry needed.
+2019-06-06 16:46:53,224 DEBUG    Event needs-retry.s3.ListObjects: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x10f406240>>
+2019-06-06 16:46:53,224 DEBUG    S3 client configured for region us-east-1 but the bucket startup-funding-avc is in region us-east-2; Please configure the proper region to avoid multiple unnecessary redirects and signing attempts.
+2019-06-06 16:46:53,225 DEBUG    Updating URI from https://s3.amazonaws.com/startup-funding-avc?encoding-type=url to https://s3.us-east-2.amazonaws.com/startup-funding-avc?encoding-type=url
+2019-06-06 16:46:53,225 DEBUG    Response received to retry, sleeping for 0 seconds
+2019-06-06 16:46:53,225 DEBUG    Event request-created.s3.ListObjects: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x10f305978>>
+2019-06-06 16:46:53,226 DEBUG    Event choose-signer.s3.ListObjects: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x10e77b588>>
+2019-06-06 16:46:53,226 DEBUG    Event choose-signer.s3.ListObjects: calling handler <function set_operation_specific_signer at 0x105c5d9d8>
+2019-06-06 16:46:53,226 DEBUG    Event before-sign.s3.ListObjects: calling handler <function fix_s3_host at 0x105af08c8>
+2019-06-06 16:46:53,226 DEBUG    Checking for DNS compatible bucket for: https://s3.us-east-2.amazonaws.com/startup-funding-avc?encoding-type=url
+2019-06-06 16:46:53,227 DEBUG    URI updated to: https://startup-funding-avc.s3.us-east-2.amazonaws.com/?encoding-type=url
+2019-06-06 16:46:53,227 DEBUG    Calculating signature using v4 auth.
+2019-06-06 16:46:53,227 DEBUG    CanonicalRequest:
+GET
+/
+encoding-type=url
+host:startup-funding-avc.s3.us-east-2.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20190606T214653Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2019-06-06 16:46:53,227 DEBUG    StringToSign:
+AWS4-HMAC-SHA256
+20190606T214653Z
+20190606/us-east-2/s3/aws4_request
+b2fa852f3eb837c030df9275566433197c8f8c02c8edb93c448e1c7f82040722
+2019-06-06 16:46:53,228 DEBUG    Signature:
+516af14f411157af587e88fe4b6c430c1854218ecab3f249f5c0f5e864904796
+2019-06-06 16:46:53,228 DEBUG    Sending http request: <AWSPreparedRequest stream_output=False, method=GET, url=https://startup-funding-avc.s3.us-east-2.amazonaws.com/?encoding-type=url, headers={'User-Agent': b'Boto3/1.9.146 Python/3.7.3 Darwin/18.5.0 Botocore/1.12.146 Resource', 'X-Amz-Date': b'20190606T214653Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAICJAEJNGVCVPB7XA/20190606/us-east-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=516af14f411157af587e88fe4b6c430c1854218ecab3f249f5c0f5e864904796'}>
+2019-06-06 16:46:53,228 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:53,228 DEBUG    Starting new HTTPS connection (1): startup-funding-avc.s3.us-east-2.amazonaws.com:443
+2019-06-06 16:46:54,052 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /?encoding-type=url HTTP/1.1" 200 None
+2019-06-06 16:46:54,053 DEBUG    Response headers: {'x-amz-id-2': 'LA1oGP4BTjBBCQdPRHJLoRk+xPx1kRSEAx71568KZ7p9thR3Me+RrqHK1m9jC7Xdw9XNDj4qxhs=', 'x-amz-request-id': 'E4E818A223F56FD5', 'Date': 'Thu, 06 Jun 2019 21:46:55 GMT', 'x-amz-bucket-region': 'us-east-2', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Server': 'AmazonS3'}
+2019-06-06 16:46:54,054 DEBUG    Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>startup-funding-avc</Name><Prefix></Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>acquisitions.csv</Key><LastModified>2019-05-12T22:08:00.000Z</LastModified><ETag>&quot;f68c88d9f87cca28ba79cb181290ae52&quot;</ETag><Size>3113320</Size><Owner><ID>3df923c3330062b1bad4d501d51216feadae78eada53f0342ab9b8aeb1d3f264</ID></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>companies.csv</Key><LastModified>2019-05-12T22:08:00.000Z</LastModified><ETag>&quot;c4e12356f9979164b0147ac696f00420&quot;</ETag><Size>9482929</Size><Owner><ID>3df923c3330062b1bad4d501d51216feadae78eada53f0342ab9b8aeb1d3f264</ID></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>investments.csv</Key><LastModified>2019-05-12T22:08:00.000Z</LastModified><ETag>&quot;809fb7689a70c93272b8827c93265a46-2&quot;</ETag><Size>32668854</Size><Owner><ID>3df923c3330062b1bad4d501d51216feadae78eada53f0342ab9b8aeb1d3f264</ID></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>ipo_counts.csv</Key><LastModified>2019-05-12T22:08:00.000Z</LastModified><ETag>&quot;9c1179cc44f59f0c85d433d165af9f83&quot;</ETag><Size>193</Size><Owner><ID>3df923c3330062b1bad4d501d51216feadae78eada53f0342ab9b8aeb1d3f264</ID></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>rounds.csv</Key><LastModified>2019-05-12T22:08:00.000Z</LastModified><ETag>&quot;956f7a006cfa3ba8aded936f9a141e24-2&quot;</ETag><Size>16925576</Size><Owner><ID>3df923c3330062b1bad4d501d51216feadae78eada53f0342ab9b8aeb1d3f264</ID></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+2019-06-06 16:46:54,061 DEBUG    Event needs-retry.s3.ListObjects: calling handler <botocore.retryhandler.RetryHandler object at 0x10f406278>
+2019-06-06 16:46:54,061 DEBUG    No retry needed.
+2019-06-06 16:46:54,061 DEBUG    Event needs-retry.s3.ListObjects: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x10f406240>>
+2019-06-06 16:46:54,062 DEBUG    S3 request was previously redirected, not redirecting.
+2019-06-06 16:46:54,062 DEBUG    Event after-call.s3.ListObjects: calling handler <function decode_list_object at 0x105c62378>
+2019-06-06 16:46:54,062 DEBUG    Loading s3:ObjectSummary
+2019-06-06 16:46:54,063 DEBUG    Renaming ObjectSummary attribute key
+2019-06-06 16:46:54,064 DEBUG    Event creating-resource-class.s3.ObjectSummary: calling handler <function lazy_call.<locals>._handler at 0x10e6c1400>
+2019-06-06 16:46:54,065 DEBUG    File with path s3://startup-funding-avc/acquisitions.csv is being added
+2019-06-06 16:46:54,065 DEBUG    File with path s3://startup-funding-avc/companies.csv is being added
+2019-06-06 16:46:54,065 DEBUG    File with path s3://startup-funding-avc/investments.csv is being added
+2019-06-06 16:46:54,065 DEBUG    File with path s3://startup-funding-avc/ipo_counts.csv is being added
+2019-06-06 16:46:54,065 DEBUG    File with path s3://startup-funding-avc/rounds.csv is being added
+2019-06-06 16:46:54,088 DEBUG    Open S3 connection.  Anonymous: False
+2019-06-06 16:46:54,128 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:54,128 DEBUG    Starting new HTTPS connection (1): startup-funding-avc.s3.amazonaws.com:443
+2019-06-06 16:46:55,824 DEBUG    https://startup-funding-avc.s3.amazonaws.com:443 "HEAD /acquisitions.csv HTTP/1.1" 400 0
+2019-06-06 16:46:55,828 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:55,828 DEBUG    Resetting dropped connection: startup-funding-avc.s3.amazonaws.com
+2019-06-06 16:46:55,914 DEBUG    https://startup-funding-avc.s3.amazonaws.com:443 "HEAD / HTTP/1.1" 400 0
+2019-06-06 16:46:55,917 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:55,918 DEBUG    Starting new HTTPS connection (1): startup-funding-avc.s3.us-east-2.amazonaws.com:443
+2019-06-06 16:46:56,721 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "HEAD / HTTP/1.1" 200 0
+2019-06-06 16:46:56,724 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:57,394 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "HEAD /acquisitions.csv HTTP/1.1" 200 0
+2019-06-06 16:46:57,402 DEBUG    Fetch: startup-funding-avc/acquisitions.csv, 0-5505024
+2019-06-06 16:46:57,406 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:57,503 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /acquisitions.csv HTTP/1.1" 206 3113320
+2019-06-06 16:46:58,551 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:58,573 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "HEAD /companies.csv HTTP/1.1" 200 0
+2019-06-06 16:46:58,575 DEBUG    Fetch: startup-funding-avc/companies.csv, 0-5505024
+2019-06-06 16:46:58,578 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:58,661 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /companies.csv HTTP/1.1" 206 5505024
+2019-06-06 16:46:59,093 DEBUG    Fetch: startup-funding-avc/companies.csv, 5505024-11010048
+2019-06-06 16:46:59,094 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:59,141 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /companies.csv HTTP/1.1" 206 3977905
+2019-06-06 16:46:59,612 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:59,636 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "HEAD /investments.csv HTTP/1.1" 200 0
+2019-06-06 16:46:59,638 DEBUG    Fetch: startup-funding-avc/investments.csv, 0-5505024
+2019-06-06 16:46:59,640 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:46:59,722 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /investments.csv HTTP/1.1" 206 5505024
+2019-06-06 16:47:00,044 DEBUG    Fetch: startup-funding-avc/investments.csv, 5505024-11010048
+2019-06-06 16:47:00,045 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:00,099 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /investments.csv HTTP/1.1" 206 5505024
+2019-06-06 16:47:00,564 DEBUG    Fetch: startup-funding-avc/investments.csv, 11010048-16515072
+2019-06-06 16:47:00,565 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:00,619 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /investments.csv HTTP/1.1" 206 5505024
+2019-06-06 16:47:00,968 DEBUG    Fetch: startup-funding-avc/investments.csv, 16515072-22020096
+2019-06-06 16:47:00,970 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:00,992 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /investments.csv HTTP/1.1" 206 5505024
+2019-06-06 16:47:01,500 DEBUG    Fetch: startup-funding-avc/investments.csv, 22020096-27525120
+2019-06-06 16:47:01,503 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:01,579 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /investments.csv HTTP/1.1" 206 5505024
+2019-06-06 16:47:01,912 DEBUG    Fetch: startup-funding-avc/investments.csv, 27525120-33030144
+2019-06-06 16:47:01,913 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:01,940 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /investments.csv HTTP/1.1" 206 5143734
+2019-06-06 16:47:02,542 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:02,565 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "HEAD /ipo_counts.csv HTTP/1.1" 200 0
+2019-06-06 16:47:02,568 DEBUG    Fetch: startup-funding-avc/ipo_counts.csv, 0-5505024
+2019-06-06 16:47:02,570 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:02,635 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /ipo_counts.csv HTTP/1.1" 206 193
+2019-06-06 16:47:02,642 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:02,665 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "HEAD /rounds.csv HTTP/1.1" 200 0
+2019-06-06 16:47:02,667 DEBUG    Fetch: startup-funding-avc/rounds.csv, 0-5505024
+2019-06-06 16:47:02,670 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:02,785 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /rounds.csv HTTP/1.1" 206 5505024
+2019-06-06 16:47:03,158 DEBUG    Fetch: startup-funding-avc/rounds.csv, 5505024-11010048
+2019-06-06 16:47:03,159 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:03,247 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /rounds.csv HTTP/1.1" 206 5505024
+2019-06-06 16:47:03,636 DEBUG    Fetch: startup-funding-avc/rounds.csv, 11010048-16515072
+2019-06-06 16:47:03,638 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:03,738 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /rounds.csv HTTP/1.1" 206 5505024
+2019-06-06 16:47:04,152 DEBUG    Fetch: startup-funding-avc/rounds.csv, 16515072-22020096
+2019-06-06 16:47:04,153 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:04,179 DEBUG    https://startup-funding-avc.s3.us-east-2.amazonaws.com:443 "GET /rounds.csv HTTP/1.1" 206 410504
+2019-06-06 16:47:04,495 DEBUG    Dataframe saved to data/external/
+2019-06-06 16:47:04,962 DEBUG    Dataframe saved to data/external/
+2019-06-06 16:47:06,160 DEBUG    Dataframe saved to data/external/
+2019-06-06 16:47:06,161 DEBUG    Dataframe saved to data/external/
+2019-06-06 16:47:06,931 DEBUG    Dataframe saved to data/external/
+2019-06-06 16:47:08,559 INFO     753 of total market types in raw dataset, to be reduced to 50
+2019-06-06 16:47:08,569 INFO     Top 50 markets include software
+2019-06-06 16:47:08,570 INFO     Top 50 markets include biotechnology
+2019-06-06 16:47:08,570 INFO     Top 50 markets include mobile
+2019-06-06 16:47:08,571 INFO     Top 50 markets include e-commerce
+2019-06-06 16:47:08,571 INFO     Top 50 markets include curated web
+2019-06-06 16:47:08,572 INFO     Top 50 markets include enterprise software
+2019-06-06 16:47:08,572 INFO     Top 50 markets include health care
+2019-06-06 16:47:08,573 INFO     Top 50 markets include clean technology
+2019-06-06 16:47:08,574 INFO     Top 50 markets include games
+2019-06-06 16:47:08,574 INFO     Top 50 markets include hardware + software
+2019-06-06 16:47:08,575 INFO     Top 50 markets include advertising
+2019-06-06 16:47:08,576 INFO     Top 50 markets include health and wellness
+2019-06-06 16:47:08,577 INFO     Top 50 markets include social media
+2019-06-06 16:47:08,578 INFO     Top 50 markets include finance
+2019-06-06 16:47:08,579 INFO     Top 50 markets include education
+2019-06-06 16:47:08,580 INFO     Top 50 markets include manufacturing
+2019-06-06 16:47:08,580 INFO     Top 50 markets include analytics
+2019-06-06 16:47:08,581 INFO     Top 50 markets include security
+2019-06-06 16:47:08,581 INFO     Top 50 markets include semiconductors
+2019-06-06 16:47:08,582 INFO     Top 50 markets include consulting
+2019-06-06 16:47:08,582 INFO     Top 50 markets include hospitality
+2019-06-06 16:47:08,583 INFO     Top 50 markets include web hosting
+2019-06-06 16:47:08,583 INFO     Top 50 markets include fashion
+2019-06-06 16:47:08,584 INFO     Top 50 markets include real estate
+2019-06-06 16:47:08,584 INFO     Top 50 markets include news
+2019-06-06 16:47:08,585 INFO     Top 50 markets include travel
+2019-06-06 16:47:08,585 INFO     Top 50 markets include messaging
+2019-06-06 16:47:08,586 INFO     Top 50 markets include music
+2019-06-06 16:47:08,586 INFO     Top 50 markets include search
+2019-06-06 16:47:08,586 INFO     Top 50 markets include saas
+2019-06-06 16:47:08,587 INFO     Top 50 markets include medical
+2019-06-06 16:47:08,587 INFO     Top 50 markets include technology
+2019-06-06 16:47:08,588 INFO     Top 50 markets include sports
+2019-06-06 16:47:08,588 INFO     Top 50 markets include apps
+2019-06-06 16:47:08,588 INFO     Top 50 markets include internet
+2019-06-06 16:47:08,589 INFO     Top 50 markets include photography
+2019-06-06 16:47:08,589 INFO     Top 50 markets include entertainment
+2019-06-06 16:47:08,590 INFO     Top 50 markets include video
+2019-06-06 16:47:08,590 INFO     Top 50 markets include marketplaces
+2019-06-06 16:47:08,590 INFO     Top 50 markets include networking
+2019-06-06 16:47:08,591 INFO     Top 50 markets include automotive
+2019-06-06 16:47:08,591 INFO     Top 50 markets include social network media
+2019-06-06 16:47:08,592 INFO     Top 50 markets include public relations
+2019-06-06 16:47:08,592 INFO     Top 50 markets include transportation
+2019-06-06 16:47:08,593 INFO     Top 50 markets include design
+2019-06-06 16:47:08,593 INFO     Top 50 markets include big data
+2019-06-06 16:47:08,594 INFO     Top 50 markets include startups
+2019-06-06 16:47:08,594 INFO     Top 50 markets include cloud computing
+2019-06-06 16:47:08,595 INFO     Top 50 markets include nonprofits
+2019-06-06 16:47:08,595 INFO     Top 50 markets include sales and marketing
+2019-06-06 16:47:08,658 INFO     Top countries for venture are usa gbr can chn deu ind fra isr esp
+2019-06-06 16:47:10,721 DEBUG    Working copy was saved to data/auxiliary/new_companies_data.csv
+2019-06-06 16:47:10,792 DEBUG    Acquiring 0
+2019-06-06 16:47:10,793 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11044b6a0>}) about to wait for the following futures []
+2019-06-06 16:47:10,793 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11044b6a0>}) done waiting for dependent futures
+2019-06-06 16:47:10,794 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11044b6a0>}) with kwargs {'client': <botocore.client.S3 object at 0x110456f60>, 'config': <boto3.s3.transfer.TransferConfig object at 0x110450898>, 'osutil': <s3transfer.utils.OSUtils object at 0x1104507f0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x1104500f0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x11044b6a0>}
+2019-06-06 16:47:10,794 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x1104500f0> for transfer request: 0.
+2019-06-06 16:47:10,794 DEBUG    Acquiring 0
+2019-06-06 16:47:10,794 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 16:47:10,794 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 16:47:10,794 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x110456f60>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x110444908>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}
+2019-06-06 16:47:10,795 DEBUG    Releasing acquire 0/None
+2019-06-06 16:47:10,813 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:10,814 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 16:47:11,251 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_companies_data.csv HTTP/1.1" 400 None
+2019-06-06 16:47:11,256 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:11,256 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 16:47:18,794 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_companies_data.csv HTTP/1.1" 200 0
+2019-06-06 16:47:18,800 DEBUG    Releasing acquire 0/None
+2019-06-06 16:47:53,890 INFO     Investor features after dataframe merging Unnamed: 0 company_permalink company_name company_category_list company_market company_country_code company_state_code company_region company_city investor_permalink investor_name investor_category_list investor_market investor_country_code investor_state_code investor_region investor_city funding_round_permalink funding_round_type funding_round_code funded_at funded_month funded_quarter funded_year raised_amount_usd bins_amount
+2019-06-06 16:47:54,158 INFO     There are a total of 36498 companies in initial dataframe
+2019-06-06 16:47:59,146 DEBUG    Working copy was saved to data/auxiliary/new_investors_data.csv
+2019-06-06 16:47:59,223 DEBUG    Acquiring 0
+2019-06-06 16:47:59,224 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11f43c438>}) about to wait for the following futures []
+2019-06-06 16:47:59,224 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11f43c438>}) done waiting for dependent futures
+2019-06-06 16:47:59,225 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11f43c438>}) with kwargs {'client': <botocore.client.S3 object at 0x11ff54eb8>, 'config': <boto3.s3.transfer.TransferConfig object at 0x11ff3ad68>, 'osutil': <s3transfer.utils.OSUtils object at 0x11ff3ada0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x11ff3af60>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x11f43c438>}
+2019-06-06 16:47:59,225 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x11ff3af60> for transfer request: 0.
+2019-06-06 16:47:59,225 DEBUG    Acquiring 0
+2019-06-06 16:47:59,225 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 16:47:59,226 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 16:47:59,226 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x11ff54eb8>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x11f43c710>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}
+2019-06-06 16:47:59,227 DEBUG    Releasing acquire 0/None
+2019-06-06 16:47:59,232 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:47:59,233 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 16:48:00,130 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_investors_data.csv HTTP/1.1" 400 None
+2019-06-06 16:48:00,137 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:48:00,137 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 16:48:00,406 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_investors_data.csv HTTP/1.1" 200 0
+2019-06-06 16:48:00,408 DEBUG    Releasing acquire 0/None
+2019-06-06 16:48:01,455 INFO     There are 12791 number of acquired companies
+2019-06-06 16:48:01,455 INFO     There are 6633 number of acquirer companies
+2019-06-06 16:48:08,626 DEBUG    Working copy was saved to data/auxiliary/new_acquisitions_data.csv
+2019-06-06 16:48:08,690 DEBUG    Acquiring 0
+2019-06-06 16:48:08,691 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11a0e3240>}) about to wait for the following futures []
+2019-06-06 16:48:08,691 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11a0e3240>}) done waiting for dependent futures
+2019-06-06 16:48:08,691 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11a0e3240>}) with kwargs {'client': <botocore.client.S3 object at 0x119960cc0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x119956b70>, 'osutil': <s3transfer.utils.OSUtils object at 0x119956ba8>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x119956d68>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x11a0e3240>}
+2019-06-06 16:48:08,691 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x119956d68> for transfer request: 0.
+2019-06-06 16:48:08,691 DEBUG    Acquiring 0
+2019-06-06 16:48:08,692 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 16:48:08,692 DEBUG    Releasing acquire 0/None
+2019-06-06 16:48:08,692 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 16:48:08,692 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x119960cc0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x11a0e3518>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}
+2019-06-06 16:48:08,695 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:48:08,695 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 16:48:08,780 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_acquisitions_data.csv HTTP/1.1" 400 None
+2019-06-06 16:48:08,783 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:48:08,783 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 16:48:09,229 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_acquisitions_data.csv HTTP/1.1" 200 0
+2019-06-06 16:48:09,231 DEBUG    Releasing acquire 0/None
+2019-06-06 16:49:24,576 INFO     There are 19 funding round types
+2019-06-06 16:49:25,479 DEBUG    Working copy was saved to data/auxiliary/new_rounds_data.csv
+2019-06-06 16:49:25,583 DEBUG    Acquiring 0
+2019-06-06 16:49:25,584 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11b00c438>}) about to wait for the following futures []
+2019-06-06 16:49:25,584 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11b00c438>}) done waiting for dependent futures
+2019-06-06 16:49:25,584 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11b00c438>}) with kwargs {'client': <botocore.client.S3 object at 0x11d8786a0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x11d86bd68>, 'osutil': <s3transfer.utils.OSUtils object at 0x11d86bda0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x11d86bf60>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x11b00c438>}
+2019-06-06 16:49:25,584 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x11d86bf60> for transfer request: 0.
+2019-06-06 16:49:25,585 DEBUG    Acquiring 0
+2019-06-06 16:49:25,585 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 16:49:25,585 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 16:49:25,585 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x11d8786a0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x11b00c6d8>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}
+2019-06-06 16:49:25,586 DEBUG    Releasing acquire 0/None
+2019-06-06 16:49:25,598 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:49:25,598 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 16:49:26,410 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_rounds_data.csv HTTP/1.1" 400 None
+2019-06-06 16:49:26,416 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:49:26,416 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 16:49:26,956 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_rounds_data.csv HTTP/1.1" 200 0
+2019-06-06 16:49:26,958 DEBUG    Releasing acquire 0/None
+2019-06-06 16:50:01,341 INFO     There are 20 years of ipo data
+2019-06-06 16:50:01,386 DEBUG    Working copy was saved to data/auxiliary/new_ipo_data.csv
+2019-06-06 16:50:01,465 DEBUG    Acquiring 0
+2019-06-06 16:50:01,466 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1162f4208>}) about to wait for the following futures []
+2019-06-06 16:50:01,466 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1162f4208>}) done waiting for dependent futures
+2019-06-06 16:50:01,467 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1162f4208>}) with kwargs {'client': <botocore.client.S3 object at 0x1162aacf8>, 'config': <boto3.s3.transfer.TransferConfig object at 0x1162b8ba8>, 'osutil': <s3transfer.utils.OSUtils object at 0x1162b8be0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x1162b8da0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x1162f4208>}
+2019-06-06 16:50:01,467 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x1162b8da0> for transfer request: 0.
+2019-06-06 16:50:01,467 DEBUG    Acquiring 0
+2019-06-06 16:50:01,467 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 16:50:01,468 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 16:50:01,468 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x1162aacf8>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x1162f44a8>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}
+2019-06-06 16:50:01,469 DEBUG    Releasing acquire 0/None
+2019-06-06 16:50:01,471 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:50:01,472 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 16:50:01,572 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_ipo_data.csv HTTP/1.1" 400 None
+2019-06-06 16:50:01,578 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 16:50:01,578 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 16:50:01,707 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_ipo_data.csv HTTP/1.1" 200 0
+2019-06-06 16:50:01,708 DEBUG    Releasing acquire 0/None
+2019-06-06 19:49:33,842 INFO     753 of total market types in raw dataset, to be reduced to 50
+2019-06-06 19:49:33,853 INFO     Top 50 markets include software
+2019-06-06 19:49:33,854 INFO     Top 50 markets include biotechnology
+2019-06-06 19:49:33,855 INFO     Top 50 markets include mobile
+2019-06-06 19:49:33,856 INFO     Top 50 markets include e-commerce
+2019-06-06 19:49:33,856 INFO     Top 50 markets include curated web
+2019-06-06 19:49:33,857 INFO     Top 50 markets include enterprise software
+2019-06-06 19:49:33,858 INFO     Top 50 markets include health care
+2019-06-06 19:49:33,859 INFO     Top 50 markets include clean technology
+2019-06-06 19:49:33,859 INFO     Top 50 markets include games
+2019-06-06 19:49:33,860 INFO     Top 50 markets include hardware + software
+2019-06-06 19:49:33,861 INFO     Top 50 markets include advertising
+2019-06-06 19:49:33,861 INFO     Top 50 markets include health and wellness
+2019-06-06 19:49:33,863 INFO     Top 50 markets include social media
+2019-06-06 19:49:33,863 INFO     Top 50 markets include finance
+2019-06-06 19:49:33,864 INFO     Top 50 markets include education
+2019-06-06 19:49:33,864 INFO     Top 50 markets include manufacturing
+2019-06-06 19:49:33,865 INFO     Top 50 markets include analytics
+2019-06-06 19:49:33,865 INFO     Top 50 markets include security
+2019-06-06 19:49:33,866 INFO     Top 50 markets include semiconductors
+2019-06-06 19:49:33,866 INFO     Top 50 markets include consulting
+2019-06-06 19:49:33,867 INFO     Top 50 markets include hospitality
+2019-06-06 19:49:33,867 INFO     Top 50 markets include web hosting
+2019-06-06 19:49:33,868 INFO     Top 50 markets include fashion
+2019-06-06 19:49:33,868 INFO     Top 50 markets include real estate
+2019-06-06 19:49:33,869 INFO     Top 50 markets include news
+2019-06-06 19:49:33,870 INFO     Top 50 markets include travel
+2019-06-06 19:49:33,870 INFO     Top 50 markets include messaging
+2019-06-06 19:49:33,870 INFO     Top 50 markets include music
+2019-06-06 19:49:33,871 INFO     Top 50 markets include search
+2019-06-06 19:49:33,871 INFO     Top 50 markets include saas
+2019-06-06 19:49:33,872 INFO     Top 50 markets include medical
+2019-06-06 19:49:33,872 INFO     Top 50 markets include sports
+2019-06-06 19:49:33,872 INFO     Top 50 markets include technology
+2019-06-06 19:49:33,873 INFO     Top 50 markets include apps
+2019-06-06 19:49:33,873 INFO     Top 50 markets include internet
+2019-06-06 19:49:33,874 INFO     Top 50 markets include photography
+2019-06-06 19:49:33,874 INFO     Top 50 markets include entertainment
+2019-06-06 19:49:33,875 INFO     Top 50 markets include video
+2019-06-06 19:49:33,875 INFO     Top 50 markets include marketplaces
+2019-06-06 19:49:33,875 INFO     Top 50 markets include networking
+2019-06-06 19:49:33,876 INFO     Top 50 markets include automotive
+2019-06-06 19:49:33,876 INFO     Top 50 markets include social network media
+2019-06-06 19:49:33,877 INFO     Top 50 markets include public relations
+2019-06-06 19:49:33,877 INFO     Top 50 markets include transportation
+2019-06-06 19:49:33,878 INFO     Top 50 markets include design
+2019-06-06 19:49:33,878 INFO     Top 50 markets include big data
+2019-06-06 19:49:33,879 INFO     Top 50 markets include startups
+2019-06-06 19:49:33,879 INFO     Top 50 markets include cloud computing
+2019-06-06 19:49:33,880 INFO     Top 50 markets include nonprofits
+2019-06-06 19:49:33,880 INFO     Top 50 markets include sales and marketing
+2019-06-06 19:49:33,952 INFO     Top countries for venture are usa gbr can chn deu ind fra isr esp
+2019-06-06 19:49:36,085 DEBUG    Working copy was saved to data/auxiliary/new_companies_data.csv
+2019-06-06 19:49:36,207 DEBUG    Acquiring 0
+2019-06-06 19:49:36,208 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1151753c8>}) about to wait for the following futures []
+2019-06-06 19:49:36,208 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1151753c8>}) done waiting for dependent futures
+2019-06-06 19:49:36,208 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1151753c8>}) with kwargs {'client': <botocore.client.S3 object at 0x115181cc0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x11517a320>, 'osutil': <s3transfer.utils.OSUtils object at 0x11517a2b0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x115175710>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x1151753c8>}
+2019-06-06 19:49:36,209 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x115175710> for transfer request: 0.
+2019-06-06 19:49:36,209 DEBUG    Acquiring 0
+2019-06-06 19:49:36,209 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 19:49:36,209 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:49:36,209 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x115181cc0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x11516e668>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_companies_data.csv', 'extra_args': {}}
+2019-06-06 19:49:36,211 DEBUG    Releasing acquire 0/None
+2019-06-06 19:49:36,231 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:49:36,231 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 19:49:36,388 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_companies_data.csv HTTP/1.1" 400 None
+2019-06-06 19:49:36,393 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:49:36,393 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:49:41,275 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_companies_data.csv HTTP/1.1" 200 0
+2019-06-06 19:49:41,279 DEBUG    Releasing acquire 0/None
+2019-06-06 19:49:41,280 DEBUG    Working copy was saved to bucket startup-funding-working-bucket
+2019-06-06 19:49:43,268 INFO     Investor features after dataframe merging Unnamed: 0 company_permalink company_name company_category_list company_market company_country_code company_state_code company_region company_city investor_permalink investor_name investor_category_list investor_market investor_country_code investor_state_code investor_region investor_city funding_round_permalink funding_round_type funding_round_code funded_at funded_month funded_quarter funded_year raised_amount_usd bins_amount
+2019-06-06 19:49:43,574 INFO     There are a total of 36498 companies in initial dataframe
+2019-06-06 19:49:48,715 DEBUG    Working copy was saved to data/auxiliary/new_investors_data.csv
+2019-06-06 19:49:48,793 DEBUG    Acquiring 0
+2019-06-06 19:49:48,793 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11e780a20>}) about to wait for the following futures []
+2019-06-06 19:49:48,794 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11e780a20>}) done waiting for dependent futures
+2019-06-06 19:49:48,794 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11e780a20>}) with kwargs {'client': <botocore.client.S3 object at 0x11f27cfd0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x11f291e80>, 'osutil': <s3transfer.utils.OSUtils object at 0x11f291eb8>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x11e780390>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x11e780a20>}
+2019-06-06 19:49:48,794 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x11e780390> for transfer request: 0.
+2019-06-06 19:49:48,794 DEBUG    Acquiring 0
+2019-06-06 19:49:48,794 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 19:49:48,795 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:49:48,795 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x11f27cfd0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x11e780358>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_investors_data.csv', 'extra_args': {}}
+2019-06-06 19:49:48,796 DEBUG    Releasing acquire 0/None
+2019-06-06 19:49:48,802 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:49:48,802 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 19:49:48,935 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_investors_data.csv HTTP/1.1" 400 None
+2019-06-06 19:49:48,940 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:49:48,940 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:49:49,590 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_investors_data.csv HTTP/1.1" 200 0
+2019-06-06 19:49:49,591 DEBUG    Releasing acquire 0/None
+2019-06-06 19:49:50,746 INFO     There are 12791 number of acquired companies
+2019-06-06 19:49:50,746 INFO     There are 6633 number of acquirer companies
+2019-06-06 19:49:59,317 DEBUG    Working copy was saved to data/auxiliary/new_acquisitions_data.csv
+2019-06-06 19:49:59,407 DEBUG    Acquiring 0
+2019-06-06 19:49:59,408 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11a9ba240>}) about to wait for the following futures []
+2019-06-06 19:49:59,408 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11a9ba240>}) done waiting for dependent futures
+2019-06-06 19:49:59,409 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x11a9ba240>}) with kwargs {'client': <botocore.client.S3 object at 0x11a237cf8>, 'config': <boto3.s3.transfer.TransferConfig object at 0x11a232ba8>, 'osutil': <s3transfer.utils.OSUtils object at 0x11a232be0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x11a232d68>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x11a9ba240>}
+2019-06-06 19:49:59,409 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x11a232d68> for transfer request: 0.
+2019-06-06 19:49:59,409 DEBUG    Acquiring 0
+2019-06-06 19:49:59,409 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 19:49:59,409 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:49:59,410 DEBUG    Releasing acquire 0/None
+2019-06-06 19:49:59,410 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x11a237cf8>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x11a9ba550>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_acquisitions_data.csv', 'extra_args': {}}
+2019-06-06 19:49:59,413 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:49:59,414 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 19:49:59,565 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_acquisitions_data.csv HTTP/1.1" 400 None
+2019-06-06 19:49:59,568 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:49:59,569 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:49:59,910 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_acquisitions_data.csv HTTP/1.1" 200 0
+2019-06-06 19:49:59,911 DEBUG    Releasing acquire 0/None
+2019-06-06 19:49:59,911 DEBUG    Working copy was saved to bucket startup-funding-working-bucket
+2019-06-06 19:50:01,660 INFO     There are 19 funding round types
+2019-06-06 19:50:02,736 DEBUG    Working copy was saved to data/auxiliary/new_rounds_data.csv
+2019-06-06 19:50:02,806 DEBUG    Acquiring 0
+2019-06-06 19:50:02,807 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x111df0c88>}) about to wait for the following futures []
+2019-06-06 19:50:02,807 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x111df0c88>}) done waiting for dependent futures
+2019-06-06 19:50:02,807 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x111df0c88>}) with kwargs {'client': <botocore.client.S3 object at 0x10f0b7dd8>, 'config': <boto3.s3.transfer.TransferConfig object at 0x10f0f0358>, 'osutil': <s3transfer.utils.OSUtils object at 0x10f0f0320>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x10f0f0160>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x111df0c88>}
+2019-06-06 19:50:02,807 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x10f0f0160> for transfer request: 0.
+2019-06-06 19:50:02,807 DEBUG    Acquiring 0
+2019-06-06 19:50:02,808 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 19:50:02,808 DEBUG    Releasing acquire 0/None
+2019-06-06 19:50:02,808 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:50:02,808 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x10f0b7dd8>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x111df0978>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_rounds_data.csv', 'extra_args': {}}
+2019-06-06 19:50:02,822 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:50:02,822 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 19:50:02,956 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_rounds_data.csv HTTP/1.1" 400 None
+2019-06-06 19:50:02,959 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:50:02,959 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:50:06,290 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_rounds_data.csv HTTP/1.1" 200 0
+2019-06-06 19:50:06,291 DEBUG    Releasing acquire 0/None
+2019-06-06 19:50:06,292 DEBUG    Working copy was saved to bucket startup-funding-working-bucket
+2019-06-06 19:50:07,060 INFO     There are 20 years of ipo data
+2019-06-06 19:50:07,078 DEBUG    Working copy was saved to data/auxiliary/new_ipo_data.csv
+2019-06-06 19:50:07,144 DEBUG    Acquiring 0
+2019-06-06 19:50:07,144 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x113fa8278>}) about to wait for the following futures []
+2019-06-06 19:50:07,144 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x113fa8278>}) done waiting for dependent futures
+2019-06-06 19:50:07,145 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x113fa8278>}) with kwargs {'client': <botocore.client.S3 object at 0x113f5fd30>, 'config': <boto3.s3.transfer.TransferConfig object at 0x113f6cbe0>, 'osutil': <s3transfer.utils.OSUtils object at 0x113f6cc18>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x113f6cdd8>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x113fa8278>}
+2019-06-06 19:50:07,145 DEBUG    Submitting task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x113f6cdd8> for transfer request: 0.
+2019-06-06 19:50:07,145 DEBUG    Acquiring 0
+2019-06-06 19:50:07,145 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 19:50:07,145 DEBUG    PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:50:07,145 DEBUG    Executing task PutObjectTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x113f5fd30>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x113fa8588>, 'bucket': 'startup-funding-working-bucket', 'key': 'new_ipo_data.csv', 'extra_args': {}}
+2019-06-06 19:50:07,147 DEBUG    Releasing acquire 0/None
+2019-06-06 19:50:07,149 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:50:07,149 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 19:50:07,284 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "PUT /new_ipo_data.csv HTTP/1.1" 400 None
+2019-06-06 19:50:07,287 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:50:07,288 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:50:07,469 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /new_ipo_data.csv HTTP/1.1" 200 0
+2019-06-06 19:50:07,471 DEBUG    Releasing acquire 0/None
+2019-06-06 19:50:07,471 DEBUG    Working copy was saved to bucket startup-funding-working-bucket
+2019-06-06 19:54:44,019 DEBUG    Working copy was saved to data/auxiliary/aggregated_data.csv
+2019-06-06 19:54:44,141 DEBUG    Acquiring 0
+2019-06-06 19:54:44,141 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x119a73b38>}) about to wait for the following futures []
+2019-06-06 19:54:44,141 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x119a73b38>}) done waiting for dependent futures
+2019-06-06 19:54:44,142 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x119a73b38>}) with kwargs {'client': <botocore.client.S3 object at 0x119a3d5f8>, 'config': <boto3.s3.transfer.TransferConfig object at 0x119a734a8>, 'osutil': <s3transfer.utils.OSUtils object at 0x119a734e0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x119a736a0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x119a73b38>}
+2019-06-06 19:54:44,142 DEBUG    Submitting task CreateMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x119a736a0> for transfer request: 0.
+2019-06-06 19:54:44,142 DEBUG    Acquiring 0
+2019-06-06 19:54:44,142 DEBUG    CreateMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 19:54:44,142 DEBUG    CreateMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:54:44,142 DEBUG    Executing task CreateMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x119a3d5f8>, 'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}
+2019-06-06 19:54:44,145 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:54:44,146 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 19:54:44,146 DEBUG    Submitting task UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x119a736a0> for transfer request: 0.
+2019-06-06 19:54:44,146 DEBUG    Acquiring 0
+2019-06-06 19:54:44,147 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x119a92710>]
+2019-06-06 19:54:44,147 DEBUG    Submitting task UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x119a736a0> for transfer request: 0.
+2019-06-06 19:54:44,147 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x119a92710>
+2019-06-06 19:54:44,147 DEBUG    Acquiring 0
+2019-06-06 19:54:44,147 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x119a92710>]
+2019-06-06 19:54:44,147 DEBUG    Submitting task CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x119a736a0> for transfer request: 0.
+2019-06-06 19:54:44,148 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x119a92710>
+2019-06-06 19:54:44,148 DEBUG    Acquiring 0
+2019-06-06 19:54:44,148 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x119a92710>, <s3transfer.futures.ExecutorFuture object at 0x119b5a278>, <s3transfer.futures.ExecutorFuture object at 0x119b5a668>]
+2019-06-06 19:54:44,148 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x119a92710>
+2019-06-06 19:54:44,148 DEBUG    Releasing acquire 0/None
+2019-06-06 19:54:44,393 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "POST /aggregated.csv?uploads HTTP/1.1" 400 None
+2019-06-06 19:54:44,398 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:54:44,398 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:54:44,722 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "POST /aggregated.csv?uploads HTTP/1.1" 200 None
+2019-06-06 19:54:44,724 DEBUG    Releasing acquire 0/None
+2019-06-06 19:54:44,724 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:54:44,725 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:54:44,725 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x119b5a278>
+2019-06-06 19:54:44,725 DEBUG    Executing task UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x119a3d5f8>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x119a92f60>, 'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}, 'upload_id': 'MAgTKmuNDCMW7pEyS7tHe3zl9PtC0yTRV0zIE88CpA43vqp313L.f3Qk3KznEHSrywz1jHBvTL35OI6QRRxl4Un83_U9NJjdIpPoVAdhVvg-'}
+2019-06-06 19:54:44,725 DEBUG    Executing task UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x119a3d5f8>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x119b5a390>, 'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}, 'upload_id': 'MAgTKmuNDCMW7pEyS7tHe3zl9PtC0yTRV0zIE88CpA43vqp313L.f3Qk3KznEHSrywz1jHBvTL35OI6QRRxl4Un83_U9NJjdIpPoVAdhVvg-'}
+2019-06-06 19:54:44,746 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:54:44,756 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:54:44,756 DEBUG    Starting new HTTPS connection (2): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:54:53,549 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /aggregated.csv?uploadId=MAgTKmuNDCMW7pEyS7tHe3zl9PtC0yTRV0zIE88CpA43vqp313L.f3Qk3KznEHSrywz1jHBvTL35OI6QRRxl4Un83_U9NJjdIpPoVAdhVvg-&partNumber=1 HTTP/1.1" 200 0
+2019-06-06 19:54:53,551 DEBUG    Releasing acquire 0/None
+2019-06-06 19:54:53,551 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x119b5a668>
+2019-06-06 19:54:56,684 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /aggregated.csv?uploadId=MAgTKmuNDCMW7pEyS7tHe3zl9PtC0yTRV0zIE88CpA43vqp313L.f3Qk3KznEHSrywz1jHBvTL35OI6QRRxl4Un83_U9NJjdIpPoVAdhVvg-&partNumber=2 HTTP/1.1" 200 0
+2019-06-06 19:54:56,689 DEBUG    Releasing acquire 0/None
+2019-06-06 19:54:56,689 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:54:56,690 DEBUG    Executing task CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x119a3d5f8>, 'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}, 'upload_id': 'MAgTKmuNDCMW7pEyS7tHe3zl9PtC0yTRV0zIE88CpA43vqp313L.f3Qk3KznEHSrywz1jHBvTL35OI6QRRxl4Un83_U9NJjdIpPoVAdhVvg-', 'parts': [{'ETag': '"4ba40790469a5901d6fb9f8339f41f46"', 'PartNumber': 1}, {'ETag': '"74a470078e1668b6a3f42a2b44a56e45"', 'PartNumber': 2}]}
+2019-06-06 19:54:56,695 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:54:56,776 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "POST /aggregated.csv?uploadId=MAgTKmuNDCMW7pEyS7tHe3zl9PtC0yTRV0zIE88CpA43vqp313L.f3Qk3KznEHSrywz1jHBvTL35OI6QRRxl4Un83_U9NJjdIpPoVAdhVvg- HTTP/1.1" 200 None
+2019-06-06 19:54:56,838 DEBUG    Releasing acquire 0/None
+2019-06-06 19:54:56,839 DEBUG    Working copy was saved to bucket startup-funding-working-bucket
+2019-06-06 19:56:06,452 INFO     Final shape of merged dataframe is (36498, 51)
+2019-06-06 19:56:09,957 DEBUG    Working copy was saved to data/auxiliary/aggregated_data.csv
+2019-06-06 19:56:10,050 DEBUG    Acquiring 0
+2019-06-06 19:56:10,051 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1101363c8>}) about to wait for the following futures []
+2019-06-06 19:56:10,052 DEBUG    UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1101363c8>}) done waiting for dependent futures
+2019-06-06 19:56:10,053 DEBUG    Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x1101363c8>}) with kwargs {'client': <botocore.client.S3 object at 0x11004ae48>, 'config': <boto3.s3.transfer.TransferConfig object at 0x110054cf8>, 'osutil': <s3transfer.utils.OSUtils object at 0x110054d30>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x110054ef0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x1101363c8>}
+2019-06-06 19:56:10,053 DEBUG    Submitting task CreateMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x110054ef0> for transfer request: 0.
+2019-06-06 19:56:10,053 DEBUG    Acquiring 0
+2019-06-06 19:56:10,054 DEBUG    CreateMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for the following futures []
+2019-06-06 19:56:10,054 DEBUG    CreateMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:56:10,054 DEBUG    Executing task CreateMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x11004ae48>, 'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}
+2019-06-06 19:56:10,057 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:56:10,058 DEBUG    Submitting task UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x110054ef0> for transfer request: 0.
+2019-06-06 19:56:10,058 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.amazonaws.com:443
+2019-06-06 19:56:10,058 DEBUG    Acquiring 0
+2019-06-06 19:56:10,058 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x110155748>]
+2019-06-06 19:56:10,059 DEBUG    Submitting task UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x110054ef0> for transfer request: 0.
+2019-06-06 19:56:10,059 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x110155748>
+2019-06-06 19:56:10,059 DEBUG    Acquiring 0
+2019-06-06 19:56:10,059 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x110155748>]
+2019-06-06 19:56:10,059 DEBUG    Submitting task CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x110054ef0> for transfer request: 0.
+2019-06-06 19:56:10,059 DEBUG    Acquiring 0
+2019-06-06 19:56:10,059 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x110155748>
+2019-06-06 19:56:10,060 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x110155748>, <s3transfer.futures.ExecutorFuture object at 0x110155b38>, <s3transfer.futures.ExecutorFuture object at 0x110155f28>]
+2019-06-06 19:56:10,060 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x110155748>
+2019-06-06 19:56:10,060 DEBUG    Releasing acquire 0/None
+2019-06-06 19:56:10,224 DEBUG    https://startup-funding-working-bucket.s3.amazonaws.com:443 "POST /aggregated.csv?uploads HTTP/1.1" 400 None
+2019-06-06 19:56:10,231 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:56:10,231 DEBUG    Starting new HTTPS connection (1): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:56:10,401 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "POST /aggregated.csv?uploads HTTP/1.1" 200 None
+2019-06-06 19:56:10,403 DEBUG    Releasing acquire 0/None
+2019-06-06 19:56:10,403 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x110155b38>
+2019-06-06 19:56:10,403 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:56:10,404 DEBUG    Executing task UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x11004ae48>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x110155c50>, 'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 2, 'extra_args': {}, 'upload_id': 'xsH4H_JDSUVxjGYbB5ZxzCSDOIwnoksPTbcA5xWoeyKPkHp3Gyyfozw0vD85lP1fevsLZeTpUX9zgHt7lJ7MSpRC1PIZzBWrbMUE5shcYRY-'}
+2019-06-06 19:56:10,405 DEBUG    UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:56:10,405 DEBUG    Executing task UploadPartTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x11004ae48>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x110155860>, 'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'part_number': 1, 'extra_args': {}, 'upload_id': 'xsH4H_JDSUVxjGYbB5ZxzCSDOIwnoksPTbcA5xWoeyKPkHp3Gyyfozw0vD85lP1fevsLZeTpUX9zgHt7lJ7MSpRC1PIZzBWrbMUE5shcYRY-'}
+2019-06-06 19:56:10,424 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:56:10,430 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:56:10,430 DEBUG    Starting new HTTPS connection (2): startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443
+2019-06-06 19:56:14,081 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /aggregated.csv?uploadId=xsH4H_JDSUVxjGYbB5ZxzCSDOIwnoksPTbcA5xWoeyKPkHp3Gyyfozw0vD85lP1fevsLZeTpUX9zgHt7lJ7MSpRC1PIZzBWrbMUE5shcYRY-&partNumber=2 HTTP/1.1" 200 0
+2019-06-06 19:56:14,084 DEBUG    Releasing acquire 0/None
+2019-06-06 19:56:19,363 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "PUT /aggregated.csv?uploadId=xsH4H_JDSUVxjGYbB5ZxzCSDOIwnoksPTbcA5xWoeyKPkHp3Gyyfozw0vD85lP1fevsLZeTpUX9zgHt7lJ7MSpRC1PIZzBWrbMUE5shcYRY-&partNumber=1 HTTP/1.1" 200 0
+2019-06-06 19:56:19,363 DEBUG    Releasing acquire 0/None
+2019-06-06 19:56:19,364 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x110155f28>
+2019-06-06 19:56:19,364 DEBUG    CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) done waiting for dependent futures
+2019-06-06 19:56:19,364 DEBUG    Executing task CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x11004ae48>, 'bucket': 'startup-funding-working-bucket', 'key': 'aggregated.csv', 'extra_args': {}, 'upload_id': 'xsH4H_JDSUVxjGYbB5ZxzCSDOIwnoksPTbcA5xWoeyKPkHp3Gyyfozw0vD85lP1fevsLZeTpUX9zgHt7lJ7MSpRC1PIZzBWrbMUE5shcYRY-', 'parts': [{'ETag': '"4ba40790469a5901d6fb9f8339f41f46"', 'PartNumber': 1}, {'ETag': '"74a470078e1668b6a3f42a2b44a56e45"', 'PartNumber': 2}]}
+2019-06-06 19:56:19,366 DEBUG    Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+2019-06-06 19:56:19,454 DEBUG    https://startup-funding-working-bucket.s3.us-east-2.amazonaws.com:443 "POST /aggregated.csv?uploadId=xsH4H_JDSUVxjGYbB5ZxzCSDOIwnoksPTbcA5xWoeyKPkHp3Gyyfozw0vD85lP1fevsLZeTpUX9zgHt7lJ7MSpRC1PIZzBWrbMUE5shcYRY- HTTP/1.1" 200 None
+2019-06-06 19:56:19,498 DEBUG    Releasing acquire 0/None
+2019-06-06 19:56:19,499 DEBUG    Working copy was saved to bucket startup-funding-working-bucket
+2019-06-06 19:57:56,146 INFO     Final shape of merged dataframe is (36498, 51)

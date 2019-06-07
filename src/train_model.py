@@ -78,7 +78,7 @@ def run_training(args):
     # Save pickle to S3 bucket
     s3 = boto3.client("s3")
     s3.upload_file(args.save, args.bucket_name, args.output_file_path)
-    logging.debug('Working model was saved to bucket %s', bucket_name)
+    logging.debug('Working model was saved to bucket %s', args.bucket_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
@@ -87,7 +87,7 @@ if __name__ == '__main__':
         help="input file path to aggregated data")
     parser.add_argument('--save', default='models/sample_model.pkl',
         help='path to where the model should be saved to')
-    parser.add_argument("--bucket_name", default='startu    p-funding-working-bucket',
+    parser.add_argument("--bucket_name", default='startup-funding-working-bucket',
         help="S3 bucket name")
     parser.add_argument("--output_file_path", default='sample_model.pkl',
         help="output file path of uploaded file in s3 bucket")

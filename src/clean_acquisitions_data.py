@@ -64,7 +64,7 @@ def run_clean_acquisitions(args):
     if args.bucket_name != None:
         s3 = boto3.client("s3")
         s3.upload_file(args.save, args.bucket_name, args.output_file_path)
-        logging.debug('Working copy was saved to bucket %s', bucket_name)
+        logging.debug('Working copy was saved to bucket %s', args.bucket_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
