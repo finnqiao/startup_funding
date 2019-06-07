@@ -47,3 +47,8 @@ model_input = dict.fromkeys(all_features, [0])
 model_input = pd.DataFrame.from_dict(model_input)
 predict = model.predict(model_input)
 print(predict[0])
+
+import pandas as pd
+df = pd.read_csv('data/auxiliary/aggregated_data.csv')
+df = df[all_features]
+df.describe()

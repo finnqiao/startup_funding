@@ -1,3 +1,12 @@
+<!-- all_features = ['funding_rounds', 'founded_month', 'founded_quarter', 'founded_year',
+'country_esp', 'country_ind', 'country_other', 'country_usa', 'days_to_fund', 'months_to_fund',
+'days_between_rounds', 'months_between_rounds', 'funding_round_type_debt_financing',
+'funding_round_type_post_ipo_debt', 'funding_round_type_post_ipo_equity',
+'funding_round_type_private_equity', 'funding_round_type_venture', 'unique_investors',
+'median_investor_value', 'no_acquisitions', 'no_ipos', 'market_biotechnology',
+'market_clean technology', 'market_enterprise software', 'market_finance', 'market_health and wellness',
+'market_hospitality', 'market_internet', 'market_mobile', 'market_other'] -->
+
 <!doctype html>
 <html>
 <style>
@@ -13,26 +22,45 @@ form {
 </style>
 
 <head>
-    <title>Bike Usage Model</title>
+    <title>What kind of startup founder are you?</title>
 </head>
 <form action="{{ url_for('main') }}" method="POST">
     <fieldset>
-        <legend>Input values:</legend>
-        Temperature:
-        <input name="temperature" type="number" required>
+        <legend>Startup tendencies:</legend>
+        How many fundraising rounds are you going for?:
+        <input name="num_rounds" type="number" required>
         <br>
-        <br> Humidity:
+        <br> How aggressive are you in getting that first funding round?:
+        <input name="windspeed" type="number" required>
+        <br>
+        <br> How long do you wait before going for that next funding round?:
+        <input name="windspeed" type="number" required>
+        <br>
+        <br> What is your preferred funding round type?:
+        <input name="windspeed" type="number" required>
+        <br>
+        <br> When was your startup founded?:
         <input name="humidity" type="number" required>
         <br>
-        <br> Windspeed:
+        <br> Which country was your startup founded in?:
+        <input name="windspeed" type="number" required>
+        <br>
+        <br> What investor profile do you prefer?:
+        <input name="windspeed" type="number" required>
+        <br>
+        <br> How acquisitive are you as a company?:
+        <input name="windspeed" type="number" required>
+        <br>
+        <br> Which market are you targeting?:
         <input name="windspeed" type="number" required>
         <br>
         <br>
         <input type="submit">
+        <input type="reset">
     </fieldset>
 </form>
 <br>
-<div class="result" align="center">
+<!-- <div class="result" align="center">
     {% if result %}
     	{% for variable, value in original_input.items() %}
     		<b>{{ variable }}</b> : {{ value }}
@@ -41,6 +69,6 @@ form {
     	<br> Predicted number of bikes in use:
    		<p style="font-size:50px">{{ result }}</p>
     {% endif %}
-</div>
+</div> -->
 
 </html>
