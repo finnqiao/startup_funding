@@ -10,7 +10,7 @@ import sklearn
 import pandas as pd
 
 # Initialize the Flask application
-# app = Flask(__name__)
+app = Flask(__name__)
 
 # Configure flask app from flask_config.py
 # app.config.from_pyfile('config/flask_config.py')
@@ -22,16 +22,16 @@ import pandas as pd
 with open('models/sample_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-# @app.route('/')
-# def index():
-#     """Title view"""
-#     return render_template('index.html')
-#
-# @app.route('/main', methods=['POST'])
-# def main():
-#     """Page with form to submit to model for prediction"""
-#
-#     return render_template(url_for('index'))
+@app.route('/')
+def index():
+    """Title view"""
+    return render_template('index.html')
+
+@app.route('/main', methods=['GET','POST'])
+def main():
+    """Page with form to submit to model for prediction"""
+
+    return render_template('main.html')
 
 
 
@@ -48,7 +48,7 @@ model_input = pd.DataFrame.from_dict(model_input)
 predict = model.predict(model_input)
 print(predict[0])
 
-import pandas as pd
+
 df = pd.read_csv('data/auxiliary/aggregated_data.csv')
 df = df[all_features]
 df.describe()
