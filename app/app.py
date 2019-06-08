@@ -94,15 +94,3 @@ def main():
         funding = '{0:,}'.format(int(math.exp(predict[0])))
 
         return(render_template('main.html', result=funding))
-
-
-df = pd.read_csv('data/auxiliary/aggregated_data.csv')
-list(df.columns)
-df = df[all_features]
-df = df[['days_to_fund','months_to_fund','days_between_rounds','months_between_rounds','median_investor_value','no_acquisitions']]
-df.describe()
-
-x = list(np.percentile(df['no_acquisitions'], np.arange(0, 100, 25)))
-# x.reverse()
-x
-df['no_acquisitions'].value_counts()

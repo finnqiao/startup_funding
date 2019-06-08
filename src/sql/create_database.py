@@ -22,9 +22,16 @@ class Funding_Prediction(Base):
 
     __tablename__ = 'funding_prediction'
 
-    user_session_id = Column(String(500), primary_key=True, unique=True, nullable=False)
-    user_timestamp = Column(DateTime, default=datetime.datetime.utcnow)
-    predicted_amount = Column(Float, unique=False, nullable=False)
+    num_rounds = Column(Integer, unique=False, nullable=False)
+    time_first_round = Column(Integer, unique=False, nullable=False)
+    time_btw_round = Column(Integer, unique=False, nullable=False)
+    funding_type = Column(String(100), unique=True, nullable=False)
+    founding_date = Column(String(100), unique=True, nullable=False)
+    country = Column(String(100), unique=True, nullable=False)
+    investor_type = Column(Integer, unique=False, nullable=False)
+    acq_type = Column(Integer, unique=False, nullable=False)
+    market = Column(String(100), unique=True, nullable=False)
+    prediction = Column(String(100), unique=True, nullable=False)
 
 class Company_Features(Base):
     """
