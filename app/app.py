@@ -8,6 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 import pickle
 import sklearn
 import pandas as pd
+import numpy as np
 import math
 
 # Initialize the Flask application
@@ -27,6 +28,11 @@ all_features = ['funding_rounds', 'founded_month', 'founded_quarter', 'founded_y
 'median_investor_value', 'no_acquisitions', 'no_ipos', 'market_biotechnology',
 'market_clean technology', 'market_enterprise software', 'market_finance', 'market_health and wellness',
 'market_hospitality', 'market_internet', 'market_mobile', 'market_other']
+
+months_to_fund = [61.70147230949301, 25.922503542167192, 11.992032690609665, 2.694100494876692, -576.1432472946057]
+median_investor = [0, 1, 5, 9]
+acquisitions_list = [0, 1, 4, 100]
+
 
 # Use pickle to load in the pre-trained model
 with open('models/sample_model.pkl', 'rb') as f:
@@ -75,12 +81,12 @@ def main():
             model_input[funding_type][0] = 1
         if market in all_features:
             model_input[market][0] = 1
-        model_input['days_to_fund'][0]
-        model_input['months_to_fund'][0]
-        model_input['days_between_rounds'][0]
-        model_input['months_between_rounds'][0]
-        model_input['median_investor_value'][0]
-        model_input['no_acquisitions'][0]
+        model_input['months_to_fund'][0] = months_to_fund[int(time_first_round)]
+        model_input['days_to_fund'][0] = model_input['months_to_fund'][0] * 30
+        model_input['months_between_rounds'][0] = int(time_btw_round)
+        model_input['days_between_rounds'][0] = model_input['months_between_rounds'][0] * 30
+        model_input['median_investor_value'][0] = median_investor[int(investor_type)]
+        model_input['no_acquisitions'][0] = acquisitions_list[int(acq_type)]
 
         model_input = pd.DataFrame.from_dict(model_input)
         predict = model.predict(model_input)
@@ -93,4 +99,10 @@ def main():
 df = pd.read_csv('data/auxiliary/aggregated_data.csv')
 list(df.columns)
 df = df[all_features]
+df = df[['days_to_fund','months_to_fund','days_between_rounds','months_between_rounds','median_investor_value','no_acquisitions']]
 df.describe()
+
+x = list(np.percentile(df['no_acquisitions'], np.arange(0, 100, 25)))
+# x.reverse()
+x
+df['no_acquisitions'].value_counts()
