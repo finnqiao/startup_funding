@@ -22,16 +22,17 @@ class Funding_Prediction(Base):
 
     __tablename__ = 'funding_prediction'
 
+    startup_name = Column(String(500), primary_key=True, unique=True, nullable=False)
     num_rounds = Column(Integer, unique=False, nullable=False)
     time_first_round = Column(Integer, unique=False, nullable=False)
     time_btw_round = Column(Integer, unique=False, nullable=False)
-    funding_type = Column(String(100), unique=True, nullable=False)
-    founding_date = Column(String(100), unique=True, nullable=False)
-    country = Column(String(100), unique=True, nullable=False)
+    funding_type = Column(String(100), unique=False, nullable=False)
+    founding_date = Column(String(100), unique=False, nullable=False)
+    country = Column(String(100), unique=False, nullable=False)
     investor_type = Column(Integer, unique=False, nullable=False)
     acq_type = Column(Integer, unique=False, nullable=False)
-    market = Column(String(100), unique=True, nullable=False)
-    prediction = Column(String(100), unique=True, nullable=False)
+    market = Column(String(100), unique=False, nullable=False)
+    prediction = Column(String(100), unique=False, nullable=False)
 
 class Company_Features(Base):
     """
@@ -96,7 +97,7 @@ def get_engine_string(RDS = False):
         logging.debug("engine string: %s"%engine_string)
         return  engine_string
     else:
-        return 'sqlite:///startupfund.db'
+        return 'sqlite:///data/startup_funding.db'
 
 def create_db(args,engine=None):
     """Creates a database with the data models inherited from `Base`"""
@@ -116,22 +117,22 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     engine = create_db(args)
-
-    # create engine
-    engine = sql.create_engine(get_engine_string(RDS=args.RDS))
-
-    # create a db session
-    Session = sessionmaker(bind=engine)
-    session = Session()
-
-    # insert a new url to prediction table for testing
-    input_user = Funding_Prediction(user_session_id='aba124jd1', predicted_amount=34500.0)
-    session.add(input_user)
-    session.commit()
-
-    logger.info("New user input added")
-
-    # check if the new url was inserted successfully
-    query = "SELECT * FROM funding_prediction LIMIT 1"
-    df = pd.read_sql(query, con=engine)
-    logger.debug(df)
+    #
+    # # create engine
+    # engine = sql.create_engine(get_engine_string(RDS=args.RDS))
+    #
+    # # create a db session
+    # Session = sessionmaker(bind=engine)
+    # session = Session()
+    #
+    # # insert a new url to prediction table for testing
+    # input_user = Funding_Prediction(user_session_id='aba124jd1', predicted_amount=34500.0)
+    # session.add(input_user)
+    # session.commit()
+    #
+    # logger.info("New user input added")
+    #
+    # # check if the new url was inserted successfully
+    # query = "SELECT * FROM funding_prediction LIMIT 1"
+    # df = pd.read_sql(query, con=engine)
+    # logger.debug(df)

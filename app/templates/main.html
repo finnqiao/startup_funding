@@ -3,13 +3,21 @@
 
 <style>
 form {
-    margin: auto;
-    width: 35%;
+  margin: auto;
+  width: 35%;
 }
 .result {
-    margin: auto;
-    width: 35%;
-    border: 1px solid #ccc;
+  margin: auto;
+  width: 35%;
+  border: 1px solid #ccc;
+}
+.rocket {
+  padding: 25px;
+  height: 10%;
+  width: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 
@@ -23,9 +31,13 @@ form {
 </head>
 
 <body>
+  <img class='rocket' src="{{url_for('static', filename='startup.png')}}" />
   <form action="{{ url_for('main') }}" method="POST">
     <legend>What kind of startup founder are you?</legend>
-    How many fundraising rounds are you going for?:
+    What is the name of your startup?:<br>
+    <input name="startup_name" type="text" required>
+    <br>
+    <br>How many fundraising rounds are you going for?:
     <input name="num_rounds" type="number" min="0" max="15" value="0" required>
     <br>
     <br> How aggressive are you in getting that first funding round?:<br>
@@ -49,7 +61,7 @@ form {
     <br> When was your startup founded?:
     <input name="founding_date" type="month" min="1900-01" max="2014-12" required>
     <br>
-    <br> Which country was your startup founded in?:
+    <br> In which country was your startup founded in?:
     <select name="country">
       <option value="country_can">Canada</option>
       <option value="country_chn">China</option>

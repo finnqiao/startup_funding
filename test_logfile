@@ -1,4 +1,0 @@
-2019-06-06 15:53:49,688 DEBUG    CACHEDIR=/Users/finn/.matplotlib
-2019-06-06 15:53:49,696 DEBUG    Using fontManager instance from /Users/finn/.matplotlib/fontlist-v300.json
-2019-06-06 15:53:50,000 DEBUG    Loaded backend module://ipykernel.pylab.backend_inline version unknown.
-2019-06-06 15:53:50,555 DEBUG    Loaded backend module://ipykernel.pylab.backend_inline version unknown.

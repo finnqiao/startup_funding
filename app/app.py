@@ -1,9 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.abspath('./src'))
 import traceback
 from flask import render_template, request, redirect, url_for
 import logging.config
-# from app.models import Tracks
 from flask import Flask
-# from src.add_songs import Tracks
+from sql.create_database import Funding_Prediction
 from flask_sqlalchemy import SQLAlchemy
 import pickle
 import sklearn
@@ -15,10 +17,10 @@ import math
 app = Flask(__name__)
 
 # Configure flask app from flask_config.py
-# app.config.from_pyfile('config/flask_config.py')
+app.config.from_pyfile('../config/flask_config.py')
 
 # Initialize the database
-# db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
 all_features = ['funding_rounds', 'founded_month', 'founded_quarter', 'founded_year',
 'country_esp', 'country_ind', 'country_other', 'country_usa', 'days_to_fund', 'months_to_fund',
@@ -32,7 +34,6 @@ all_features = ['funding_rounds', 'founded_month', 'founded_quarter', 'founded_y
 months_to_fund = [61.70147230949301, 25.922503542167192, 11.992032690609665, 2.694100494876692, -576.1432472946057]
 median_investor = [0, 1, 5, 9]
 acquisitions_list = [0, 1, 4, 100]
-
 
 # Use pickle to load in the pre-trained model
 with open('models/sample_model.pkl', 'rb') as f:
@@ -52,6 +53,7 @@ def main():
 
     if request.method == 'POST':
         # Extract the input
+        startup_name = request.form['startup_name']
         num_rounds = request.form['num_rounds']
         time_first_round = request.form['time_first_round']
         time_btw_round = request.form['time_btw_round']
@@ -64,6 +66,7 @@ def main():
 
         model_input = dict.fromkeys(all_features, [0])
 
+        # Load in data from form in POST.
         model_input['funding_rounds'][0] = int(num_rounds)
         model_input['founded_month'][0] = int(founding_date[-2:])
         if int(founding_date[-2:]) <= 3:
@@ -92,5 +95,21 @@ def main():
         predict = model.predict(model_input)
 
         funding = '{0:,}'.format(int(math.exp(predict[0])))
+
+        # Adding prediction details to RDS.
+        prediction1 = Funding_Prediction(startup_name = startup_name,
+                                        num_rounds = int(num_rounds),
+                                        time_first_round = int(time_first_round),
+                                        time_btw_round = int(time_btw_round),
+                                        funding_type = funding_type,
+                                        founding_date = founding_date,
+                                        country = country,
+                                        investor_type = int(investor_type),
+                                        acq_type = int(acq_type),
+                                        market = market,
+                                        prediction = funding)
+        db.session.add(prediction1)
+        db.session.commit()
+        logging.info("New prediction added.")
 
         return(render_template('main.html', result=funding))
