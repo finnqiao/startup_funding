@@ -39,17 +39,12 @@ acquisitions_list = [0, 1, 4, 100]
 with open('models/sample_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def index():
-    """Title view"""
-    return render_template('index.html')
-
-@app.route('/main', methods=['GET','POST'])
-def main():
     """Page with form to submit to model for prediction"""
     if request.method == 'GET':
         # Just render the initial form, to get input
-        return(render_template('main.html'))
+        return(render_template('index.html'))
 
     if request.method == 'POST':
         # Extract the input
@@ -112,4 +107,4 @@ def main():
         db.session.commit()
         logging.info("New prediction added.")
 
-        return(render_template('main.html', result=funding))
+        return(render_template('index.html', result=funding))
