@@ -1,70 +1,234 @@
- 2019-05-15 12:09:04,835 INFO     RDS:True
-2019-05-15 12:09:04,835 DEBUG    engine string: mysql+pymysql://None:None@None:None/startup_funding
-2019-05-15 12:14:49,405 INFO     RDS:False
-2019-05-15 12:14:49,437 INFO     database created
-2019-05-15 12:14:49,437 DEBUG    engine string: mysql+pymysql://None:None@None:None/startup_funding
-2019-05-15 12:15:33,953 INFO     RDS:True
-2019-05-15 12:15:33,954 DEBUG    engine string: mysql+pymysql://None:None@None:None/startup_funding
-2019-05-15 13:56:35,707 INFO     RDS:False
-2019-05-15 13:56:35,739 INFO     database created
-2019-05-15 13:56:35,739 DEBUG    engine string: mysql+pymysql://None:None@None:None/startup_funding
-2019-05-15 15:20:35,654 INFO     RDS:False
-2019-05-15 15:20:35,689 INFO     database created
-2019-05-15 15:20:35,690 DEBUG    engine string: mysql+pymysql://None:None@None:None/startup_funding
-2019-05-15 15:21:31,612 INFO     RDS:False
-2019-05-15 15:21:31,641 INFO     database created
-2019-05-15 15:21:31,641 DEBUG    engine string: mysql+pymysql://None:None@None:None/startup_funding
-2019-05-15 15:23:24,342 INFO     RDS:False
-2019-05-15 15:23:24,372 INFO     database created
-2019-05-15 15:23:24,372 DEBUG    engine string: mysql+pymysql://None:None@None:None/startup_funding
-2019-05-15 15:23:40,153 INFO     RDS:False
-2019-05-15 15:23:40,172 INFO     database created
-2019-05-15 15:23:40,172 DEBUG    engine string: mysql+pymysql://None:None@None:None/startup_funding
-2019-05-15 15:28:59,474 INFO     RDS:False
-2019-05-15 15:28:59,509 INFO     database created
-2019-05-15 15:28:59,509 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:29:15,252 INFO     RDS:True
-2019-05-15 15:29:15,253 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:29:15,997 INFO     database created
-2019-05-15 15:29:15,998 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:29:16,465 INFO     New user input added
-2019-05-15 15:32:37,987 INFO     RDS:False
-2019-05-15 15:32:38,021 INFO     database created
-2019-05-15 15:32:38,021 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:44:12,697 INFO     RDS:False
-2019-05-15 15:44:12,730 INFO     database created
-2019-05-15 15:44:12,730 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:44:37,904 INFO     RDS:False
-2019-05-15 15:44:37,941 INFO     database created
-2019-05-15 15:44:37,941 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:45:17,739 INFO     RDS:False
-2019-05-15 15:45:17,773 INFO     database created
-2019-05-15 15:45:17,773 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:48:58,223 INFO     RDS:False
-2019-05-15 15:48:58,255 INFO     database created
-2019-05-15 15:48:58,255 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:49:40,303 INFO     RDS:True
-2019-05-15 15:49:40,303 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:49:41,010 INFO     database created
-2019-05-15 15:49:41,011 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:49:41,485 INFO     New user input added
-2019-05-15 15:54:15,552 INFO     RDS:True
-2019-05-15 15:54:15,553 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:54:16,346 INFO     database created
-2019-05-15 15:54:16,346 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 15:54:16,828 INFO     New user input added
-2019-05-15 15:54:16,972 INFO       user_session_id      user_timestamp  predicted_amount
-0       aba124jd1 2019-05-15 20:54:17           34500.0
-2019-05-15 15:55:57,562 INFO     RDS:False
-2019-05-15 15:55:57,601 INFO     database created
-2019-05-15 15:55:57,601 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 16:14:39,138 INFO     RDS:False
-2019-05-15 16:14:39,175 INFO     database created
-2019-05-15 16:14:39,175 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 16:16:45,948 INFO     RDS:True
-2019-05-15 16:16:45,948 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 16:16:47,518 INFO     database created
-2019-05-15 16:16:47,519 DEBUG    engine string: mysql+pymysql://root:startup_funding@startupfund-db.crnqbkbtfb7a.us-east-2.rds.amazonaws.com:3306/startup_funding
-2019-05-15 16:16:48,488 INFO     New user input added
-2019-05-15 16:16:48,734 INFO       user_session_id      user_timestamp  predicted_amount
-0       aba124jd1 2019-05-15 21:16:48           34500.0
+2019-06-08 11:52:46,910 INFO     RDS:False
+2019-06-08 11:52:46,934 INFO     database created
+2019-06-08 11:52:50,622 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 11:52:51,342 INFO     New prediction added.
+2019-06-08 11:52:51,351 INFO     127.0.0.1 - - [08/Jun/2019 11:52:51] "POST /main HTTP/1.1" 200 -
+2019-06-08 13:28:34,358 INFO     127.0.0.1 - - [08/Jun/2019 13:28:34] "GET / HTTP/1.1" 200 -
+2019-06-08 13:28:44,125 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:28:46,495 INFO     127.0.0.1 - - [08/Jun/2019 13:28:46] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:28:46,609 INFO     127.0.0.1 - - [08/Jun/2019 13:28:46] "GET /assets/startup.png HTTP/1.1" 404 -
+2019-06-08 13:29:40,930 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:29:43,884 INFO     127.0.0.1 - - [08/Jun/2019 13:29:43] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:29:44,006 INFO     127.0.0.1 - - [08/Jun/2019 13:29:44] "GET /assets/startup.png HTTP/1.1" 404 -
+2019-06-08 13:31:40,165 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:31:42,194 INFO     127.0.0.1 - - [08/Jun/2019 13:31:42] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:31:42,244 INFO     127.0.0.1 - - [08/Jun/2019 13:31:42] "GET /static/startup.png HTTP/1.1" 200 -
+2019-06-08 13:33:19,207 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:33:21,951 INFO     127.0.0.1 - - [08/Jun/2019 13:33:21] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:33:22,068 INFO     127.0.0.1 - - [08/Jun/2019 13:33:22] "GET /static/startup.png HTTP/1.1" 200 -
+2019-06-08 13:34:07,373 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:34:08,645 INFO     127.0.0.1 - - [08/Jun/2019 13:34:08] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:34:08,682 INFO     127.0.0.1 - - [08/Jun/2019 13:34:08] "GET /static/startup.png HTTP/1.1" 200 -
+2019-06-08 13:34:31,659 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:34:32,141 INFO     127.0.0.1 - - [08/Jun/2019 13:34:32] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:34:32,247 INFO     127.0.0.1 - - [08/Jun/2019 13:34:32] "GET /static/startup.png HTTP/1.1" 200 -
+2019-06-08 13:34:56,347 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:34:56,716 INFO     127.0.0.1 - - [08/Jun/2019 13:34:56] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:34:56,845 INFO     127.0.0.1 - - [08/Jun/2019 13:34:56] "GET /static/startup.png HTTP/1.1" 200 -
+2019-06-08 13:37:27,562 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:37:27,736 INFO     127.0.0.1 - - [08/Jun/2019 13:37:27] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:37:41,572 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:37:41,885 INFO     127.0.0.1 - - [08/Jun/2019 13:37:41] "GET /main HTTP/1.1" 200 -
+2019-06-08 13:47:18,549 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:47:20,215 INFO     127.0.0.1 - - [08/Jun/2019 13:47:20] "GET / HTTP/1.1" 200 -
+2019-06-08 13:47:20,263 INFO     127.0.0.1 - - [08/Jun/2019 13:47:20] "GET /static/startup_bg.jpg HTTP/1.1" 200 -
+2019-06-08 13:57:20,158 INFO     127.0.0.1 - - [08/Jun/2019 13:57:20] "GET / HTTP/1.1" 200 -
+2019-06-08 13:57:20,794 INFO     127.0.0.1 - - [08/Jun/2019 13:57:20] "GET / HTTP/1.1" 200 -
+2019-06-08 13:57:29,506 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:57:29,626 INFO     127.0.0.1 - - [08/Jun/2019 13:57:29] "GET / HTTP/1.1" 200 -
+2019-06-08 13:58:14,167 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:58:14,343 INFO     127.0.0.1 - - [08/Jun/2019 13:58:14] "GET / HTTP/1.1" 200 -
+2019-06-08 13:58:29,036 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:58:29,142 INFO     127.0.0.1 - - [08/Jun/2019 13:58:29] "GET / HTTP/1.1" 200 -
+2019-06-08 13:59:59,099 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 13:59:59,369 INFO     127.0.0.1 - - [08/Jun/2019 13:59:59] "GET / HTTP/1.1" 200 -
+2019-06-08 14:00:00,172 INFO     127.0.0.1 - - [08/Jun/2019 14:00:00] "GET / HTTP/1.1" 200 -
+2019-06-08 14:00:00,849 INFO     127.0.0.1 - - [08/Jun/2019 14:00:00] "GET / HTTP/1.1" 200 -
+2019-06-08 14:00:22,218 INFO     127.0.0.1 - - [08/Jun/2019 14:00:22] "GET / HTTP/1.1" 200 -
+2019-06-08 14:00:22,996 INFO     127.0.0.1 - - [08/Jun/2019 14:00:22] "GET / HTTP/1.1" 200 -
+2019-06-08 14:04:47,999 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 14:04:48,349 INFO     127.0.0.1 - - [08/Jun/2019 14:04:48] "GET / HTTP/1.1" 200 -
+2019-06-08 14:06:49,933 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 14:06:51,064 INFO     127.0.0.1 - - [08/Jun/2019 14:06:51] "GET / HTTP/1.1" 200 -
+2019-06-08 14:11:45,412 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-08 14:11:48,959 INFO     127.0.0.1 - - [08/Jun/2019 14:11:48] "GET / HTTP/1.1" 200 -
+2019-06-08 14:11:50,035 INFO     127.0.0.1 - - [08/Jun/2019 14:11:50] "GET / HTTP/1.1" 200 -
+2019-06-08 18:14:23,468 INFO     127.0.0.1 - - [08/Jun/2019 18:14:23] "GET /main HTTP/1.1" 200 -
+2019-06-08 18:17:30,031 INFO     New prediction added.
+2019-06-08 18:17:30,032 INFO     127.0.0.1 - - [08/Jun/2019 18:17:30] "POST /main HTTP/1.1" 200 -
+2019-06-09 14:14:14,740 INFO     127.0.0.1 - - [09/Jun/2019 14:14:14] "GET /index HTTP/1.1" 404 -
+2019-06-09 14:15:56,680 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-09 14:15:57,738 ERROR    Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/finn/startup_funding/app/app.py", line 47, in index
+    return(render_template('main.html'))
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/finn/startup_funding/app/templates/main.html", line 35, in top-level template code
+    <form action="{{ url_for('main') }}" method="POST">
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/werkzeug/routing.py", line 2007, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main'. Did you mean 'index' instead?
+2019-06-09 14:15:57,755 INFO     127.0.0.1 - - [09/Jun/2019 14:15:57] "GET / HTTP/1.1" 500 -
+2019-06-09 14:17:47,220 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-09 14:17:50,976 ERROR    Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/finn/startup_funding/app/app.py", line 47, in index
+    return(render_template('index.html'))
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/finn/startup_funding/app/templates/index.html", line 35, in top-level template code
+    <form action="{{ url_for('main') }}" method="POST">
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/werkzeug/routing.py", line 2007, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main'. Did you mean 'index' instead?
+2019-06-09 14:17:50,989 INFO     127.0.0.1 - - [09/Jun/2019 14:17:50] "GET / HTTP/1.1" 500 -
+2019-06-09 14:18:12,553 ERROR    Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/finn/startup_funding/app/app.py", line 47, in index
+    return(render_template('index.html'))
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/finn/startup_funding/app/templates/index.html", line 35, in top-level template code
+    <form action="{{ url_for('main') }}" method="POST">
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/werkzeug/routing.py", line 2007, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main'. Did you mean 'index' instead?
+2019-06-09 14:18:12,557 INFO     127.0.0.1 - - [09/Jun/2019 14:18:12] "GET / HTTP/1.1" 500 -
+2019-06-09 14:18:15,003 ERROR    Exception on / [GET]
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/finn/startup_funding/app/app.py", line 47, in index
+    return(render_template('index.html'))
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/finn/startup_funding/app/templates/index.html", line 35, in top-level template code
+    <form action="{{ url_for('main') }}" method="POST">
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/werkzeug/routing.py", line 2007, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main'. Did you mean 'index' instead?
+2019-06-09 14:18:15,004 INFO     127.0.0.1 - - [09/Jun/2019 14:18:15] "GET / HTTP/1.1" 500 -
+2019-06-09 14:19:52,314 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-09 14:20:01,651 INFO     127.0.0.1 - - [09/Jun/2019 14:20:01] "GET / HTTP/1.1" 200 -
+2019-06-09 14:20:01,773 INFO     127.0.0.1 - - [09/Jun/2019 14:20:01] "GET /static/startup.png HTTP/1.1" 200 -
+2019-06-09 14:20:36,985 INFO     New prediction added.
+2019-06-09 14:20:36,986 INFO     127.0.0.1 - - [09/Jun/2019 14:20:36] "POST / HTTP/1.1" 200 -

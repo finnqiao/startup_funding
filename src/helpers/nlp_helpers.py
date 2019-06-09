@@ -1,5 +1,7 @@
 import logging
 
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def word2ngrams(text, n=4, exact=True):
