@@ -10,7 +10,8 @@ import boto3
 
 from helpers import gen_helpers as gen_h
 
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def bin_investors(df):
@@ -29,6 +30,7 @@ def bin_investors(df):
     df = pd.merge(df, investors_amount_df[
     ['investor_permalink','bins_amount']], how='left',
     left_on='investor_permalink', right_on='investor_permalink')
+    logging.info('Investor features after dataframe merging ' + ' '.join(list(df.columns)))
 
     return df
 
@@ -38,6 +40,7 @@ def get_unique_investors(df, all_companies_file):
 
     # Get number of unique investors and mean investor bin quality (decile)
     all_companies_list = list(company_df['permalink'].unique())
+    logging.info('There are a total of %s companies in initial dataframe', len(all_companies_list))
 
     # Filtes unique investors such that only those investing in companies listed in
     # the initial companies df are included
@@ -72,10 +75,12 @@ def run_clean_investors(args):
     df = get_unique_investors(df, **config['clean_investors_data']['get_unique_investors'])
 
     df.to_csv(args.save)
+    logging.debug('Working copy was saved to %s', args.save)
 
     # Save copy to S3 Bucket
     s3 = boto3.client("s3")
     s3.upload_file(args.save, args.bucket_name, args.output_file_path)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")

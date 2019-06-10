@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+.enterclick {
+  position:absolute;
+  top:30;
+  left:30;
+}
+</style>
+
+<head>
+  <title>Startup Funding: How much would your startup be worth?</title>
+</head>
+
+<body>
+  <div id='bg'>
+    <img src="{{url_for('static', filename='startup_bg.jpg')}}" />
+  </div>
+
+  <div class="enterclick col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button victoria-one">Sign up</a> </div>
+</body>
+
+</html>

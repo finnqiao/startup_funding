@@ -8,7 +8,8 @@ import boto3
 import yaml
 import pandas as pd
 
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def get_s3_file_names(s3_prefix_path):
@@ -22,6 +23,7 @@ def get_s3_file_names(s3_prefix_path):
     regex = r"s3:\/\/([\w._-]+)\/"
     m = re.match(regex, s3_prefix_path)
     s3bucket_name = m.group(1)
+    logging.info('Bucket name parsed out is %s', s3bucket_name)
 
     # Get s3 bucket handle
     s3 = boto3.resource('s3')
@@ -30,6 +32,7 @@ def get_s3_file_names(s3_prefix_path):
     files = []
     for object in s3bucket.objects.all():
         path_to_file = os.path.join("s3://%s" % s3bucket_name, object.key)
+        logging.debug('File with path %s is being added', path_to_file)
         files.append(path_to_file)
 
     return files
@@ -49,6 +52,11 @@ def get_file_names(top_dir):
         list_of_files = glob.glob(top_dir+'/*.csv', recursive=True)
 
     return list_of_files
+
+def load_csv(path, **kwargs):
+    """Wrapper function for `pandas.read_csv()` method to enable multiprocessing.
+    """
+    return pd.read_csv(path, **kwargs)
 
 def load_csvs(file_names=None, directory=None):
     """Loads multiple CSVs into a single Pandas dataframe.
@@ -92,12 +100,11 @@ def run_loading(args):
 
     for df in df_list:
         df[1].to_csv(args.save + df[0])
-
+        logging.debug('Dataframe saved to %s', args.save)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--config', help='path to yaml file with configurations')
-
     parser.add_argument('--save', default='data/external/',
     help='Path to where the dataset should be saved to')
 
@@ -106,4 +113,4 @@ if __name__ == '__main__':
     run_loading(args)
 
 # makefile command
-# python src/ingest_data.py --config=config/model_config.yml --save=data/sample/
+# python src/ingest_data.py --config=config/model_config.yml --save=data/external/

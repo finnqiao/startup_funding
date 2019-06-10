@@ -9,7 +9,8 @@ import boto3
 
 from helpers import gen_helpers as gen_h
 
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
+                    format="%(asctime)-15s %(levelname)-8s %(message)s")
 logger = logging.getLogger(__name__)
 
 def group_permalink_funding(df):
@@ -47,6 +48,7 @@ def group_permalink_funding(df):
      'funding_round_type_undisclosed': 'sum',
      'funding_round_type_venture': 'sum'})
     venture_df = venture_df.reset_index()
+    logging.info('There are %s funding round types', venture_df.shape[1])
 
     return venture_df
 
@@ -71,10 +73,12 @@ def run_clean_rounds(args):
     df = group_permalink_funding(df)
 
     df.to_csv(args.save)
+    logging.debug('Working copy was saved to %s', args.save)
 
     # Save copy to S3 Bucket
     s3 = boto3.client("s3")
     s3.upload_file(args.save, args.bucket_name, args.output_file_path)
+    logging.debug('Working copy was saved to bucket %s', args.bucket_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="")
