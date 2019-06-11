@@ -232,3 +232,84 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'main'. Did you me
 2019-06-09 14:20:01,773 INFO     127.0.0.1 - - [09/Jun/2019 14:20:01] "GET /static/startup.png HTTP/1.1" 200 -
 2019-06-09 14:20:36,985 INFO     New prediction added.
 2019-06-09 14:20:36,986 INFO     127.0.0.1 - - [09/Jun/2019 14:20:36] "POST / HTTP/1.1" 200 -
+2019-06-10 00:20:47,288 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-10 00:20:55,205 INFO     127.0.0.1 - - [10/Jun/2019 00:20:55] "GET / HTTP/1.1" 200 -
+2019-06-10 00:25:17,662 ERROR    Exception on / [POST]
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: funding_prediction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/finn/startup_funding/app/app.py", line 107, in index
+    db.session.commit()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1026, in commit
+    self.transaction.commit()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 493, in commit
+    self._prepare_impl()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 472, in _prepare_impl
+    self.session.flush()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2451, in flush
+    self._flush(objects)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2589, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 129, in reraise
+    raise value
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2549, in _flush
+    flush_context.execute()
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1066, in _emit_insert_statements
+    c = cached_connections[connection].execute(statement, multiparams)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 128, in reraise
+    raise value.with_traceback(tb)
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/Applications/anaconda3/envs/startup_funding/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: funding_prediction
+[SQL: INSERT INTO funding_prediction (startup_name, num_rounds, time_first_round, time_btw_round, funding_type, founding_date, country, investor_type, acq_type, market, prediction) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('night_test', 5, 2, 1, 'funding_round_type_post_ipo_equity', '2012-12', 'country_chn', 2, 0, 'market_mobile', '2,685')]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-06-10 00:25:17,686 INFO     127.0.0.1 - - [10/Jun/2019 00:25:17] "POST / HTTP/1.1" 500 -
+2019-06-10 00:26:38,107 INFO     RDS:False
+2019-06-10 00:26:38,133 INFO     database created
+2019-06-10 00:26:43,494 INFO      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-06-10 00:26:45,540 INFO     New prediction added.
+2019-06-10 00:26:45,549 INFO     127.0.0.1 - - [10/Jun/2019 00:26:45] "POST / HTTP/1.1" 200 -
