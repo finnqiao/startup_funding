@@ -4,6 +4,7 @@
 	* [Mission](#mission)
 	* [Vision](#vision)
 	* [Success Criteria](#success-criteria)
+* [Repo Structure](#repo-structure)
 * [Planned Work](#planned-work)
 * [Backlog](#backlog)
 * [Icebox](#icebox)
@@ -27,6 +28,56 @@ Utilize past venture outcomes to predict startup success on a variety of metrics
 An outcome accuracy of at least 65% for startup outcome classification.
 
 Inbound traffic from 100 existing venture capital firms.
+
+## Repo structure
+
+├── README.md                         <- You are here
+│
+├── app
+│   ├── static/                       <- CSS, JS files that remain static
+│   ├── templates/                    <- HTML (or other code) that is templated and changes based on a set of inputs
+│   ├── app.py                        <- File to run Flask app from
+│   ├── __init__.py                   <- Initializes the Flask app and database connection
+│
+├── config                            <- Directory for yaml configuration files for model training, scoring, etc
+│   ├── logging/                      <- Configuration files for python loggers
+│   ├── model_config.py               <- Configuration files for data and model training
+│   ├── flask_config.py               <- Configuration files for flask app
+│
+├── data                              <- Folder that contains data used or generated. Only the external/ and sample/ subdirectories are tracked by git.
+│   ├── auxiliary/                    <- Place to put intermediate transformed and merged data. Not synced with git.
+│   ├── external/                     <- External data sources,not synced with git
+│   ├── sample/                       <- Sample data used for code development and testing, will be synced with git
+│
+├── docs                              <- A default Sphinx project; see sphinx-doc.org for details.
+│
+├── figures                           <- Generated graphics and figures to be used in reporting.
+│
+├── models                            <- Trained model objects (TMOs), model predictions, and/or model summaries
+│
+├── notebooks
+│   ├── develop                       <- Current notebooks being used in development.
+│   ├── deliver                       <- Notebooks shared with others.
+│   ├── archive                       <- Develop notebooks no longer being used.
+│
+├── src                               <- Source data for the project
+│   ├── archive/                      <- No longer current scripts.
+│   ├── helpers/                      <- Helper scripts used in main src files
+│   ├── sql/                          <- SQL source code
+│   ├── ingest_data.py                <- Script for downloading data from source.
+│   ├── clean_companies_data.py       <- Script for cleaning and feature generation for company data.
+│   ├── clean_investors_data.py       <- Script for cleaning and feature generation for investors data.
+│   ├── clean_acquisitions_data.py    <- Script for cleaning and feature generation for acquisitions data.
+│   ├── clean_rounds_data.py          <- Script for cleaning and feature generation for rounds data.
+│   ├── clean_macro_data.py           <- Script for cleaning and feature generation for macro data.
+│   ├── preprocess_merge_data.py      <- Script for merging cleaned datasets.
+│   ├── train_model.py                <- Script for training, scoring, and uploading model to S3.
+│
+├── test                              <- Files necessary for running model tests (see documentation below)
+│
+├── Makefile                          <- Makefile to generate required data files and model
+├── requirements.txt                  <- Python package dependencies
+
 
 ## Planned Work
 
