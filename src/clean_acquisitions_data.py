@@ -15,7 +15,14 @@ logger = logging.getLogger(__name__)
 
 def get_acquisition_count(df, all_companies_file):
     """Aggregates acquisition by acquirer and creates new dataframe for
-    acquisition count"""
+    acquisition count
+    Args:
+        df (DataFrame): DataFrame for acquisition data
+        all_companies_file (str): filepath for where all company data is to get
+                                    list of all unique companies
+    Returns:
+        acquirers_df (DataFrame): DataFrame consisting of companies and acquisition count
+    """
     # Create list of acquired companies in original company dataset
     company_df = pd.read_csv(all_companies_file)
     all_companies_list = list(company_df['permalink'].unique())

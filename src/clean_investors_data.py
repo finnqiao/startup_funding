@@ -15,7 +15,12 @@ logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
 logger = logging.getLogger(__name__)
 
 def bin_investors(df):
-    """Group investors by investor key and obtain summary statistics for investment amounts."""
+    """Group investors by investor key and obtain summary statistics for investment amounts.
+    Args:
+        df (DataFrame): DataFrame with investor data
+    Returns:
+        df (DataFrame): DataFrame investors binned into deciles
+    """
     investors_amount_df = df.groupby('investor_permalink').agg(
     {'raised_amount_usd':['sum','mean','median','min','max']}).dropna()
     investors_amount_df.columns =  ['_'.join(col).strip() for col in
@@ -35,7 +40,14 @@ def bin_investors(df):
     return df
 
 def get_unique_investors(df, all_companies_file):
-    """Get number of unique investors that invested in each company and median value"""
+    """Get number of unique investors that invested in each company and median value
+    Args:
+        df (DataFrame): DataFrame with investor data
+        all_companies_file (str): filepath for where all company data is to get
+                                    list of all unique companies
+    Returns:
+        unique_investors_df (DataFrame): DataFrame with dataframe filtered to unique investors
+    """
     company_df = pd.read_csv(all_companies_file)
 
     # Get number of unique investors and mean investor bin quality (decile)

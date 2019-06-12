@@ -60,7 +60,12 @@ def run_training(args):
     """Loads config, loads aggregated data file, filters by selected features,
     and trains a random forest regression.
     Args:
-        args
+        args: From argparse, should contain args.config and optionally, args.save
+            args.config (str): Path to yaml file with load_data as a top level
+            key containing relevant configurations
+            args.save (str): If given, resulting dataframe will be saved to this
+            location.
+    Returns: None
     """
     with open(args.config, "r") as f:
         config = yaml.load(f)

@@ -14,7 +14,12 @@ logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
 logger = logging.getLogger(__name__)
 
 def group_permalink_funding(df):
-    """Generate features based on funding round descriptive statistics"""
+    """Generate features based on funding round descriptive statistics
+    Args:
+        df (DataFrame): DataFrame with rounds data
+    Returns:
+        df (DataFrame): DataFrame with columns for individual funding types
+    """
     # Get total number of funding rounds for each funding round type.
     round_type_df = df.groupby('company_permalink').agg('sum')
 

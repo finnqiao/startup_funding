@@ -17,7 +17,12 @@ logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
 logger = logging.getLogger(__name__)
 
 def reduce_market_categories(df):
-    """Reduce market categories to top 50 and other with nlp techniques"""
+    """Reduce market categories to top 50 and other with nlp techniques
+    Args:
+        df (DataFrame): Original company DataFrame
+    Returns:
+        df (DataFrame): DataFrame with reduced market feature set
+    """
     # Save list of all market types.
     market_types = list(df['market'].unique())
     logging.info('%s of total market types in raw dataset, to be reduced to 50',
@@ -80,7 +85,12 @@ def reduce_market_categories(df):
     return df
 
 def company_country_features(df):
-    """Generate one-hot encoding of top countries and others"""
+    """Generate one-hot encoding of top countries and others
+    Args:
+        df (DataFrame): DataFrame with company data
+    Returns:
+        df (DataFrame): DataFrame with one hot country columns
+    """
     value_counts_list = df['country_code'].value_counts()
 
     #  Countries with startup numbers above global mean.
@@ -99,7 +109,12 @@ def company_country_features(df):
     return df
 
 def impute_founding_date(df):
-    """Impute missing founding dates."""
+    """Impute missing founding dates.
+        Args:
+            df (DataFrame): DataFrame with company data
+        Returns:
+            df (DataFrame): DataFrame with imputed date columns
+    """
     df = df.dropna(subset=['first_funding_at','founded_at'])
     # Convert datetime columns to datetime objects.
     df['first_funding_at'] = pd.to_datetime(df['first_funding_at'], errors='coerce')
@@ -122,7 +137,12 @@ def impute_founding_date(df):
     return df
 
 def temporal_features(df):
-    """Feature generation for temporal features."""
+    """Feature generation for temporal features.
+    Args:
+        df (DataFrame): DataFrame with company data
+    Returns:
+        df (DataFrame): DataFrame with new temporal columns
+    """
 
     # Number of days and months from first founding date that first round was raised.
     df['days_to_fund'] = ((df['first_funding_at'] - df['founded_at'])/

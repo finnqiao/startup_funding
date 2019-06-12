@@ -14,6 +14,12 @@ logging.basicConfig(level=logging.DEBUG, filename="logfile", filemode="a+",
 logger = logging.getLogger(__name__)
 
 def aggregate_dataframes(data_path_list):
+    '''Takes all cleaned and feature engineered datasets and merges them
+    Args:
+        data_path_list (list): List of all files for cleaned and engineered data
+    Returns:
+        agg_df (DataFrame): Aggregated dataframe ready for model training
+    '''
     for data_path in data_path_list:
         if 'companies' in data_path:
             companies_df = pd.read_csv(data_path)
