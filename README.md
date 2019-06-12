@@ -113,6 +113,8 @@ python src/sql/create_database.py --RDS=True
 
 ### 3. Make necessary files and trained model
 
+Before running make all, ensure a new S3 bucket is set up to receive transformed data files and pickled model. The default is s3://startup-funding-avc/ but replace the bucket name with desired bucket name in model/model_config.yml.
+
 From the root startup_funding directory, run `make all`.
 
 This will download all raw data files, save them to a specified S3 bucket based on configurations, clean and feature generate from the raw data, save transformed data locally and in a specified S3 bucket, train a model, and save the trained model locally and in a specified S3 bucket.
