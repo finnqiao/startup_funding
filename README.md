@@ -31,9 +31,9 @@ Utilize past venture outcomes to predict startup success on a variety of metrics
 
 ### Success Criteria
 
-An outcome accuracy of at least 65% for startup outcome classification.
+R2 of at least 0.5 due to the inaccuracies of funding predictions.
 
-Inbound traffic from 100 existing venture capital firms.
+Inbound traffic from 100 existing venture capital firms and 60% retention thereafter.
 
 ## Repo structure
 
